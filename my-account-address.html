@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>Spice Nutrition</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="images/favicon.png">
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+   <link href="css/home-style.css" rel="stylesheet">
+   <link href="css/home-responsive.css" rel="stylesheet">
+   <link href="css/menu.css" rel="stylesheet">
+   <link href="css/font/font.css" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+   <!-- Login -->
+   <div class="modal fade logreg-modal" id="loginmodal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="d-flex justify-content-center mb-4">
+               <button type="button" class="c_close c_custom" data-bs-dismiss="modal" aria-label="Close"><i><img
+                        src="images/close-btn2.png" alt="icon"></i></button>
+               <img src="images/logo-white.png" alt="logo" class="mt-5 logoinmodal">
+            </div>
+            <div class="modal-body">
+               <div class="login-box">
+                  <h2 class="text-white">Login Or Sign-Up</h2>
+                  <p>Login to access your Spice Nutrition account</p>
+
+                  <form>
+                     <div class="mb-3 text-start">
+                        <label class="form-label text-white">Whatsapp Number</label>
+                        <input type="text" class="form-control" placeholder="9847123547">
+                     </div>
+                     <button type="submit" class="btn btn-login" data-bs-toggle="modal"
+                        data-bs-target="#otpmodal">Login</button>
+                  </form>
+
+                  <div class="divider"><span>Or login with</span></div>
+
+                  <div class="social-login">
+                     <a href="#"><img src="images/gplus.png" width="24" alt="icon"></a>
+                     <a href="#"><img src="images/mail-ic.png" width="24" alt="icon"></a>
+                  </div>
+                   <p class="not-send text-center mt-3">No Registered Click here to <a href="" class="theme-color" data-bs-toggle="modal"
+                        data-bs-target="#registermodal">Register</a>
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </div>
+
+
+   <!-- OTP -->
+   <div class="modal fade logreg-modal" id="otpmodal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="d-flex justify-content-center mb-4">
+               <button type="button" class="c_close c_custom" data-bs-dismiss="modal" aria-label="Close"><i><img
+                        src="images/close-btn2.png" alt="icon"></i></button>
+               <img src="images/logo-white.png" alt="logo" class="mt-5 logoinmodal">
+            </div>
+            <div class="modal-body">
+               <div class="login-box">
+                  <p><a data-bs-toggle="modal" data-bs-target="#loginmodal"><i
+                           class="fa-solid fa-chevron-left me-2"></i>Back to Login</a></p>
+                  <h2 class="text-white">Verify code</h2>
+                  <p>An authentication code has been sent to +91 9842715341</p>
+
+                  <form>
+                     <div class="mb-3 text-start">
+                        <label class="form-label text-white">Enter Code</label>
+                        <input type="text" class="form-control" placeholder="4571">
+                     </div>
+                     <p class="not-send text-end">Didn’t receive a code?
+                        <a href="" class="theme-color">Resend</a>
+                     </p>
+                     <button type="submit" class="btn btn-login">Verify</button>
+                  </form>
+
+
+
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </div>
+
+
+   <!-- Register -->
+   <div class="modal fade logreg-modal" id="registermodal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="d-flex justify-content-center mb-4">
+               <button type="button" class="c_close c_custom" data-bs-dismiss="modal" aria-label="Close"><i><img
+                        src="images/close-btn2.png" alt="icon"></i></button>
+               <img src="images/logo-white.png" alt="logo" class="mt-5 logoinmodal">
+            </div>
+            <div class="modal-body">
+               <div class="login-box mt-3">
+                  <h2 class="text-white">Fill the Details</h2>
+                  <p>Fill in your information so we can get in touch with you and serve you better.</p>
+
+                  <form>
+                     <div class="mb-3 text-start">
+                        <label class="form-label text-white">Full Name</label>
+                        <input type="text" class="form-control" placeholder="John Doe">
+                     </div>
+                      <div class="mb-3 text-start">
+                        <label class="form-label text-white">Email Address</label>
+                        <input type="text" class="form-control" placeholder="john.doe@gmail.com">
+                     </div>
+                      <div class="mb-3 text-start">
+                        <label class="form-label text-white">Date of Birth</label>
+                        <input type="text" class="form-control" placeholder="select date" id="datepicker2">
+                     </div>
+                      <div class="mb-3 text-start">
+                        <label class="form-label text-white">Referral Code</label>
+                        <input type="text" class="form-control" placeholder="SN12345">
+                     </div>
+                     <button type="submit" class="btn btn-login">CONTINUE</button>
+                  </form>
+
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </div>
+   
+   <a href="javascript:" id="return-to-top"><i class="fas fa-angle-up pulse"></i></a>
+
+   <header class="header inner-header">
+      <div class="container">
+         <div class="inner-wrap">
+            <div class="d-flex  align-items-center justify-content-between">
+               <div class="logo">
+                  <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+               </div>
+               <div class="header-item">
+                  <div class="menu-overlay"></div>
+                  <nav class="menu">
+                     <div class="mobile-menu-head">
+                        <div class="go-back"><i class="fa fa-angle-left"></i></div>
+                        <a class="current-menu-title" href="#"></a>
+                        <div class="mobile-menu-close"><i><img src="images/close.png" alt="icon"></i></div>
+                     </div>
+                     <ul class="menu-main">
+
+                        <li><a href="index.html">Home</a></li>
+                        <li class="menu-item-has-children">
+                           <a href="product.html" class="d-none d-xl-block">Shop<i class="fa fa-angle-down"></i></a>
+                           <a href="#" class="d-xl-none d-block">Shop<i class="fa fa-angle-down"></i></a>
+                           <div class="sub-menu mega-menu mega-menu-column-4">
+                              <div class="list-item">
+                                 <h4 class="title">Protein & Nutrition</h4>
+                                 <ul>
+                                    <li><a href="product.html">Whey Protein</a></li>
+                                    <li><a href="product.html">Plant Protein</a></li>
+                                    <li><a href="product.html">Mass Gainers</a></li>
+                                    <li><a href="product.html">Creatine</a></li>
+                                    <li><a href="product.html">BCAAs & EAAs</a></li>
+                                 </ul>
+                              </div>
+                              <div class="list-item">
+                                 <h4 class="title">Vitamins & Wellness</h4>
+                                 <ul>
+                                    <li><a href="product.html">Multivitamins</a></li>
+                                    <li><a href="product.html">Omega & Fish Oil</a></li>
+                                    <li><a href="product.html">Immunity Boosters</a></li>
+                                    <li><a href="product.html">Joint Support</a></li>
+                                    <li><a href="product.html">Greens & Superfoods</a></li>
+                                 </ul>
+                              </div>
+                              <div class="list-item">
+                                 <h4 class="title">Performance & Energy</h4>
+                                 <ul>
+                                    <li><a href="product.html">Pre-Workout</a></li>
+                                    <li><a href="product.html">Intra-Workout</a></li>
+                                    <li><a href="product.html">Post-Workout</a></li>
+                                    <li><a href="product.html">Energy Drinks</a></li>
+                                    <li><a href="product.html">Nitric Oxide Boosters</a></li>
+                                 </ul>
+                              </div>
+                              <div class="list-item">
+                                 <h4 class="title">Fitness Essentials</h4>
+                                 <ul>
+                                    <li><a href="product.html">Protein Bars & Snacks</a></li>
+                                    <li><a href="product.html">Shakers & Bottles</a></li>
+                                    <li><a href="product.html">Gym Accessories</a></li>
+                                    <li><a href="product.html">Meal Replacements</a></li>
+                                    <li><a href="product.html">Fat Burners</a></li>
+                                 </ul>
+                              </div>
+                           </div>
+
+                        </li>
+
+
+                        <li class="menu-item-has-children">
+                           <a href="#" class="d-none d-xl-block">Brands<i class="fa fa-angle-down"></i></a>
+                           <a href="#" class="d-xl-none d-block">Brands<i class="fa fa-angle-down"></i></a>
+
+                           <div class="sub-menu">
+                              <div class="list-item">
+                                 <ul>
+                                    <li><a href="#">Brands 01</a></li>
+                                    <li><a href="#">Brands 02</a></li>
+                                    <li><a href="#">Brands 03</a></li>
+                                    <li><a href="#">Brands 04</a></li>
+                                    <li><a href="#">Brands 05</a></li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </li>
+                        <li><a href="blog.html">Blogs</a></li>
+
+
+                     </ul>
+                  </nav>
+               </div>
+               <div class="right-blk d-flex">
+                  <div class="search-dropdown me-2">
+                     <form class="d-flex">
+                        <div class="input-group position-relative">
+                           <input type="text" class="form_fi" placeholder="Search" aria-label="Search">
+                           <button class="btn-search" type="submit">
+                              <i><img src="images/search.svg" alt="search" class="fa-search"></i>
+                           </button>
+                        </div>
+                     </form>
+                  </div>
+                   <ul>
+                     <li><a href="wishlist.html"><img src="images/heart.svg" alt="image"></a></li>
+                     <li><a href="my-account-wallet-point.html"><img src="images/wallet2.svg" alt="image"></a></li>
+                     <li><a href="cart.html" class="custom_ic"><span class="cartCout">0</span><img src="images/cart.svg"
+                              alt="image"></a></li>
+                     <li><a href="#" data-bs-toggle="modal" data-bs-target="#loginmodal"><img src="images/person.svg"
+                              alt="image"></a></li>
+                  </ul>
+                  <div class="mobile-menu-trigger">
+                     <span></span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+
+   <div class="search-dropdown2" style="display: none;">
+      <form class="d-flex">
+         <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" aria-label="Search">
+            <button class="btn btn-dark" type="submit">
+               <i class="search-icon2"><img src="images/search-white.svg" alt="search"></i>
+            </button>
+         </div>
+      </form>
+   </div>
+
+   <!-- Mobile Only -->
+   <div class="bottom-fixed">
+      <ul>
+         <li><a class="active" data-bs-toggle="modal" data-bs-target="#loginmodal"><img src="images/profile_IC.svg"
+                  alt="image"></a></li>
+         <li><a href="javascript:void(0)" class="search-btn search-icon"><img src="images/search_IC.svg"
+                  alt="Search Icon"></a></li>
+         <li><a href="wishlist.html"><img src="images/wishlist_IC.svg" alt="image"></a></li>
+         <li><a href="my-account-wallet-point.html"><img src="images/wallet2.svg" alt="image"></a></li>
+         <li><a href="cart.html" class="custom_ic"><img src="images/bag_IC.svg" alt="image"><span class="cartCout">0</span></a>
+         </li>
+      </ul>
+   </div>
+
+
+   <div class="myacount myaddres custompad-2 custom_bg">
+      <div class="container">
+         <h1 class="fw-30 mb-4">My Account</h1>
+
+         <div class="row">
+            <div class="col-md-4">
+               <div class="my-account-tab h-100">
+                  <ul>
+                     <li><a href="my-account-info.html"><i class="icon-c2"><img src="images/ic-xs-1.png" alt="icon"></i>Personal
+                           Information</a></li>
+                     <li><a href="my-account-orders.html"><i class="icon-c2"><img src="images/ic-xs-2.png" alt="icon"></i> My
+                           Orders</a></li>
+                     <li><a href="my-account-address.html" class="active"><i class="icon-c2"><img
+                                 src="images/ic-xs-3.png" alt="icon"></i> My Addresses</a></li>
+                     <li><a href="my-account-wallet-point.html"><i class="icon-c2"><img src="images/ic-xs-4.png" alt="icon"></i> Wallet Points</a></li>
+                     <li><a href="#"><i class="icon-c2"><img src="images/ic-xs-5.png" alt="icon"></i> Logout</a></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-md-8">
+               <div class="tab-con">
+                  <h2 class="d-flex justify-content-between f-24 mb-4">My Addresses <a href="add-address.html" class="add_add_link">Add
+                        New Address <i class="fa-solid fa-plus ms-2"></i></a></h2>
+
+                  <div class="address-wrap">
+                     <div class="row">
+                        <div class="col-lg-6 col-sm-12">
+                           <div class="address-option active mb-3 position-relative">
+                              <label class="radio-blk"><span class="label-text">Make Default Address</span>
+                                 <input type="checkbox" checked>
+                                 <span class="checkmark"></span>
+                              </label>
+                              <p class="mt-4">Alfredo Dokidis<br>
+                                 Kaoser Complex, Caltex Kannur,
+                                 KANNUR, KERALA, 670002</p>
+                              <p>+91 8590243275</p>
+                              <a href="#edit_address" class="delete_pen"><i class="fa-regular fa-trash-can"></i></a>
+                              <a href="#delete_address" class="edit_pen2"><i class="fa-solid fa-pen"></i></a>
+                           </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                           <div class="address-option mb-3 position-relative">
+                              <label class="radio-blk"><span class="label-text">Make Default Address</span>
+                                 <input type="checkbox">
+                                 <span class="checkmark"></span>
+                              </label>
+                              <p class="mt-4">Alfredo Dokidis<br>
+                                 Kaoser Complex, Caltex Kannur,
+                                 KANNUR, KERALA, 670002</p>
+                              <p>+91 8590243275</p>
+                              <a href="#edit_address" class="delete_pen"><i class="fa-regular fa-trash-can"></i></a>
+                              <a href="#delete_address" class="edit_pen2"><i class="fa-solid fa-pen"></i></a>
+                           </div>
+                        </div>
+
+                        <div class="col-lg-6 col-sm-12">
+                           <div class="address-option mb-3 position-relative">
+                              <label class="radio-blk"><span class="label-text">Make Default Address</span>
+                                 <input type="checkbox">
+                                 <span class="checkmark"></span>
+                              </label>
+                              <p class="mt-4">Alfredo Dokidis<br>
+                                 Kaoser Complex, Caltex Kannur,
+                                 KANNUR, KERALA, 670002</p>
+                              <p>+91 8590243275</p>
+                              <a href="#edit_address" class="delete_pen"><i class="fa-regular fa-trash-can"></i></a>
+                              <a href="#delete_address" class="edit_pen2"><i class="fa-solid fa-pen"></i></a>
+                           </div>
+                        </div>
+
+                        <div class="col-lg-6 col-sm-12">
+                           <div class="address-option mb-3 position-relative">
+                              <label class="radio-blk"><span class="label-text">Make Default Address</span>
+                                 <input type="checkbox">
+                                 <span class="checkmark"></span>
+                              </label>
+                              <p class="mt-4">Alfredo Dokidis<br>
+                                 Kaoser Complex, Caltex Kannur,
+                                 KANNUR, KERALA, 670002</p>
+                              <p>+91 8590243275</p>
+                              <a href="#edit_address" class="delete_pen"><i class="fa-regular fa-trash-can"></i></a>
+                              <a href="#delete_address" class="edit_pen2"><i class="fa-solid fa-pen"></i></a>
+                           </div>
+                        </div>
+
+
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+
+      </div>
+   </div>
+
+
+
+   <footer class="footer">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-4">
+               <div class="footer-col col1">
+                  <img src="images/footer-logo.png" alt="footer-logo" class="footer-logo">
+                  <p>It’s More Than Just Supplements
+                     It’s a Commitment to Your Best Self.</p>
+                  <ul class="social-links">
+                     <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                     <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                     <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-md-4 col-6">
+               <div class="footer-col col2">
+                 <ul class="links">
+                     <li><a href="about.html"><i class="me-1"><img src="images/ic-xs-01.png" alt="icon"></i>About Us</a></li>
+                     <li><a href="terms-condition.html"><i class="me-1"><img src="images/ic-xs-01.png" alt="icon"></i>Terms and
+                           Conditions</a></li>
+                     <li><a href="privacy-policy.html"><i class="me-1"><img src="images/ic-xs-01.png" alt="icon"></i>privacy policy</a>
+                     </li>
+                     <li><a href="return-policy.html"><i class="me-1"><img src="images/ic-xs-01.png" alt="icon"></i>Return policy</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-md-4 col-6 d-flex justify-content-end">
+               <div class="footer-col col3">
+                  <label>Address:</label>
+                  <p>The Malabar Chamber of Commerce, Thayatheru Rd, Caltex, Kannur</p>
+                  <label>Phone:</label>
+                  <p><a href="tel:+919895202021">+91 9895202021</a></p>
+                  <label>Address:</label>
+                  <a href="mailto:info@spicenutrition.com">info@spicenutrition.com</a>
+               </div>
+            </div>
+         </div>
+         <p class="copy-rite">© 2025 spicenutrition.com All rights reserved</p>
+      </div>
+   </footer>
+
+
+
+   <!-- Optional JavaScript -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+   <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   <script src="js/wow.js"></script>
+   <script src="js/page.js"></script>
+   <script src="js/swiper-call.js"></script>
+
+
+
+   <script>
+      document.querySelectorAll('.address-option input[type="checkbox"]').forEach(checkbox => {
+         checkbox.addEventListener('change', () => {
+            if (checkbox.checked) {
+               // Uncheck all other checkboxes and reset labels
+               document.querySelectorAll('.address-option').forEach(box => {
+                  if (box !== checkbox.closest('.address-option')) {
+                     box.classList.remove('active');
+                     box.querySelector('.label-text').textContent = 'Make Default Address';
+                     box.querySelector('input').checked = false;
+                  }
+               });
+
+               // Activate the selected one
+               const parentBox = checkbox.closest('.address-option');
+               parentBox.classList.add('active');
+               parentBox.querySelector('.label-text').textContent = 'Default Address';
+               checkbox.checked = true;
+            } else {
+               // If unchecked, remove active state
+               const parentBox = checkbox.closest('.address-option');
+               parentBox.classList.remove('active');
+               parentBox.querySelector('.label-text').textContent = 'Make Default Address';
+            }
+         });
+      });
+
+   </script>
+
+</body>
+
+
+</html>

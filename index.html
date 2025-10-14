@@ -1,0 +1,3644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>Adam Xpress</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="images/favicon.png">
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+   <link href="css/home-style.css" rel="stylesheet">
+   <link href="css/home-responsive.css" rel="stylesheet">
+   <link href="css/menu.css" rel="stylesheet">
+   <link href="css/font/font.css" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+   <!-- Login -->
+   <div class="modal fade logreg-modal" id="loginmodal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="d-flex justify-content-center mb-4">
+               <button type="button" class="c_close c_custom" data-bs-dismiss="modal" aria-label="Close"><i><img
+                        src="images/close-btn2.png" alt="icon"></i></button>
+               <img src="images/logo-white.png" alt="logo" class="mt-5 logoinmodal">
+            </div>
+            <div class="modal-body">
+               <div class="login-box">
+                  <h2 class="text-white">Login Or Sign-Up</h2>
+                  <p>Login to access your Art Factory account</p>
+
+                  <form>
+                     <div class="mb-3 text-start">
+                        <label class="form-label text-white">Whatsapp Number</label>
+                        <input type="text" class="form-control" placeholder="9847123547">
+                     </div>
+                     <button type="submit" class="btn btn-login" data-bs-toggle="modal"
+                        data-bs-target="#otpmodal">Login</button>
+                  </form>
+
+                  <div class="divider"><span>Or login with</span></div>
+
+                  <div class="social-login">
+                     <a href="#"><img src="images/gplus.png" width="24" alt="icon"></a>
+                     <a href="#"><img src="images/mail-ic.png" width="24" alt="icon"></a>
+                  </div>
+                  <p class="not-send text-center mt-3">No Registered Click here to <a href="" class="theme-color"
+                        data-bs-toggle="modal" data-bs-target="#registermodal">Register</a>
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </div>
+
+
+   <!-- OTP -->
+   <div class="modal fade logreg-modal" id="otpmodal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="d-flex justify-content-center mb-4">
+               <button type="button" class="c_close c_custom" data-bs-dismiss="modal" aria-label="Close"><i><img
+                        src="images/close-btn2.png" alt="icon"></i></button>
+               <img src="images/logo-white.png" alt="logo" class="mt-5 logoinmodal">
+            </div>
+            <div class="modal-body">
+               <div class="login-box">
+                  <p><a data-bs-toggle="modal" data-bs-target="#loginmodal"><i
+                           class="fa-solid fa-chevron-left me-2"></i>Back to Login</a></p>
+                  <h2 class="text-white">Verify code</h2>
+                  <p>An authentication code has been sent to +91 9842715341</p>
+
+                  <form>
+                     <div class="mb-3 text-start">
+                        <label class="form-label text-white">Enter Code</label>
+                        <input type="text" class="form-control" placeholder="4571">
+                     </div>
+                     <p class="not-send text-end">Didn’t receive a code?
+                        <a href="" class="theme-color">Resend</a>
+                     </p>
+                     <button type="submit" class="btn btn-login">Verify</button>
+                  </form>
+
+
+
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </div>
+
+
+   <!-- Register -->
+   <div class="modal fade logreg-modal" id="registermodal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="d-flex justify-content-center mb-4">
+               <button type="button" class="c_close c_custom" data-bs-dismiss="modal" aria-label="Close"><i><img
+                        src="images/close-btn2.png" alt="icon"></i></button>
+               <img src="images/logo-white.png" alt="logo" class="mt-5 logoinmodal">
+            </div>
+            <div class="modal-body">
+               <div class="login-box mt-3">
+                  <h2 class="text-white">Fill the Details</h2>
+                  <p>Fill in your information so we can get in touch with you and serve you better.</p>
+
+                  <form>
+                     <div class="mb-3 text-start">
+                        <label class="form-label text-white">Full Name</label>
+                        <input type="text" class="form-control" placeholder="John Doe">
+                     </div>
+                     <div class="mb-3 text-start">
+                        <label class="form-label text-white">Email Address</label>
+                        <input type="text" class="form-control" placeholder="john.doe@gmail.com">
+                     </div>
+                     <div class="mb-3 text-start">
+                        <label class="form-label text-white">Date of Birth</label>
+                        <input type="text" class="form-control" placeholder="select date" id="datepicker2">
+                     </div>
+                     <div class="mb-3 text-start">
+                        <label class="form-label text-white">Referral Code</label>
+                        <input type="text" class="form-control" placeholder="SN12345">
+                     </div>
+                     <button type="submit" class="btn btn-login">CONTINUE</button>
+                  </form>
+
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </div>
+
+
+   <a href="javascript:" id="return-to-top"><i class="fas fa-angle-up pulse"></i></a>
+
+   <header class="header">
+      <div class="container">
+        <div class="inner-wrap">
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="logo">
+              <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+            </div>
+
+            <div class="top_block_02">
+              <div class="select_block">
+                <select>
+                  <option>Categories</option>
+                  <option>1</option>
+                  <option>1</option>
+                </select>
+              </div>
+              <div class="search-dropdown me-2">
+                <form>
+                  <div class="input-group position-relative">
+                    <input type="text" class="form_fi" placeholder="What are you looking for?" aria-label="Search">
+                    <button class="btn-search" type="submit">
+                      <i><img src="images/search.svg" alt="search" class="fa-search"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div class="dropdown" id="languageDropdown">
+              <div class="dropdown-toggle">
+                <img src="https://flagcdn.com/w20/qa.png" alt="Qatar Flag">
+                <span>العربية</span>
+              </div>
+              <div class="dropdown-menu">
+                <div class="option" data-lang="ar">
+                  <img src="https://flagcdn.com/w20/qa.png" alt="Qatar">
+                  <span>العربية</span>
+                </div>
+                <div class="option" data-lang="en">
+                  <img src="https://flagcdn.com/w20/us.png" alt="English">
+                  <span>English</span>
+                </div>
+                <div class="option" data-lang="fr">
+                  <img src="https://flagcdn.com/w20/fr.png" alt="French">
+                  <span>Français</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="right-blk">
+              <ul>
+                <li>
+                  <a href="wishlist.html"><img src="images/heart.svg" alt="image">Wishlist</a>
+                </li>
+
+                <li>
+                  <a href="cart.html" class="custom_ic"><span class="cartCout">0</span><img src="images/cart.svg" alt="image">Cart</a>
+                </li>
+                <li>
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#loginmodal"><img src="images/person.svg" alt="image">Login/Signup</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+   <div class="search-dropdown2" style="display: none;">
+      <form class="d-flex">
+         <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" aria-label="Search">
+            <button class="btn btn-dark" type="submit">
+               <i class="search-icon2"><img src="images/search-white.svg" alt="search"></i>
+            </button>
+         </div>
+      </form>
+   </div>
+
+   <!-- Mobile Only -->
+   <div class="bottom-fixed">
+      <ul>
+         <li><a class="active" data-bs-toggle="modal" data-bs-target="#loginmodal"><img src="images/profile_IC.svg"
+                  alt="image"></a></li>
+         <li><a href="javascript:void(0)" class="search-btn search-icon"><img src="images/search_IC.svg"
+                  alt="Search Icon"></a></li>
+         <li><a href="wishlist.html"><img src="images/wishlist_IC.svg" alt="image"></a></li>
+         <li><a href="my-account-wallet-point.html"><img src="images/wallet2.svg" alt="image"></a></li>
+         <li><a href="cart.html" class="custom_ic"><img src="images/bag_IC.svg" alt="image"><span
+                  class="cartCout">0</span></a>
+         </li>
+      </ul>
+   </div>
+
+  
+
+ 
+
+   <section class="popular-products custompad pt-0 wow animate__fadeIn" data-wow-duration="2s">
+      <div class="container">
+         <div class="title-wrap d-flex align-items-center  justify-content-between position-relative">
+            <h2 class="title mb-0">Meet our bestsellers</h2>
+            <div class="arrow-space">
+               <!-- If we need navigation buttons -->
+               <div class="swiper-button-prev1"><img src="images/ar-left.png" alt="arrow"></div>
+               <div class="swiper-button-next1"><img src="images/ar-right.png" alt="arrow"></div>
+            </div>
+         </div>
+
+
+         <div class="swiper trending-product-slider best-sellers c_margin">
+            <div class="swiper-wrapper">
+
+               <!--Product 1 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/best-sellers-img-01.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>Wellcore - Pure Micronised Creatine Monohy </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 2 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/best-sellers-img-02.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>MuscleBlaze Whey Protein - 1.8 Kg (3.9 Lb), R.. </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 3 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/best-sellers-img-03.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>Nutrabay Wellness Fish Oil Omega 3 - 1000mg </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 4 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/best-sellers-img-04.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>Nutrabay Gold 100% Whey Protein Concent </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product loop -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/best-sellers-img-01.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>Wellcore - Pure Micronised Creatine Monohy </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+
+            </div>
+
+         </div>
+
+         <div class="title-wrap d-flex align-items-center  justify-content-between position-relative c_margin">
+            <h2 class="title mb-0">Recently Bought</h2>
+            <div class="arrow-space">
+               <!-- If we need navigation buttons -->
+               <div class="swiper-button-prev2"><img src="images/ar-left.png" alt="arrow"></div>
+               <div class="swiper-button-next2"><img src="images/ar-right.png" alt="arrow"></div>
+            </div>
+         </div>
+
+         <div class="swiper recently-bought-slider c_margin">
+            <div class="swiper-wrapper">
+
+               <!--Product 1 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/recently-bought-01.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>Nutrabay Pure Whey Protein Concentrate - 1... </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 2 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/recently-bought-02.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>Beta Alanine | Amino Acid Supplement </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 3 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/recently-bought-03.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>Nutrabay Pro Active Multivitamin for Men - 3... </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 4 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/recently-bought-04.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>MuscleBlaze BCAA Pro Essential Amino Acid... </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product loop -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/recently-bought-01.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>Nutrabay Pure Whey Protein Concentrate - 1... </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+
+            </div>
+
+         </div>
+      </div>
+
+
+   </section>
+
+   <section class="fuel-your-routine">
+      <div class="wrap">
+         <div class="col-md-6 first-box">
+            <div class="content">
+               <h3>Fuel Your Routine</h3>
+               <h4 class="outlined-text">Beyond the Gym</h4>
+               <p>Your supplements don’t have to stop at shakes. Power up your oatmeal, blend into smoothie bowls, or
+                  stir into your morning coffee. Clean fuel, delicious flavor, and functional nutrition for every part
+                  of your day.</p>
+               <a href="product.html" class="link1">Explore All Supplements</a>
+            </div>
+         </div>
+         <div class="col-md-6 img-box"
+            style="background-image: url(images/fuel-your-routine.png);background-size: cover;background-repeat: no-repeat;">
+         </div>
+      </div>
+   </section>
+
+   <section class="popular-products-sec-2 custompad wow animate__fadeIn" data-wow-duration="2s">
+      <div class="container">
+         <div class="title-wrap d-flex align-items-center  justify-content-between position-relative">
+            <h2 class="title mb-0">Mega Deal Packs</h2>
+            <div class="arrow-space">
+               <!-- If we need navigation buttons -->
+               <div class="swiper-button-prev3"><img src="images/ar-left.png" alt="arrow"></div>
+               <div class="swiper-button-next3"><img src="images/ar-right.png" alt="arrow"></div>
+            </div>
+         </div>
+
+
+         <div class="swiper megadeal-product-slider best-sellers c_margin">
+            <div class="swiper-wrapper">
+
+               <!--Product 1 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/product-img-01.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>MuscleBlaze Citrulline Malate, 0.22 lb Unflav </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 2 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/product-img-02.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>MuscleBlaze High Protein Oats 2kg Dark Cho </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 3 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/product-img-03.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>MuscleBlaze PRE Workout 200 Xtreme & Cr </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 4 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/product-img-05.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>MuscleBlaze Biozyme Performance Whey 2k </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product loop -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/product-img-01.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>MuscleBlaze Citrulline Malate, 0.22 lb Unflav... </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+
+            </div>
+
+         </div>
+
+         <div class="title-wrap d-flex align-items-center  justify-content-between position-relative c_margin">
+            <h2 class="title mb-0">Best Selling Proteins</h2>
+            <div class="arrow-space">
+               <!-- If we need navigation buttons -->
+               <div class="swiper-button-prev4"><img src="images/ar-left.png" alt="arrow"></div>
+               <div class="swiper-button-next4"><img src="images/ar-right.png" alt="arrow"></div>
+            </div>
+         </div>
+
+         <div class="swiper bestSelling-slider c_margin">
+            <div class="swiper-wrapper">
+
+               <!--Product 1 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/best-selling-05.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>MuscleTech NitroTech Whey Protein, 1.82 kg </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 2 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/best-selling-06.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>Dymatize ISO100 Whey Protein Isolate, 2.27 </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 3 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/best-selling-07.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>ON (Optimum Nutrition) Gold Standard 100 </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 4 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/best-selling-08.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>Ultimate Nutrition Prostar 100% Whey Protei </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product loop -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/best-selling-05.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>MuscleTech NitroTech Whey Protein, 1.82 kg </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+
+            </div>
+
+         </div>
+      </div>
+
+
+   </section>
+
+   <section class="watch-shop pb-0 custompad">
+
+      <div class="container">
+         <div class="title_wrap wow animate__fadeIn" data-wow-duration="2s">
+            <h2 class="title mb-0">Watch and shop</h2>
+         </div>
+      </div>
+
+      <div class="container-2 position-relative">
+
+         <div class="swiper placementSwiper wow animate__fadeIn c_margin" data-wow-duration="2s">
+            <div class="swiper-wrapper align-items-center">
+               <div class="swiper-slide">
+                  <video muted poster="images/video-cover-01.png">
+                     <source src="video/video-1.mp4" type="video/mp4">
+                  </video>
+               </div>
+
+               <div class="swiper-slide">
+                  <video muted preload="metadata" poster="images/video-cover-02.png">
+                     <source src="video/video-2.mp4" type="video/mp4">
+                  </video>
+               </div>
+
+               <div class="swiper-slide">
+                  <video muted preload="metadata" poster="images/video-cover-03.png">
+                     <source src="video/video-3.mp4" type="video/mp4">
+                  </video>
+               </div>
+
+               <div class="swiper-slide">
+                  <video muted preload="metadata" poster="images/video-cover-04.png">
+                     <source src="video/video-4.mp4" type="video/mp4">
+                  </video>
+               </div>
+
+               <div class="swiper-slide">
+                  <video muted preload="metadata" poster="images/video-cover-05.png">
+                     <source src="video/video-5.mp4" type="video/mp4">
+                  </video>
+               </div>
+
+               <div class="swiper-slide">
+                  <video muted preload="metadata" poster="images/video-cover-01.png">
+                     <source src="video/video-1.mp4" type="video/mp4">
+                  </video>
+               </div>
+
+               <div class="swiper-slide">
+                  <video muted preload="metadata" poster="images/video-cover-02.png">
+                     <source src="video/video-2.mp4" type="video/mp4">
+                  </video>
+               </div>
+
+               <div class="swiper-slide">
+                  <video muted preload="metadata" poster="images/video-cover-03.png">
+                     <source src="video/video-3.mp4" type="video/mp4">
+                  </video>
+               </div>
+               <div class="swiper-slide">
+                  <video muted preload="metadata" poster="images/video-cover-04.png">
+                     <source src="video/video-4.mp4" type="video/mp4">
+                  </video>
+               </div>
+
+
+            </div>
+         </div>
+
+         <div class="swiper-button-next6"><i><img src="images/left-ar.png" alt="icon"></i></div>
+         <div class="swiper-button-prev6"><i><img src="images/right-ar.png" alt="icon"></i></div>
+      </div>
+
+
+      <div class="product-inthe-video-wrap custompad wow animate__fadeIn" data-wow-duration="2s">
+         <div class="container">
+            <div class="title-wrap d-flex align-items-center  justify-content-between position-relative">
+               <h2 class="title mb-0">Products in the video</h2>
+               <div class="arrow-space">
+                  <!-- If we need navigation buttons -->
+                  <div class="swiper-button-prev7"><img src="images/ar-left.png" alt="arrow"></div>
+                  <div class="swiper-button-next7"><img src="images/ar-right.png" alt="arrow"></div>
+               </div>
+            </div>
+
+
+            <div class="swiper product-inthe-video c_margin">
+               <div class="swiper-wrapper">
+
+                  <!--Product 1 -->
+                  <div class="swiper-slide">
+                     <div class="product-wrap mb-0">
+                        <div class="position-relative">
+                           <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                 src="images/product-img-05.png" alt="image" class="product-box-img radius-20"></a>
+                           <div class="absolute-block">
+                              <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                              <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                           </div>
+                        </div>
+                        <div class="product-box-content radius-20">
+                           <h4>Fuel One Whey Protein Powder, 2 kg (4.4 lb) </h4>
+                           <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star-half-alt"></i>
+                           </div>
+                           <div class="d-flex">
+                              <div class="price_rate">
+                                 <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                 </div>
+                              </div>
+                              <span class="ofr-disc">-40%</span>
+                           </div>
+                           <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                    alt="icon"></i></a>
+                           <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                    alt="icon"></i></a>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- End -->
+
+                  <!--Product 2 -->
+                  <div class="swiper-slide">
+                     <div class="product-wrap mb-0">
+                        <div class="position-relative">
+                           <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                 src="images/product-img-06.png" alt="image" class="product-box-img radius-20"></a>
+                           <div class="absolute-block">
+                              <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                              <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                           </div>
+                        </div>
+                        <div class="product-box-content radius-20">
+                           <h4>MuscleBlaze Whey Gold Protein, 2 kg (4.4 lb) </h4>
+                           <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star-half-alt"></i>
+                           </div>
+                           <div class="d-flex">
+                              <div class="price_rate">
+                                 <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                 </div>
+                              </div>
+                              <span class="ofr-disc">-40%</span>
+                           </div>
+                           <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                    alt="icon"></i></a>
+                           <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                    alt="icon"></i></a>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- End -->
+
+                  <!--Product 3 -->
+                  <div class="swiper-slide">
+                     <div class="product-wrap mb-0">
+                        <div class="position-relative">
+                           <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                 src="images/product-img-07.png" alt="image" class="product-box-img radius-20"></a>
+                           <div class="absolute-block">
+                              <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                              <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                           </div>
+                        </div>
+                        <div class="product-box-content radius-20">
+                           <h4>Nakpro Perform Whey Protein Concentrate, 1 </h4>
+                           <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star-half-alt"></i>
+                           </div>
+                           <div class="d-flex">
+                              <div class="price_rate">
+                                 <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                 </div>
+                              </div>
+                              <span class="ofr-disc">-40%</span>
+                           </div>
+                           <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                    alt="icon"></i></a>
+                           <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                    alt="icon"></i></a>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- End -->
+
+                  <!--Product 4 -->
+                  <div class="swiper-slide">
+                     <div class="product-wrap mb-0">
+                        <div class="position-relative">
+                           <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                 src="images/product-img-08.png" alt="image" class="product-box-img radius-20"></a>
+                           <div class="absolute-block">
+                              <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                              <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                           </div>
+                        </div>
+                        <div class="product-box-content radius-20">
+                           <h4>BCAA 5000 Powder | Fruit Punch | 250 g </h4>
+                           <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star-half-alt"></i>
+                           </div>
+                           <div class="d-flex">
+                              <div class="price_rate">
+                                 <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                 </div>
+                              </div>
+                              <span class="ofr-disc">-40%</span>
+                           </div>
+                           <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                    alt="icon"></i></a>
+                           <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                    alt="icon"></i></a>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- End -->
+
+                  <!--Product loop -->
+                  <div class="swiper-slide">
+                     <div class="product-wrap mb-0">
+                        <div class="position-relative">
+                           <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                 src="images/product-img-05.png" alt="image" class="product-box-img radius-20"></a>
+                           <div class="absolute-block">
+                              <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                              <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                           </div>
+                        </div>
+                        <div class="product-box-content radius-20">
+                           <h4>Fuel One Whey Protein Powder, 2 kg (4.4 lb) </h4>
+                           <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star-half-alt"></i>
+                           </div>
+                           <div class="d-flex">
+                              <div class="price_rate">
+                                 <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                 </div>
+                              </div>
+                              <span class="ofr-disc">-40%</span>
+                           </div>
+                           <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                    alt="icon"></i></a>
+                           <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                    alt="icon"></i></a>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- End -->
+
+
+               </div>
+
+            </div>
+
+         </div>
+      </div>
+
+   </section>
+
+   <section class="popular-products-sec-3 custompad wow animate__fadeIn" data-wow-duration="2s">
+      <div class="container">
+         <div class="title-wrap d-flex align-items-center  justify-content-between position-relative">
+            <h2 class="title mb-0">Gaining-Zone</h2>
+            <div class="arrow-space">
+               <!-- If we need navigation buttons -->
+               <div class="swiper-button-prev8"><img src="images/ar-left.png" alt="arrow"></div>
+               <div class="swiper-button-next8"><img src="images/ar-right.png" alt="arrow"></div>
+            </div>
+         </div>
+
+
+         <div class="swiper gaining-zone-slider c_margin">
+            <div class="swiper-wrapper">
+
+               <!--Product 1 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/product-img-09.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>Nutrabay Pure Whey Protein Concentrate - 1 </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 2 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/product-img-10.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>Beta Alanine | Amino Acid Supplement </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 3 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/product-img-11.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>Nutrabay Pro Active Multivitamin for Men - 3 </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 4 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/product-img-12.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>MuscleBlaze BCAA Pro Essential Amino Acid... </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product loop -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/product-img-09.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>Nutrabay Pure Whey Protein Concentrate - 1 </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+
+            </div>
+
+         </div>
+
+         <div class="title-wrap d-flex align-items-center  justify-content-between position-relative c_margin">
+            <h2 class="title mb-0">Saver Combo Packs</h2>
+            <div class="arrow-space">
+               <!-- If we need navigation buttons -->
+               <div class="swiper-button-prev9"><img src="images/ar-left.png" alt="arrow"></div>
+               <div class="swiper-button-next9"><img src="images/ar-right.png" alt="arrow"></div>
+            </div>
+         </div>
+
+         <div class="swiper saver-combo-slider c_margin">
+            <div class="swiper-wrapper">
+
+               <!--Product 1 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/product-img-13.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>MuscleBlaze High Protein Peanut Butter, 1 kg </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 2 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/product-img-14.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>MuscleBlaze MB Fat Burner PRO, 60 tablet(s) </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 3 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/product-img-15.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>Wellversed (Wellcore) - Micron </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 4 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/product-img-16.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>Wellversed (Wellcore) - Micron </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product loop -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/product-img-13.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>MuscleBlaze High Protein Peanut Butter, 1 kg</h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+
+            </div>
+
+         </div>
+      </div>
+
+
+   </section>
+
+   <div class="advt-banner">
+      <a href="product.html"><img src="images/advt-banner.png" alt="image" class="w-100"></a>
+   </div>
+
+   <section class="shopby-combo custompad">
+      <div class="container">
+         <div>
+            <h2 class="title">Shop By combo</h2>
+         </div>
+         <ul class="nav nav-pills custom-tabs flex-nowrap overflow-auto" id="pills-tab" role="tablist">
+            <li class="nav-item me-3" role="presentation">
+               <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#pills-1" type="button" role="tab">
+                  MASS GAIN STACK
+               </button>
+            </li>
+            <li class="nav-item me-3" role="presentation">
+               <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-2" type="button" role="tab">
+                  FAT BURN KIT
+               </button>
+            </li>
+            <li class="nav-item" role="presentation">
+               <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-3" type="button" role="tab">
+                  EVERYDAY ESSENTIALS PACK
+               </button>
+            </li>
+         </ul>
+         <div class="row c_margin">
+            <!-- Tab Content -->
+            <div class="tab-content" id="pills-tabContent">
+
+               <div class="tab-pane fade show active" id="pills-1" role="tabpanel">
+
+                  <div class="swiper combo-slider">
+                     <div class="swiper-wrapper">
+
+                        <!--Product 1 -->
+                        <div class="swiper-slide">
+                           <div class="product-wrap mb-0">
+                              <div class="position-relative">
+                                 <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                       src="images/product-img-09.png" alt="image"
+                                       class="product-box-img radius-20"></a>
+                                 <div class="absolute-block">
+                                    <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                                    <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                                 </div>
+                              </div>
+                              <div class="product-box-content radius-20">
+                                 <h4>MuscleBlaze Fish Oil & MB-VITE Daily Multivi </h4>
+                                 <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                 </div>
+                                 <div class="d-flex">
+                                    <div class="price_rate">
+                                       <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                       </div>
+                                    </div>
+                                    <span class="ofr-disc">-40%</span>
+                                 </div>
+                                 <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                          alt="icon"></i></a>
+                                 <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                          alt="icon"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- End -->
+
+                        <!--Product 2 -->
+                        <div class="swiper-slide">
+                           <div class="product-wrap mb-0">
+                              <div class="position-relative">
+                                 <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                       src="images/product-img-10.png" alt="image"
+                                       class="product-box-img radius-20"></a>
+                                 <div class="absolute-block">
+                                    <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                                    <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                                 </div>
+                              </div>
+                              <div class="product-box-content radius-20">
+                                 <h4>Biozyme Performance Whey 2 kg & Creatin </h4>
+                                 <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                 </div>
+                                 <div class="d-flex">
+                                    <div class="price_rate">
+                                       <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                       </div>
+                                    </div>
+                                    <span class="ofr-disc">-40%</span>
+                                 </div>
+                                 <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                          alt="icon"></i></a>
+                                 <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                          alt="icon"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- End -->
+
+                        <!--Product 3 -->
+                        <div class="swiper-slide">
+                           <div class="product-wrap mb-0">
+                              <div class="position-relative">
+                                 <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                       src="images/product-img-11.png" alt="image"
+                                       class="product-box-img radius-20"></a>
+                                 <div class="absolute-block">
+                                    <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                                    <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                                 </div>
+                              </div>
+                              <div class="product-box-content radius-20">
+                                 <h4>MuscleBlaze High Protein Oats 2 kg & Peanut </h4>
+                                 <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                 </div>
+                                 <div class="d-flex">
+                                    <div class="price_rate">
+                                       <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                       </div>
+                                    </div>
+                                    <span class="ofr-disc">-40%</span>
+                                 </div>
+                                 <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                          alt="icon"></i></a>
+                                 <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                          alt="icon"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- End -->
+
+                        <!--Product 4 -->
+                        <div class="swiper-slide">
+                           <div class="product-wrap mb-0">
+                              <div class="position-relative">
+                                 <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                       src="images/product-img-12.png" alt="image"
+                                       class="product-box-img radius-20"></a>
+                                 <div class="absolute-block">
+                                    <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                                    <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                                 </div>
+                              </div>
+                              <div class="product-box-content radius-20">
+                                 <h4>MuscleBlaze Creatine Monohydrate CreAM </h4>
+                                 <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                 </div>
+                                 <div class="d-flex">
+                                    <div class="price_rate">
+                                       <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                       </div>
+                                    </div>
+                                    <span class="ofr-disc">-40%</span>
+                                 </div>
+                                 <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                          alt="icon"></i></a>
+                                 <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                          alt="icon"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- End -->
+
+                        <!--Product loop -->
+                        <div class="swiper-slide">
+                           <div class="product-wrap mb-0">
+                              <div class="position-relative">
+                                 <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                       src="images/product-img-09.png" alt="image"
+                                       class="product-box-img radius-20"></a>
+                                 <div class="absolute-block">
+                                    <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                                    <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                                 </div>
+                              </div>
+                              <div class="product-box-content radius-20">
+                                 <h4>MuscleBlaze Fish Oil & MB-VITE Daily Multivi </h4>
+                                 <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                 </div>
+                                 <div class="d-flex">
+                                    <div class="price_rate">
+                                       <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                       </div>
+                                    </div>
+                                    <span class="ofr-disc">-40%</span>
+                                 </div>
+                                 <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                          alt="icon"></i></a>
+                                 <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                          alt="icon"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- End -->
+
+
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+
+               </div>
+
+               <div class="tab-pane fade" id="pills-2" role="tabpanel">
+                  <div class="swiper combo-slider">
+                     <div class="swiper-wrapper">
+
+                        <!--Product 1 -->
+                        <div class="swiper-slide">
+                           <div class="product-wrap mb-0">
+                              <div class="position-relative">
+                                 <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                       src="images/product-img-09.png" alt="image"
+                                       class="product-box-img radius-20"></a>
+                                 <div class="absolute-block">
+                                    <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                                    <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                                 </div>
+                              </div>
+                              <div class="product-box-content radius-20">
+                                 <h4>MuscleBlaze Fish Oil & MB-VITE Daily Multivi </h4>
+                                 <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                 </div>
+                                 <div class="d-flex">
+                                    <div class="price_rate">
+                                       <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                       </div>
+                                    </div>
+                                    <span class="ofr-disc">-40%</span>
+                                 </div>
+                                 <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                          alt="icon"></i></a>
+                                 <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                          alt="icon"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- End -->
+
+                        <!--Product 2 -->
+                        <div class="swiper-slide">
+                           <div class="product-wrap mb-0">
+                              <div class="position-relative">
+                                 <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                       src="images/product-img-10.png" alt="image"
+                                       class="product-box-img radius-20"></a>
+                                 <div class="absolute-block">
+                                    <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                                    <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                                 </div>
+                              </div>
+                              <div class="product-box-content radius-20">
+                                 <h4>Biozyme Performance Whey 2 kg & Creatin </h4>
+                                 <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                 </div>
+                                 <div class="d-flex">
+                                    <div class="price_rate">
+                                       <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                       </div>
+                                    </div>
+                                    <span class="ofr-disc">-40%</span>
+                                 </div>
+                                 <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                          alt="icon"></i></a>
+                                 <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                          alt="icon"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- End -->
+
+                        <!--Product 3 -->
+                        <div class="swiper-slide">
+                           <div class="product-wrap mb-0">
+                              <div class="position-relative">
+                                 <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                       src="images/product-img-11.png" alt="image"
+                                       class="product-box-img radius-20"></a>
+                                 <div class="absolute-block">
+                                    <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                                    <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                                 </div>
+                              </div>
+                              <div class="product-box-content radius-20">
+                                 <h4>MuscleBlaze High Protein Oats 2 kg & Peanut </h4>
+                                 <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                 </div>
+                                 <div class="d-flex">
+                                    <div class="price_rate">
+                                       <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                       </div>
+                                    </div>
+                                    <span class="ofr-disc">-40%</span>
+                                 </div>
+                                 <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                          alt="icon"></i></a>
+                                 <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                          alt="icon"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- End -->
+
+                        <!--Product 4 -->
+                        <div class="swiper-slide">
+                           <div class="product-wrap mb-0">
+                              <div class="position-relative">
+                                 <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                       src="images/product-img-12.png" alt="image"
+                                       class="product-box-img radius-20"></a>
+                                 <div class="absolute-block">
+                                    <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                                    <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                                 </div>
+                              </div>
+                              <div class="product-box-content radius-20">
+                                 <h4>MuscleBlaze Creatine Monohydrate CreAM </h4>
+                                 <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                 </div>
+                                 <div class="d-flex">
+                                    <div class="price_rate">
+                                       <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                       </div>
+                                    </div>
+                                    <span class="ofr-disc">-40%</span>
+                                 </div>
+                                 <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                          alt="icon"></i></a>
+                                 <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                          alt="icon"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- End -->
+
+                        <!--Product loop -->
+                        <div class="swiper-slide">
+                           <div class="product-wrap mb-0">
+                              <div class="position-relative">
+                                 <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                       src="images/product-img-09.png" alt="image"
+                                       class="product-box-img radius-20"></a>
+                                 <div class="absolute-block">
+                                    <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                                    <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                                 </div>
+                              </div>
+                              <div class="product-box-content radius-20">
+                                 <h4>MuscleBlaze Fish Oil & MB-VITE Daily Multivi </h4>
+                                 <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                 </div>
+                                 <div class="d-flex">
+                                    <div class="price_rate">
+                                       <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                       </div>
+                                    </div>
+                                    <span class="ofr-disc">-40%</span>
+                                 </div>
+                                 <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                          alt="icon"></i></a>
+                                 <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                          alt="icon"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- End -->
+
+
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+
+               <div class="tab-pane fade" id="pills-3" role="tabpanel">
+                  <div class="swiper combo-slider">
+                     <div class="swiper-wrapper">
+
+                        <!--Product 1 -->
+                        <div class="swiper-slide">
+                           <div class="product-wrap mb-0">
+                              <div class="position-relative">
+                                 <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                       src="images/product-img-09.png" alt="image"
+                                       class="product-box-img radius-20"></a>
+                                 <div class="absolute-block">
+                                    <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                                    <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                                 </div>
+                              </div>
+                              <div class="product-box-content radius-20">
+                                 <h4>MuscleBlaze Fish Oil & MB-VITE Daily Multivi </h4>
+                                 <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                 </div>
+                                 <div class="d-flex">
+                                    <div class="price_rate">
+                                       <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                       </div>
+                                    </div>
+                                    <span class="ofr-disc">-40%</span>
+                                 </div>
+                                 <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                          alt="icon"></i></a>
+                                 <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                          alt="icon"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- End -->
+
+                        <!--Product 2 -->
+                        <div class="swiper-slide">
+                           <div class="product-wrap mb-0">
+                              <div class="position-relative">
+                                 <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                       src="images/product-img-10.png" alt="image"
+                                       class="product-box-img radius-20"></a>
+                                 <div class="absolute-block">
+                                    <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                                    <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                                 </div>
+                              </div>
+                              <div class="product-box-content radius-20">
+                                 <h4>Biozyme Performance Whey 2 kg & Creatin </h4>
+                                 <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                 </div>
+                                 <div class="d-flex">
+                                    <div class="price_rate">
+                                       <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                       </div>
+                                    </div>
+                                    <span class="ofr-disc">-40%</span>
+                                 </div>
+                                 <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                          alt="icon"></i></a>
+                                 <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                          alt="icon"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- End -->
+
+                        <!--Product 3 -->
+                        <div class="swiper-slide">
+                           <div class="product-wrap mb-0">
+                              <div class="position-relative">
+                                 <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                       src="images/product-img-11.png" alt="image"
+                                       class="product-box-img radius-20"></a>
+                                 <div class="absolute-block">
+                                    <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                                    <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                                 </div>
+                              </div>
+                              <div class="product-box-content radius-20">
+                                 <h4>MuscleBlaze High Protein Oats 2 kg & Peanut </h4>
+                                 <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                 </div>
+                                 <div class="d-flex">
+                                    <div class="price_rate">
+                                       <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                       </div>
+                                    </div>
+                                    <span class="ofr-disc">-40%</span>
+                                 </div>
+                                 <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                          alt="icon"></i></a>
+                                 <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                          alt="icon"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- End -->
+
+                        <!--Product 4 -->
+                        <div class="swiper-slide">
+                           <div class="product-wrap mb-0">
+                              <div class="position-relative">
+                                 <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                       src="images/product-img-12.png" alt="image"
+                                       class="product-box-img radius-20"></a>
+                                 <div class="absolute-block">
+                                    <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                                    <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                                 </div>
+                              </div>
+                              <div class="product-box-content radius-20">
+                                 <h4>MuscleBlaze Creatine Monohydrate CreAM </h4>
+                                 <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                 </div>
+                                 <div class="d-flex">
+                                    <div class="price_rate">
+                                       <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                       </div>
+                                    </div>
+                                    <span class="ofr-disc">-40%</span>
+                                 </div>
+                                 <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                          alt="icon"></i></a>
+                                 <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                          alt="icon"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- End -->
+
+                        <!--Product loop -->
+                        <div class="swiper-slide">
+                           <div class="product-wrap mb-0">
+                              <div class="position-relative">
+                                 <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                       src="images/product-img-09.png" alt="image"
+                                       class="product-box-img radius-20"></a>
+                                 <div class="absolute-block">
+                                    <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                                    <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                                 </div>
+                              </div>
+                              <div class="product-box-content radius-20">
+                                 <h4>MuscleBlaze Fish Oil & MB-VITE Daily Multivi </h4>
+                                 <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                 </div>
+                                 <div class="d-flex">
+                                    <div class="price_rate">
+                                       <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                       </div>
+                                    </div>
+                                    <span class="ofr-disc">-40%</span>
+                                 </div>
+                                 <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                          alt="icon"></i></a>
+                                 <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                          alt="icon"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- End -->
+
+
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <div class="advt-banner-2 d-flex">
+      <div class="col"><a href="product.html"><img src="images/advt-banner-02.png" alt="image" class="w-100"></a></div>
+      <div class="col"><a href="product.html"><img src="images/advt-banner-03.png" alt="image" class="w-100"></a></div>
+   </div>
+
+   <section class="popular-products-4 custompad wow animate__fadeIn" data-wow-duration="2s">
+      <div class="container">
+         <div class="title-wrap d-flex align-items-center  justify-content-between position-relative">
+            <h2 class="title mb-0">TOP SELLING BRANDS</h2>
+            <div class="arrow-space">
+               <!-- If we need navigation buttons -->
+               <div class="swiper-button-prev10"><img src="images/ar-left.png" alt="arrow"></div>
+               <div class="swiper-button-next10"><img src="images/ar-right.png" alt="arrow"></div>
+            </div>
+         </div>
+
+
+         <div class="swiper top_selling_slider c_margin">
+            <div class="swiper-wrapper">
+
+               <!--Product 1 -->
+               <div class="swiper-slide">
+                  <a href="#"><img src="images/top-selling-brands-01.png" alt="image" class="radius-20 w-100"></a>
+               </div>
+               <!-- End -->
+
+               <!--Product 2 -->
+               <div class="swiper-slide">
+                  <a href="#"><img src="images/top-selling-brands-02.png" alt="image" class="radius-20 w-100"></a>
+               </div>
+               <!-- End -->
+
+               <!--Product 3 -->
+               <div class="swiper-slide">
+                  <a href="#"><img src="images/top-selling-brands-03.png" alt="image" class="radius-20 w-100"></a>
+               </div>
+               <!-- End -->
+
+               <!--Product 4 -->
+               <div class="swiper-slide">
+                  <a href="#"><img src="images/top-selling-brands-04.png" alt="image" class="radius-20 w-100"></a>
+               </div>
+               <!-- End -->
+
+               <!--Product 5 -->
+               <div class="swiper-slide">
+                  <a href="#"><img src="images/top-selling-brands-01.png" alt="image" class="radius-20 w-100"></a>
+               </div>
+               <!-- End -->
+
+
+
+            </div>
+
+         </div>
+
+      </div>
+
+
+   </section>
+
+   <section class="popular-products-sec-5 pt-0 custompad wow animate__fadeIn" data-wow-duration="2s">
+      <div class="container">
+         <div class="title-wrap d-flex align-items-center  justify-content-between position-relative">
+            <h2 class="title mb-0">Trending in Fat Loss</h2>
+            <div class="arrow-space">
+               <!-- If we need navigation buttons -->
+               <div class="swiper-button-prev11"><img src="images/ar-left.png" alt="arrow"></div>
+               <div class="swiper-button-next11"><img src="images/ar-right.png" alt="arrow"></div>
+            </div>
+         </div>
+
+
+         <div class="swiper trending-slider c_margin">
+            <div class="swiper-wrapper">
+
+               <!--Product 1 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/trending-fat-loss-img-01.png" alt="image"
+                              class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>MuscleBlaze CLA 1000 Fat Burner Supplem </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 2 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/trending-fat-loss-img-02.png" alt="image"
+                              class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>MuscleTech Hydroxycut Hardcore Super Elit </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 3 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/trending-fat-loss-img-03.png" alt="image"
+                              class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>GNC Pro Performance Thermo Burst Hardco </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 4 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/trending-fat-loss-img-04.png" alt="image"
+                              class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>MuscleBlaze Biozyme Shred, 90 tablet(s) </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product loop -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/category-img-01.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>MuscleBlaze CLA 1000 Fat Burner Supplem </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+
+            </div>
+
+         </div>
+
+         <div class="title-wrap d-flex align-items-center  justify-content-between position-relative c_margin">
+            <h2 class="title mb-0">For Lean Muscle</h2>
+            <div class="arrow-space">
+               <!-- If we need navigation buttons -->
+               <div class="swiper-button-prev12"><img src="images/ar-left.png" alt="arrow"></div>
+               <div class="swiper-button-next12"><img src="images/ar-right.png" alt="arrow"></div>
+            </div>
+         </div>
+
+         <div class="swiper lean-slider c_margin">
+            <div class="swiper-wrapper">
+
+               <!--Product 1 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/product-img-17.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>MuscleBlaze High Protein Peanut Butter, 1 kg </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 2 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/product-img-18.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>MuscleBlaze MB Fat Burner PRO, 60 tablet(s) </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 3 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/product-img-19.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>Wellversed (Wellcore) - Micron </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 4 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/product-img-20.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>Wellversed (Wellcore) - Micron </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product loop -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/product-img-16.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>MuscleBlaze High Protein Peanut Butter, 1 kg</h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+
+            </div>
+
+         </div>
+      </div>
+
+
+   </section>
+
+   <section class="popular-products-6 pt-0 custompad wow animate__fadeIn" data-wow-duration="2s">
+      <div class="container">
+         <div class="title-wrap d-flex align-items-center  justify-content-between position-relative">
+            <h2 class="title mb-0">Picks You Can't Miss</h2>
+            <div class="arrow-space">
+               <!-- If we need navigation buttons -->
+               <div class="swiper-button-prev13"><img src="images/ar-left.png" alt="arrow"></div>
+               <div class="swiper-button-next13"><img src="images/ar-right.png" alt="arrow"></div>
+            </div>
+         </div>
+
+
+         <div class="swiper you-cant-miss c_margin">
+            <div class="swiper-wrapper">
+
+               <!--Product 1 -->
+               <div class="swiper-slide">
+                  <a href="#"><img src="images/deals-img-01.png" alt="image" class="radius-20 w-100"></a>
+               </div>
+               <!-- End -->
+
+               <!--Product 2 -->
+               <div class="swiper-slide">
+                  <a href="#"><img src="images/deals-img-02.png" alt="image" class="radius-20 w-100"></a>
+               </div>
+               <!-- End -->
+
+               <!--Product 3 -->
+               <div class="swiper-slide">
+                  <a href="#"><img src="images/deals-img-03.png" alt="image" class="radius-20 w-100"></a>
+               </div>
+               <!-- End -->
+
+               <!--Product 4 -->
+               <div class="swiper-slide">
+                  <a href="#"><img src="images/deals-img-04.png" alt="image" class="radius-20 w-100"></a>
+               </div>
+               <!-- End -->
+
+               <!--Product 5 -->
+               <div class="swiper-slide">
+                  <a href="#"><img src="images/deals-img-01.png" alt="image" class="radius-20 w-100"></a>
+               </div>
+               <!-- End -->
+
+
+
+            </div>
+
+         </div>
+
+      </div>
+
+
+   </section>
+
+
+   <section class="popular-products-7 pt-0 custompad wow animate__fadeIn" data-wow-duration="2s">
+      <div class="container">
+         <div class="title-wrap d-flex align-items-center  justify-content-between position-relative">
+            <h2 class="title mb-0">Vitamins & Wellness Essentials</h2>
+            <div class="arrow-space">
+               <!-- If we need navigation buttons -->
+               <div class="swiper-button-prev14"><img src="images/ar-left.png" alt="arrow"></div>
+               <div class="swiper-button-next14"><img src="images/ar-right.png" alt="arrow"></div>
+            </div>
+         </div>
+
+
+         <div class="swiper product-slider-Z1 c_margin">
+            <div class="swiper-wrapper">
+
+               <!--Product 1 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/product-img-21.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>MuscleBlaze CLA 1000 Fat Burner Supplem </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 2 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/product-img-22.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>MuscleTech Hydroxycut Hardcore Super Elit </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 3 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/product-img-23.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>GNC Pro Performance Thermo Burst Hardco </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 4 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/product-img-24.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>MuscleBlaze Biozyme Shred, 90 tablet(s) </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product loop -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/product-img-21.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>MuscleBlaze CLA 1000 Fat Burner Supplem </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+
+            </div>
+
+         </div>
+
+         <div class="title-wrap d-flex align-items-center  justify-content-between position-relative c_margin">
+            <h2 class="title mb-0">Fit Food Range</h2>
+            <div class="arrow-space">
+               <!-- If we need navigation buttons -->
+               <div class="swiper-button-prev15"><img src="images/ar-left.png" alt="arrow"></div>
+               <div class="swiper-button-next15"><img src="images/ar-right.png" alt="arrow"></div>
+            </div>
+         </div>
+
+         <div class="swiper product-slider-Z2 c_margin">
+            <div class="swiper-wrapper">
+
+               <!--Product 1 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/product-img-25.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>MuscleBlaze High Protein Peanut Butter, 1 kg </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 2 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/product-img-26.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>MuscleBlaze MB Fat Burner PRO, 60 tablet(s) </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 3 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/product-img-27.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>Wellversed (Wellcore) - Micron </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 4 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/product-img-28.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>Wellversed (Wellcore) - Micron </h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product loop -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                              src="images/product-img-26.png" alt="image" class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>MuscleBlaze High Protein Peanut Butter, 1 kg</h4>
+                        <div class="stars">
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star"></i>
+                           <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+
+            </div>
+
+         </div>
+      </div>
+
+
+   </section>
+
+   <section class="popular-products-8 custompad pt-0 wow animate__fadeIn" data-wow-duration="2s">
+      <div class="container">
+         <div class="title-wrap d-flex align-items-center  justify-content-between position-relative">
+            <h2 class="title mb-0">Why Choose Us</h2>
+            <div class="arrow-space">
+               <!-- If we need navigation buttons -->
+               <div class="swiper-button-prev16"><img src="images/ar-left.png" alt="arrow"></div>
+               <div class="swiper-button-next16"><img src="images/ar-right.png" alt="arrow"></div>
+            </div>
+         </div>
+
+
+         <div class="swiper ThreeGridSlider1 c_margin">
+            <div class="swiper-wrapper">
+
+               <!--Product 1 -->
+               <div class="swiper-slide">
+                  <a href="#"><img src="images/why-choose-us-img-01.png" alt="image" class="radius-20 w-100"></a>
+               </div>
+               <!-- End -->
+
+               <!--Product 2 -->
+               <div class="swiper-slide">
+                  <a href="#"><img src="images/why-choose-us-img-02.png" alt="image" class="radius-20 w-100"></a>
+               </div>
+               <!-- End -->
+
+               <!--Product 3 -->
+               <div class="swiper-slide">
+                  <a href="#"><img src="images/why-choose-us-img-03.png" alt="image" class="radius-20 w-100"></a>
+               </div>
+               <!-- End -->
+
+               <!--Product 4 -->
+               <div class="swiper-slide">
+                  <a href="#"><img src="images/why-choose-us-img-01.png" alt="image" class="radius-20 w-100"></a>
+               </div>
+               <!-- End -->
+
+               <!--Product 5 -->
+               <div class="swiper-slide">
+                  <a href="#"><img src="images/why-choose-us-img-02.png" alt="image" class="radius-20 w-100"></a>
+               </div>
+               <!-- End -->
+
+
+
+            </div>
+
+         </div>
+
+      </div>
+
+
+   </section>
+
+   <div class="customer-love-us custompad">
+      <div class="container">
+         <div class="title-wrap d-flex align-items-center  justify-content-between position-relative">
+            <h2 class="title mb-0">customer love us</h2>
+            <div class="arrow-space">
+               <!-- If we need navigation buttons -->
+               <div class="swiper-button-prev17"><img src="images/ar-left.png" alt="arrow"></div>
+               <div class="swiper-button-next17"><img src="images/ar-right.png" alt="arrow"></div>
+            </div>
+         </div>
+
+         <div class="swiper ReviewSlider c_margin">
+            <div class="swiper-wrapper">
+
+               <!--Product 1 -->
+               <div class="swiper-slide">
+                  <div class="customer-box">
+                     <div>
+                        <div class="stars mb-1">
+
+                           <!-- Example: 4.5 stars -->
+                           <i class="fa-solid fa-star"></i>
+                           <i class="fa-solid fa-star"></i>
+                           <i class="fa-solid fa-star"></i>
+                           <i class="fa-solid fa-star"></i>
+                           <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h4>Great service</h4>
+                        <p>Great service, great products and well priced. Only quality supplements and has such a great
+                           range. Everything in one place.</p>
+                     </div>
+                     <div class="d-flex justify-content-between align-items-end">
+                        <h5 class="one-line">Derrick W</h5>
+                        <img src="images/review-product.png" alt="image" class="prdt-thumb">
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 2 -->
+               <div class="swiper-slide">
+                  <div class="customer-box">
+                     <div>
+                        <div class="stars mb-1">
+
+                           <!-- Example: 4.5 stars -->
+                           <i class="fa-solid fa-star"></i>
+                           <i class="fa-solid fa-star"></i>
+                           <i class="fa-solid fa-star"></i>
+                           <i class="fa-solid fa-star-half-stroke"></i>
+                           <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <h4>Great service</h4>
+                        <p>Great service, great products and well priced. Only quality supplements and has such a great
+                           range. Everything in one place.</p>
+                     </div>
+                     <div class="d-flex justify-content-between align-items-end">
+                        <h5 class="one-line">Derrick W</h5>
+                        <img src="images/review-product.png" alt="image" class="prdt-thumb">
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 3 -->
+               <div class="swiper-slide">
+                  <div class="customer-box">
+                     <div>
+                        <div class="stars mb-1">
+
+                           <!-- Example: 4.5 stars -->
+                           <i class="fa-solid fa-star"></i>
+                           <i class="fa-solid fa-star"></i>
+                           <i class="fa-solid fa-star"></i>
+                           <i class="fa-solid fa-star"></i>
+                           <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <h4>Great service</h4>
+                        <p>Great service, great products and well priced. Only quality supplements and has such a great
+                           range. Everything in one place.</p>
+                     </div>
+                     <div class="d-flex justify-content-between align-items-end">
+                        <h5 class="one-line">Derrick W</h5>
+                        <img src="images/review-product.png" alt="image" class="prdt-thumb">
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 4 -->
+               <div class="swiper-slide">
+                  <div class="customer-box">
+                     <div>
+                        <div class="stars mb-1">
+
+                           <!-- Example: 4.5 stars -->
+                           <i class="fa-solid fa-star"></i>
+                           <i class="fa-solid fa-star"></i>
+                           <i class="fa-solid fa-star"></i>
+                           <i class="fa-solid fa-star-half-stroke"></i>
+                           <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <h4 class="one-line">Great service</h4>
+                        <p>Great service, great products and well priced. Only quality supplements and has such a great
+                           range. Everything in one place.</p>
+                     </div>
+                     <div class="d-flex justify-content-between align-items-end">
+                        <h5>Derrick W</h5>
+                        <img src="images/review-product.png" alt="image" class="prdt-thumb">
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 5 -->
+               <div class="swiper-slide">
+                  <div class="customer-box">
+                     <div>
+                        <div class="stars mb-1">
+
+                           <!-- Example: 4.5 stars -->
+                           <i class="fa-solid fa-star"></i>
+                           <i class="fa-solid fa-star"></i>
+                           <i class="fa-solid fa-star-half-stroke"></i>
+                           <i class="fa-solid fa-star-half-stroke"></i>
+                           <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <h4 class="clamp">Great service</h4>
+                        <p>Great service, great products and well priced. Only quality supplements and has such a great
+                           range. Everything in one place.</p>
+                     </div>
+                     <div class="d-flex justify-content-between align-items-end">
+                        <h5>Derrick W</h5>
+                        <img src="images/review-product.png" alt="image" class="prdt-thumb">
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+
+
+            </div>
+
+         </div>
+
+      </div>
+   </div>
+
+   <footer class="footer">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-4">
+               <div class="footer-col col1">
+                  <img src="images/footer-logo.png" alt="footer-logo" class="footer-logo">
+                  <p>It’s More Than Just Supplements
+                     It’s a Commitment to Your Best Self.</p>
+                  <ul class="social-links">
+                     <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                     <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                     <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-md-4 col-6">
+               <div class="footer-col col2">
+                  <ul class="links">
+                     <li><a href="about.html"><i class="me-1"><img src="images/ic-xs-01.png" alt="icon"></i>About Us</a>
+                     </li>
+                     <li><a href="terms-condition.html"><i class="me-1"><img src="images/ic-xs-01.png"
+                                 alt="icon"></i>Terms and
+                           Conditions</a></li>
+                     <li><a href="privacy-policy.html"><i class="me-1"><img src="images/ic-xs-01.png"
+                                 alt="icon"></i>privacy policy</a>
+                     </li>
+                     <li><a href="return-policy.html"><i class="me-1"><img src="images/ic-xs-01.png"
+                                 alt="icon"></i>Return policy</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-md-4 col-6 d-flex justify-content-end">
+               <div class="footer-col col3">
+                  <label>Address:</label>
+                  <p>The Malabar Chamber of Commerce, Thayatheru Rd, Caltex, Kannur</p>
+                  <label>Phone:</label>
+                  <p><a href="tel:+919895202021">+91 9895202021</a></p>
+                  <label>Address:</label>
+                  <a href="mailto:info@spicenutrition.com">info@spicenutrition.com</a>
+               </div>
+            </div>
+         </div>
+         <p class="copy-rite">© 2025 spicenutrition.com All rights reserved</p>
+      </div>
+   </footer>
+
+
+
+   <!-- Optional JavaScript -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+   <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   <script src="js/wow.js"></script>
+   <script src="js/page.js"></script>
+   <script src="js/swiper-call.js"></script>
+
+   <script>
+      
+const dropdown = document.getElementById('languageDropdown');
+  const toggle = dropdown.querySelector('.dropdown-toggle');
+  const menu2 = dropdown.querySelector('.dropdown-menu');
+
+  toggle.addEventListener('click', () => {
+    menu2.style.display = menu2.style.display === 'block' ? 'none' : 'block';
+  });
+
+  dropdown.querySelectorAll('.option').forEach(option => {
+    option.addEventListener('click', () => {
+      toggle.querySelector('img').src = option.querySelector('img').src;
+      toggle.querySelector('span').innerText = option.querySelector('span').innerText;
+      menu2.style.display = 'none';
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!dropdown.contains(e.target)) {
+      menu2.style.display = 'none';
+    }
+  });
+   </script>
+
+   <script>
+      $(document).ready(function () {
+         $(".heart-icon").on("click", function (e) {
+            e.preventDefault();
+
+            $(this).toggleClass("clicked animated");
+
+            // Remove animation class after animation ends
+            setTimeout(() => {
+               $(this).removeClass("animated");
+            }, 300);
+         });
+      });
+   </script>
+
+
+
+   <script>
+      const placementSwiper = new Swiper(".placementSwiper", {
+         slidesPerView: 1.5,
+         centeredSlides: true,
+         loop: true,
+         speed: 800,
+         grabCursor: true,
+         spaceBetween: 10,
+         navigation: {
+            nextEl: ".swiper-button-next6",
+            prevEl: ".swiper-button-prev6",
+         },
+         breakpoints: {
+            768: { slidesPerView: 3, spaceBetween: 10, },
+            992: { slidesPerView: 5, spaceBetween: 10, }
+         },
+         on: {
+            init: function () { toggleControls(this); },
+            slideChangeTransitionEnd: function () { toggleControls(this); }
+         }
+      });
+
+      function toggleControls(swiper) {
+         // hide controls on all video elements inside this swiper
+         const videos = swiper.el.querySelectorAll('video');
+         videos.forEach(v => {
+            v.controls = false;
+            // optionally pause other videos
+            // v.pause();
+         });
+
+         // get current active slide DOM element (works with loop/cloned slides)
+         const activeSlide = swiper.slides[swiper.activeIndex];
+         if (!activeSlide) return;
+
+         const activeVideo = activeSlide.querySelector('video');
+         if (activeVideo) {
+            activeVideo.controls = true;
+
+            // OPTIONAL: autoplay the active video (works only if muted; catches errors)
+            // activeVideo.play().catch(()=>{ /* autoplay blocked by browser */ });
+         }
+      }
+   </script>
+</body>
+
+
+</html>

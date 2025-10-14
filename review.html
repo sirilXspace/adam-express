@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>Spice Nutrition</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="images/favicon.png">
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+   <link href="css/home-style.css" rel="stylesheet">
+   <link href="css/home-responsive.css" rel="stylesheet">
+   <link href="css/menu.css" rel="stylesheet">
+   <link href="css/font/font.css" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+   <!-- Login -->
+   <div class="modal fade logreg-modal" id="loginmodal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="d-flex justify-content-center mb-4">
+               <button type="button" class="c_close c_custom" data-bs-dismiss="modal" aria-label="Close"><i><img
+                        src="images/close-btn2.png" alt="icon"></i></button>
+               <img src="images/logo-white.png" alt="logo" class="mt-5 logoinmodal">
+            </div>
+            <div class="modal-body">
+               <div class="login-box">
+                  <h2 class="text-white">Login Or Sign-Up</h2>
+                  <p>Login to access your Spice Nutrition account</p>
+
+                  <form>
+                     <div class="mb-3 text-start">
+                        <label class="form-label text-white">Whatsapp Number</label>
+                        <input type="text" class="form-control" placeholder="9847123547">
+                     </div>
+                     <button type="submit" class="btn btn-login" data-bs-toggle="modal"
+                        data-bs-target="#otpmodal">Login</button>
+                  </form>
+
+                  <div class="divider"><span>Or login with</span></div>
+
+                  <div class="social-login">
+                     <a href="#"><img src="images/gplus.png" width="24" alt="icon"></a>
+                     <a href="#"><img src="images/mail-ic.png" width="24" alt="icon"></a>
+                  </div>
+                   <p class="not-send text-center mt-3">No Registered Click here to <a href="" class="theme-color" data-bs-toggle="modal"
+                        data-bs-target="#registermodal">Register</a>
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </div>
+
+
+   <!-- OTP -->
+   <div class="modal fade logreg-modal" id="otpmodal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="d-flex justify-content-center mb-4">
+               <button type="button" class="c_close c_custom" data-bs-dismiss="modal" aria-label="Close"><i><img
+                        src="images/close-btn2.png" alt="icon"></i></button>
+               <img src="images/logo-white.png" alt="logo" class="mt-5 logoinmodal">
+            </div>
+            <div class="modal-body">
+               <div class="login-box">
+                  <p><a data-bs-toggle="modal" data-bs-target="#loginmodal"><i
+                           class="fa-solid fa-chevron-left me-2"></i>Back to Login</a></p>
+                  <h2 class="text-white">Verify code</h2>
+                  <p>An authentication code has been sent to +91 9842715341</p>
+
+                  <form>
+                     <div class="mb-3 text-start">
+                        <label class="form-label text-white">Enter Code</label>
+                        <input type="text" class="form-control" placeholder="4571">
+                     </div>
+                     <p class="not-send text-end">Didn’t receive a code?
+                        <a href="" class="theme-color">Resend</a>
+                     </p>
+                     <button type="submit" class="btn btn-login">Verify</button>
+                  </form>
+
+
+
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </div>
+
+
+   <!-- Register -->
+   <div class="modal fade logreg-modal" id="registermodal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="d-flex justify-content-center mb-4">
+               <button type="button" class="c_close c_custom" data-bs-dismiss="modal" aria-label="Close"><i><img
+                        src="images/close-btn2.png" alt="icon"></i></button>
+               <img src="images/logo-white.png" alt="logo" class="mt-5 logoinmodal">
+            </div>
+            <div class="modal-body">
+               <div class="login-box mt-3">
+                  <h2 class="text-white">Fill the Details</h2>
+                  <p>Fill in your information so we can get in touch with you and serve you better.</p>
+
+                  <form>
+                     <div class="mb-3 text-start">
+                        <label class="form-label text-white">Full Name</label>
+                        <input type="text" class="form-control" placeholder="John Doe">
+                     </div>
+                      <div class="mb-3 text-start">
+                        <label class="form-label text-white">Email Address</label>
+                        <input type="text" class="form-control" placeholder="john.doe@gmail.com">
+                     </div>
+                      <div class="mb-3 text-start">
+                        <label class="form-label text-white">Date of Birth</label>
+                        <input type="text" class="form-control" placeholder="select date" id="datepicker2">
+                     </div>
+                      <div class="mb-3 text-start">
+                        <label class="form-label text-white">Referral Code</label>
+                        <input type="text" class="form-control" placeholder="SN12345">
+                     </div>
+                     <button type="submit" class="btn btn-login">CONTINUE</button>
+                  </form>
+
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </div>
+   
+   <a href="javascript:" id="return-to-top"><i class="fas fa-angle-up pulse"></i></a>
+
+   <header class="header inner-header">
+      <div class="container">
+         <div class="inner-wrap">
+            <div class="d-flex  align-items-center justify-content-between">
+               <div class="logo">
+                  <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+               </div>
+               <div class="header-item">
+                  <div class="menu-overlay"></div>
+                  <nav class="menu">
+                     <div class="mobile-menu-head">
+                        <div class="go-back"><i class="fa fa-angle-left"></i></div>
+                        <a class="current-menu-title" href="#"></a>
+                        <div class="mobile-menu-close"><i><img src="images/close.png" alt="icon"></i></div>
+                     </div>
+                     <ul class="menu-main">
+
+                        <li><a href="index.html">Home</a></li>
+                        <li class="menu-item-has-children">
+                           <a href="product.html" class="d-none d-xl-block">Shop<i class="fa fa-angle-down"></i></a>
+                           <a href="#" class="d-xl-none d-block">Shop<i class="fa fa-angle-down"></i></a>
+                           <div class="sub-menu mega-menu mega-menu-column-4">
+                              <div class="list-item">
+                                 <h4 class="title">Protein & Nutrition</h4>
+                                 <ul>
+                                    <li><a href="product.html">Whey Protein</a></li>
+                                    <li><a href="product.html">Plant Protein</a></li>
+                                    <li><a href="product.html">Mass Gainers</a></li>
+                                    <li><a href="product.html">Creatine</a></li>
+                                    <li><a href="product.html">BCAAs & EAAs</a></li>
+                                 </ul>
+                              </div>
+                              <div class="list-item">
+                                 <h4 class="title">Vitamins & Wellness</h4>
+                                 <ul>
+                                    <li><a href="product.html">Multivitamins</a></li>
+                                    <li><a href="product.html">Omega & Fish Oil</a></li>
+                                    <li><a href="product.html">Immunity Boosters</a></li>
+                                    <li><a href="product.html">Joint Support</a></li>
+                                    <li><a href="product.html">Greens & Superfoods</a></li>
+                                 </ul>
+                              </div>
+                              <div class="list-item">
+                                 <h4 class="title">Performance & Energy</h4>
+                                 <ul>
+                                    <li><a href="product.html">Pre-Workout</a></li>
+                                    <li><a href="product.html">Intra-Workout</a></li>
+                                    <li><a href="product.html">Post-Workout</a></li>
+                                    <li><a href="product.html">Energy Drinks</a></li>
+                                    <li><a href="product.html">Nitric Oxide Boosters</a></li>
+                                 </ul>
+                              </div>
+                              <div class="list-item">
+                                 <h4 class="title">Fitness Essentials</h4>
+                                 <ul>
+                                    <li><a href="product.html">Protein Bars & Snacks</a></li>
+                                    <li><a href="product.html">Shakers & Bottles</a></li>
+                                    <li><a href="product.html">Gym Accessories</a></li>
+                                    <li><a href="product.html">Meal Replacements</a></li>
+                                    <li><a href="product.html">Fat Burners</a></li>
+                                 </ul>
+                              </div>
+                           </div>
+
+                        </li>
+
+
+                        <li class="menu-item-has-children">
+                           <a href="#" class="d-none d-xl-block">Brands<i class="fa fa-angle-down"></i></a>
+                           <a href="#" class="d-xl-none d-block">Brands<i class="fa fa-angle-down"></i></a>
+
+                           <div class="sub-menu">
+                              <div class="list-item">
+                                 <ul>
+                                    <li><a href="#">Brands 01</a></li>
+                                    <li><a href="#">Brands 02</a></li>
+                                    <li><a href="#">Brands 03</a></li>
+                                    <li><a href="#">Brands 04</a></li>
+                                    <li><a href="#">Brands 05</a></li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </li>
+                        <li><a href="blog.html">Blogs</a></li>
+
+
+                     </ul>
+                  </nav>
+               </div>
+               <div class="right-blk d-flex">
+                  <div class="search-dropdown me-2">
+                     <form class="d-flex">
+                        <div class="input-group position-relative">
+                           <input type="text" class="form_fi" placeholder="Search" aria-label="Search">
+                           <button class="btn-search" type="submit">
+                              <i><img src="images/search.svg" alt="search" class="fa-search"></i>
+                           </button>
+                        </div>
+                     </form>
+                  </div>
+                  <ul>
+                     <li><a href="wishlist.html"><img src="images/heart.svg" alt="image"></a></li>
+                     <li><a href="my-account-wallet-point.html"><img src="images/wallet2.svg" alt="image"></a></li>
+                     <li><a href="cart.html" class="custom_ic"><span class="cartCout">0</span><img src="images/cart.svg"
+                              alt="image"></a></li>
+                     <li><a href="#" data-bs-toggle="modal" data-bs-target="#loginmodal"><img src="images/person.svg"
+                              alt="image"></a></li>
+                  </ul>
+                  <div class="mobile-menu-trigger">
+                     <span></span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+
+   <div class="search-dropdown2" style="display: none;">
+      <form class="d-flex">
+         <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" aria-label="Search">
+            <button class="btn btn-dark" type="submit">
+               <i class="search-icon2"><img src="images/search-white.svg" alt="search"></i>
+            </button>
+         </div>
+      </form>
+   </div>
+
+   <!-- Mobile Only -->
+   <div class="bottom-fixed">
+      <ul>
+         <li><a class="active" data-bs-toggle="modal" data-bs-target="#loginmodal"><img src="images/profile_IC.svg"
+                  alt="image"></a></li>
+         <li><a href="javascript:void(0)" class="search-btn search-icon"><img src="images/search_IC.svg"
+                  alt="Search Icon"></a></li>
+         <li><a href="wishlist.html"><img src="images/wishlist_IC.svg" alt="image"></a></li>
+         <li><a href="my-account-wallet-point.html"><img src="images/wallet2.svg" alt="image"></a></li>
+         <li><a href="cart.html" class="custom_ic"><img src="images/bag_IC.svg" alt="image"><span class="cartCout">0</span></a>
+         </li>
+      </ul>
+   </div>
+
+
+   <div class="bread-crumb-wrap">
+      <div class="container">
+         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+               <li class="breadcrumb-item"><a href="#">Home</a></li>
+               <li class="breadcrumb-item"><a href="#">Proteins</a></li>
+               <li class="breadcrumb-item"><a href="#">Whey Proteins</a></li>
+               <li class="breadcrumb-item"><a href="#">MuscleBlaze Biozyme Performance Whey</a></li>
+               <li class="breadcrumb-item active" aria-current="page">All Reviews</li>
+            </ol>
+         </nav>
+      </div>
+   </div>
+
+
+   <div class="review-page">
+      <div class="container">
+         <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
+            <h1 class="mb-0 fw-30">RATINGS & REVIEW</h1>
+            <div class="select-flavor d-flex align-items-center">
+               <label class="me-2 mb-0">Select flavor:</label>
+               <select class="form-select" aria-label="Default select example">
+                  <option selected>All</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+               </select>
+            </div>
+         </div>
+
+         <div class="row rating-delivery-block mb-4">
+            <div class="col-md-3">
+               <div class="product-wrap mb-0">
+                  <div class="position-relative">
+                     <a href="product-details.html" class="mb-3 product-box-img-wrap"><img src="images/product-img-04.png" alt="image"
+                           class="product-box-img radius-20"></a>
+                  </div>
+                  <div class="product-box-content radius-20">
+                     <h4 title="Wellcore - Pure Micronised Creatine Monohydrate">Wellcore - Pure Micronised Creatine Monohy </h4>
+                     <div class="d-flex">
+                        <div class="price_rate">
+                           <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                           </div>
+                        </div>
+                        <span class="ofr-disc">-40%</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="col-md-9">
+               <div class="ratings-container">
+
+                  <!-- Rating Summary -->
+                  <div class="rating-summary">
+                     <p>Customer Reviews</p>
+                     <h2>4.5/5</h2>
+                     <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <div class="text-rating">Based on 11,008 customer ratings</div>
+                  </div>
+
+                  <!-- Rating Bars -->
+                  <div class="rating-bars">
+                     <div class="rating-bar">
+                        <div class="star-level">5 <span class="star active" data-value="1">&#9733;</span></div>
+                        <div class="progress">
+                           <div class="progress-bar" role="progressbar" style="width: 44%;" aria-valuenow="44"
+                              aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="percentage">44%</div>
+                     </div>
+                     <div class="rating-bar">
+                        <div class="star-level">4 <span class="star active" data-value="1">&#9733;</span></div>
+                        <div class="progress">
+                           <div class="progress-bar" role="progressbar" style="width: 21%;" aria-valuenow="21"
+                              aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="percentage">21%</div>
+                     </div>
+                     <div class="rating-bar">
+                        <div class="star-level">3 <span class="star active" data-value="1">&#9733;</span></div>
+                        <div class="progress">
+                           <div class="progress-bar" role="progressbar" style="width: 13%;" aria-valuenow="13"
+                              aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="percentage">13%</div>
+                     </div>
+                     <div class="rating-bar">
+                        <div class="star-level">2 <span class="star active" data-value="1">&#9733;</span></div>
+                        <div class="progress">
+                           <div class="progress-bar" role="progressbar" style="width: 6%;" aria-valuenow="6"
+                              aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="percentage">6%</div>
+                     </div>
+                     <div class="rating-bar">
+                        <div class="star-level">1 <span class="star active" data-value="1">&#9733;</span></div>
+                        <div class="progress">
+                           <div class="progress-bar" role="progressbar" style="width: 14%;" aria-valuenow="14"
+                              aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="percentage">14%</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+      </div>
+
+
+
+      <div class="empty-space"></div>
+
+      <div class="all-flavors">
+         <div class="container">
+            <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
+               <h2 class="mb-0">All Flavour (1,243 reviews)</h2>
+               <div class="select-flavor d-flex justify-content-sm-end">
+                  <select class="form-select" aria-label="Default select example">
+                     <option selected>Most Recent</option>
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                  </select>
+               </div>
+            </div>
+            <div class="row">
+               <div class="review-wrap">
+               <div class="posted-by mb-3">
+                  <div class="d-flex justify-content-between">
+                     <h4><i><img src="images/user_ic.png" alt="user_ic"></i>Sooryakiran <span
+                           class="rating_date ms-1"><i class="fa-solid fa-circle me-1"></i>
+                           13 July 2024</span>
+                     </h4>
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                     <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <span class="ms-2">8.8 lb Rich Chocolate</span>
+                  </div>
+                  <h5>Best whey protein available in market</h5>
+                  <p>I think it is smoother than other ones in the market ones. I think the company is using
+                     better because they are new in the market. We should take advantage of that and buy such
+                     products at the right price as well. My experience is amazing so far and I do not have
+                     any complaints at all.</p>
+                  <hr>
+               </div>
+
+               <div class="posted-by mb-3">
+                  <div class="d-flex justify-content-between">
+                     <h4><i><img src="images/user_ic.png" alt="user_ic"></i>Roger Franci <span
+                           class="rating_date ms-1"><i class="fa-solid fa-circle me-1"></i>
+                           13 July 2024</span>
+                     </h4>
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                     <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <span class="ms-2">8.8 lb Rich Chocolate</span>
+                  </div>
+                  <h5>Best whey protein available in market</h5>
+                  <p>I think it is smoother than other ones in the market ones. I think the company is using
+                     better because they are new in the market. We should take advantage of that and buy such
+                     products at the right price as well. My experience is amazing so far and I do not have
+                     any complaints at all.</p>
+                  <hr>
+               </div>
+
+               <div class="posted-by mb-3">
+                  <div class="d-flex justify-content-between">
+                     <h4><i><img src="images/user_ic.png" alt="user_ic"></i>Zain George <span
+                           class="rating_date ms-1"><i class="fa-solid fa-circle me-1"></i>
+                           13 July 2024</span>
+                     </h4>
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                     <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <span class="ms-2">8.8 lb Rich Chocolate</span>
+                  </div>
+                  <h5>Best whey protein available in market</h5>
+                  <p>I think it is smoother than other ones in the market ones. I think the company is using
+                     better because they are new in the market. We should take advantage of that and buy such
+                     products at the right price as well. My experience is amazing so far and I do not have
+                     any complaints at all.</p>
+                  <hr>
+               </div>
+
+               <div class="posted-by mb-3">
+                  <div class="d-flex justify-content-between">
+                     <h4><i><img src="images/user_ic.png" alt="user_ic"></i>Jakob Franci <span
+                           class="rating_date ms-1"><i class="fa-solid fa-circle me-1"></i>
+                           13 July 2024</span>
+                     </h4>
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                     <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <span class="ms-2">8.8 lb Rich Chocolate</span>
+                  </div>
+                  <h5>Best whey protein available in market</h5>
+                  <p>I think it is smoother than other ones in the market ones. I think the company is using
+                     better because they are new in the market. We should take advantage of that and buy such
+                     products at the right price as well. My experience is amazing so far and I do not have
+                     any complaints at all.</p>
+                  <hr>
+               </div>
+
+               <div class="posted-by mb-3">
+                  <div class="d-flex justify-content-between">
+                     <h4><i><img src="images/user_ic.png" alt="user_ic"></i>Leo Press <span
+                           class="rating_date ms-1"><i class="fa-solid fa-circle me-1"></i>
+                           13 July 2024</span>
+                     </h4>
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                     <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <span class="ms-2">Brandon Philips</span>
+                  </div>
+                  <h5>Best whey protein available in market</h5>
+                  <p>I think it is smoother than other ones in the market ones. I think the company is using
+                     better because they are new in the market. We should take advantage of that and buy such
+                     products at the right price as well. My experience is amazing so far and I do not have
+                     any complaints at all.</p>
+                  <hr>
+               </div>
+
+               
+            </div>
+            <a href="#" class="load-more">Load more 1100 reviews<i class="fa-solid fa-arrow-right ms-3"></i></a>
+            </div>
+
+         </div>
+      </div>
+
+         <div class="empty-space"></div>
+
+   </div>
+
+<section class="popular-products-sec-3 custompad">
+      <div class="container">
+         <div class="title-wrap d-flex align-items-center  justify-content-between position-relative">
+            <h2 class="title mb-0">SIMILAR PRODUCTS</h2>
+            <div class="arrow-space">
+               <!-- If we need navigation buttons -->
+               <div class="swiper-button-prev8"><img src="images/ar-left.png" alt="arrow"></div>
+               <div class="swiper-button-next8"><img src="images/ar-right.png" alt="arrow"></div>
+            </div>
+         </div>
+
+
+         <div class="swiper gaining-zone-slider c_margin">
+            <div class="swiper-wrapper">
+
+               <!--Product 1 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img src="images/product-img-09.png" alt="image"
+                              class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>Nutrabay Pure Whey Protein Concentrate - 1 </h4>
+                        <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                     </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 2 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img src="images/product-img-10.png" alt="image"
+                              class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>Beta Alanine | Amino Acid Supplement </h4>
+                        <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                     </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 3 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img src="images/product-img-11.png" alt="image"
+                              class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>Nutrabay Pro Active Multivitamin for Men - 3 </h4>
+                        <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                     </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product 4 -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img src="images/product-img-12.png" alt="image"
+                              class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>MuscleBlaze BCAA Pro Essential Amino Acid... </h4>
+                        <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                     </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+               <!--Product loop -->
+               <div class="swiper-slide">
+                  <div class="product-wrap mb-0">
+                     <div class="position-relative">
+                        <a href="product-details.html" class="mb-3 product-box-img-wrap"><img src="images/product-img-09.png" alt="image"
+                              class="product-box-img radius-20"></a>
+                        <div class="absolute-block">
+                           <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                           <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                     </div>
+                     <div class="product-box-content radius-20">
+                        <h4>Nutrabay Pure Whey Protein Concentrate - 1 </h4>
+                       <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                     </div>
+                        <div class="d-flex">
+                           <div class="price_rate">
+                              <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                              </div>
+                           </div>
+                           <span class="ofr-disc">-40%</span>
+                        </div>
+                        <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                 alt="icon"></i></a>
+                        <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                 alt="icon"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End -->
+
+
+            </div>
+
+         </div>
+      </div>
+
+
+   </section>
+
+   <footer class="footer">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-4">
+               <div class="footer-col col1">
+                  <img src="images/footer-logo.png" alt="footer-logo" class="footer-logo">
+                  <p>It’s More Than Just Supplements
+                     It’s a Commitment to Your Best Self.</p>
+                  <ul class="social-links">
+                     <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                     <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                     <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-md-4 col-6">
+               <div class="footer-col col2">
+                 <ul class="links">
+                     <li><a href="about.html"><i class="me-1"><img src="images/ic-xs-01.png" alt="icon"></i>About Us</a></li>
+                     <li><a href="terms-condition.html"><i class="me-1"><img src="images/ic-xs-01.png" alt="icon"></i>Terms and
+                           Conditions</a></li>
+                     <li><a href="privacy-policy.html"><i class="me-1"><img src="images/ic-xs-01.png" alt="icon"></i>privacy policy</a>
+                     </li>
+                     <li><a href="return-policy.html"><i class="me-1"><img src="images/ic-xs-01.png" alt="icon"></i>Return policy</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-md-4 col-6 d-flex justify-content-end">
+               <div class="footer-col col3">
+                  <label>Address:</label>
+                  <p>The Malabar Chamber of Commerce, Thayatheru Rd, Caltex, Kannur</p>
+                  <label>Phone:</label>
+                  <p><a href="tel:+919895202021">+91 9895202021</a></p>
+                  <label>Address:</label>
+                  <a href="mailto:info@spicenutrition.com">info@spicenutrition.com</a>
+               </div>
+            </div>
+         </div>
+         <p class="copy-rite">© 2025 spicenutrition.com All rights reserved</p>
+      </div>
+   </footer>
+
+
+
+   <!-- Optional JavaScript -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+   <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   <script src="js/wow.js"></script>
+   <script src="js/page.js"></script>
+   <script src="js/swiper-call.js"></script>
+
+
+
+   <script>
+      $(document).ready(function () {
+         $(".heart-icon").on("click", function (e) {
+            e.preventDefault();
+
+            $(this).toggleClass("clicked animated");
+
+            // Remove animation class after animation ends
+            setTimeout(() => {
+               $(this).removeClass("animated");
+            }, 300);
+         });
+      });
+   </script>
+
+</body>
+
+
+</html>

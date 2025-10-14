@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>Spice Nutrition</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="images/favicon.png">
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+   <link href="css/home-style.css" rel="stylesheet">
+   <link href="css/home-responsive.css" rel="stylesheet">
+   <link href="css/menu.css" rel="stylesheet">
+   <link href="css/font/font.css" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+   <!-- Login -->
+   <div class="modal fade logreg-modal" id="loginmodal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="d-flex justify-content-center mb-4">
+               <button type="button" class="c_close c_custom" data-bs-dismiss="modal" aria-label="Close"><i><img
+                        src="images/close-btn2.png" alt="icon"></i></button>
+               <img src="images/logo-white.png" alt="logo" class="mt-5 logoinmodal">
+            </div>
+            <div class="modal-body">
+               <div class="login-box">
+                  <h2 class="text-white">Login Or Sign-Up</h2>
+                  <p>Login to access your Spice Nutrition account</p>
+
+                  <form>
+                     <div class="mb-3 text-start">
+                        <label class="form-label text-white">Whatsapp Number</label>
+                        <input type="text" class="form-control" placeholder="9847123547">
+                     </div>
+                     <button type="submit" class="btn btn-login" data-bs-toggle="modal"
+                        data-bs-target="#otpmodal">Login</button>
+                  </form>
+
+                  <div class="divider"><span>Or login with</span></div>
+
+                  <div class="social-login">
+                     <a href="#"><img src="images/gplus.png" width="24" alt="icon"></a>
+                     <a href="#"><img src="images/mail-ic.png" width="24" alt="icon"></a>
+                  </div>
+                  <p class="not-send text-center mt-3">No Registered Click here to <a href="" class="theme-color"
+                        data-bs-toggle="modal" data-bs-target="#registermodal">Register</a>
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </div>
+
+
+   <!-- OTP -->
+   <div class="modal fade logreg-modal" id="otpmodal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="d-flex justify-content-center mb-4">
+               <button type="button" class="c_close c_custom" data-bs-dismiss="modal" aria-label="Close"><i><img
+                        src="images/close-btn2.png" alt="icon"></i></button>
+               <img src="images/logo-white.png" alt="logo" class="mt-5 logoinmodal">
+            </div>
+            <div class="modal-body">
+               <div class="login-box">
+                  <p><a data-bs-toggle="modal" data-bs-target="#loginmodal"><i
+                           class="fa-solid fa-chevron-left me-2"></i>Back to Login</a></p>
+                  <h2 class="text-white">Verify code</h2>
+                  <p>An authentication code has been sent to +91 9842715341</p>
+
+                  <form>
+                     <div class="mb-3 text-start">
+                        <label class="form-label text-white">Enter Code</label>
+                        <input type="text" class="form-control" placeholder="4571">
+                     </div>
+                     <p class="not-send text-end">Didn’t receive a code?
+                        <a href="" class="theme-color">Resend</a>
+                     </p>
+                     <button type="submit" class="btn btn-login">Verify</button>
+                  </form>
+
+
+
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </div>
+
+
+   <!-- Register -->
+   <div class="modal fade logreg-modal" id="registermodal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="d-flex justify-content-center mb-4">
+               <button type="button" class="c_close c_custom" data-bs-dismiss="modal" aria-label="Close"><i><img
+                        src="images/close-btn2.png" alt="icon"></i></button>
+               <img src="images/logo-white.png" alt="logo" class="mt-5 logoinmodal">
+            </div>
+            <div class="modal-body">
+               <div class="login-box mt-3">
+                  <h2 class="text-white">Fill the Details</h2>
+                  <p>Fill in your information so we can get in touch with you and serve you better.</p>
+
+                  <form>
+                     <div class="mb-3 text-start">
+                        <label class="form-label text-white">Full Name</label>
+                        <input type="text" class="form-control" placeholder="John Doe">
+                     </div>
+                     <div class="mb-3 text-start">
+                        <label class="form-label text-white">Email Address</label>
+                        <input type="text" class="form-control" placeholder="john.doe@gmail.com">
+                     </div>
+                     <div class="mb-3 text-start">
+                        <label class="form-label text-white">Date of Birth</label>
+                        <input type="text" class="form-control" placeholder="select date" id="datepicker2">
+                     </div>
+                     <div class="mb-3 text-start">
+                        <label class="form-label text-white">Referral Code</label>
+                        <input type="text" class="form-control" placeholder="SN12345">
+                     </div>
+                     <button type="submit" class="btn btn-login">CONTINUE</button>
+                  </form>
+
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </div>
+
+   <a href="javascript:" id="return-to-top"><i class="fas fa-angle-up pulse"></i></a>
+
+   <header class="header inner-header">
+      <div class="container">
+         <div class="inner-wrap">
+            <div class="d-flex  align-items-center justify-content-between">
+               <div class="logo">
+                  <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+               </div>
+               <div class="header-item">
+                  <div class="menu-overlay"></div>
+                  <nav class="menu">
+                     <div class="mobile-menu-head">
+                        <div class="go-back"><i class="fa fa-angle-left"></i></div>
+                        <a class="current-menu-title" href="#"></a>
+                        <div class="mobile-menu-close"><i><img src="images/close.png" alt="icon"></i></div>
+                     </div>
+                     <ul class="menu-main">
+
+                        <li><a href="index.html">Home</a></li>
+                        <li class="menu-item-has-children">
+                           <a href="product.html" class="d-none d-xl-block">Shop<i class="fa fa-angle-down"></i></a>
+                           <a href="#" class="d-xl-none d-block">Shop<i class="fa fa-angle-down"></i></a>
+                           <div class="sub-menu mega-menu mega-menu-column-4">
+                              <div class="list-item">
+                                 <h4 class="title">Protein & Nutrition</h4>
+                                 <ul>
+                                    <li><a href="product.html">Whey Protein</a></li>
+                                    <li><a href="product.html">Plant Protein</a></li>
+                                    <li><a href="product.html">Mass Gainers</a></li>
+                                    <li><a href="product.html">Creatine</a></li>
+                                    <li><a href="product.html">BCAAs & EAAs</a></li>
+                                 </ul>
+                              </div>
+                              <div class="list-item">
+                                 <h4 class="title">Vitamins & Wellness</h4>
+                                 <ul>
+                                    <li><a href="product.html">Multivitamins</a></li>
+                                    <li><a href="product.html">Omega & Fish Oil</a></li>
+                                    <li><a href="product.html">Immunity Boosters</a></li>
+                                    <li><a href="product.html">Joint Support</a></li>
+                                    <li><a href="product.html">Greens & Superfoods</a></li>
+                                 </ul>
+                              </div>
+                              <div class="list-item">
+                                 <h4 class="title">Performance & Energy</h4>
+                                 <ul>
+                                    <li><a href="product.html">Pre-Workout</a></li>
+                                    <li><a href="product.html">Intra-Workout</a></li>
+                                    <li><a href="product.html">Post-Workout</a></li>
+                                    <li><a href="product.html">Energy Drinks</a></li>
+                                    <li><a href="product.html">Nitric Oxide Boosters</a></li>
+                                 </ul>
+                              </div>
+                              <div class="list-item">
+                                 <h4 class="title">Fitness Essentials</h4>
+                                 <ul>
+                                    <li><a href="product.html">Protein Bars & Snacks</a></li>
+                                    <li><a href="product.html">Shakers & Bottles</a></li>
+                                    <li><a href="product.html">Gym Accessories</a></li>
+                                    <li><a href="product.html">Meal Replacements</a></li>
+                                    <li><a href="product.html">Fat Burners</a></li>
+                                 </ul>
+                              </div>
+                           </div>
+
+                        </li>
+
+
+                        <li class="menu-item-has-children">
+                           <a href="#" class="d-none d-xl-block">Brands<i class="fa fa-angle-down"></i></a>
+                           <a href="#" class="d-xl-none d-block">Brands<i class="fa fa-angle-down"></i></a>
+
+                           <div class="sub-menu">
+                              <div class="list-item">
+                                 <ul>
+                                    <li><a href="#">Brands 01</a></li>
+                                    <li><a href="#">Brands 02</a></li>
+                                    <li><a href="#">Brands 03</a></li>
+                                    <li><a href="#">Brands 04</a></li>
+                                    <li><a href="#">Brands 05</a></li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </li>
+                        <li><a href="blog.html">Blogs</a></li>
+
+
+                     </ul>
+                  </nav>
+               </div>
+               <div class="right-blk d-flex">
+                  <div class="search-dropdown me-2">
+                     <form class="d-flex">
+                        <div class="input-group position-relative">
+                           <input type="text" class="form_fi" placeholder="Search" aria-label="Search">
+                           <button class="btn-search" type="submit">
+                              <i><img src="images/search.svg" alt="search" class="fa-search"></i>
+                           </button>
+                        </div>
+                     </form>
+                  </div>
+                  <ul>
+                     <li><a href="wishlist.html"><img src="images/heart.svg" alt="image"></a></li>
+                     <li><a href="my-account-wallet-point.html"><img src="images/wallet2.svg" alt="image"></a></li>
+                     <li><a href="cart.html" class="custom_ic"><span class="cartCout">0</span><img src="images/cart.svg"
+                              alt="image"></a></li>
+                     <li><a href="#" data-bs-toggle="modal" data-bs-target="#loginmodal"><img src="images/person.svg"
+                              alt="image"></a></li>
+                  </ul>
+                  <div class="mobile-menu-trigger">
+                     <span></span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+
+   <div class="search-dropdown2" style="display: none;">
+      <form class="d-flex">
+         <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" aria-label="Search">
+            <button class="btn btn-dark" type="submit">
+               <i class="search-icon2"><img src="images/search-white.svg" alt="search"></i>
+            </button>
+         </div>
+      </form>
+   </div>
+
+   <!-- Mobile Only -->
+   <div class="bottom-fixed">
+      <ul>
+         <li><a class="active" data-bs-toggle="modal" data-bs-target="#loginmodal"><img src="images/profile_IC.svg"
+                  alt="image"></a></li>
+         <li><a href="javascript:void(0)" class="search-btn search-icon"><img src="images/search_IC.svg"
+                  alt="Search Icon"></a></li>
+         <li><a href="wishlist.html"><img src="images/wishlist_IC.svg" alt="image"></a></li>
+         <li><a href="my-account-wallet-point.html"><img src="images/wallet2.svg" alt="image"></a></li>
+         <li><a href="cart.html" class="custom_ic"><img src="images/bag_IC.svg" alt="image"><span
+                  class="cartCout">0</span></a>
+         </li>
+      </ul>
+   </div>
+
+
+   <div class="bread-crumb-wrap">
+      <div class="container">
+         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+               <li class="breadcrumb-item"><a href="#">Home</a></li>
+               <li class="breadcrumb-item"><a href="#">Proteins</a></li>
+               <li class="breadcrumb-item active" aria-current="page">Whey Proteins</li>
+            </ol>
+         </nav>
+      </div>
+   </div>
+
+   <!-- Filter Button (only on mobile) -->
+   <button class="filter-btn d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#filterSidebar">
+      <i class="me-2"><img src="images/filter_ic.png" alt="filter_ic"></i>
+   </button>
+
+   <div class="product-page">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-4" id="filterSidebar">
+
+               <!-- Offcanvas Header (only on mobile) -->
+               <div class="offcanvas-header d-md-none">
+                  <h5 class="offcanvas-title">Filters</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+               </div>
+
+               <!-- Filter Sidebar -->
+               <div class="filter-sidebar">
+                  <!-- Sidebar Content -->
+                  <div class="offcanvas-body">
+                     <!-- Categories -->
+                     <div class="accordion custom-accordion box shadow-sm" id="accordionExample1">
+
+                        <h3>Categories</h3>
+                        <!-- Item 1 -->
+                        <div class="accordion-item">
+                           <h4 class="accordion-header" id="cat1">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                 data-bs-target="#catcollapse1">
+                                 <i class="fa-solid fa-chevron-right me-2"></i> Protein Powders
+                              </button>
+                           </h4>
+                           <div id="catcollapse1" class="accordion-collapse collapse"
+                              data-bs-parent="#accordionExample1">
+                              <div class="accordion-body px-3 py-1">
+                                 <ul class="list-unstyled mb-0">
+                                    <li><a href="#">Whey Protein</a></li>
+                                    <li><a href="#">Casein Protein</a></li>
+                                    <li><a href="#">Plant Protein</a></li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="accordion-item">
+                           <h4 class="accordion-header" id="cat2">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                 data-bs-target="#catcollapse2">
+                                 <i class="fa-solid fa-chevron-right me-2"></i> Pre Workout
+                              </button>
+                           </h4>
+                           <div id="catcollapse2" class="accordion-collapse collapse"
+                              data-bs-parent="#accordionExample1">
+                              <div class="accordion-body px-3 py-1">
+                                 <ul class="list-unstyled mb-0">
+                                    <li><a href="#">Energy Boosters</a></li>
+                                    <li><a href="#">Pump Formula</a></li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+
+                        <!-- Item 3 (no subcategories) -->
+                        <div class="accordion-item">
+                           <h2 class="accordion-header">
+                              <button class="accordion-button collapsed no-collapse" type="button">
+                                 <i class="fa-solid fa-chevron-right me-2"></i> Mass and Weight Gainers
+                              </button>
+                           </h2>
+                        </div>
+                     </div>
+
+
+
+                     <!-- Filters -->
+                     <div class="filters box shadow-sm">
+                        <div class="mb-2 position-relative">
+                           <h3>Filters</h3>
+                           <a href="#" class="clear-filters">Clear Filters</a>
+                        </div>
+
+                        <div class="accordion custom-accordion" id="accordionExample2">
+
+                           <h4 class="accordion-header mb-2" id="brand1">
+                              <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                 data-bs-target="#brandcollapse1">
+                                 <i class="fa-solid fa-chevron-up me-2"></i> Brand
+                              </button>
+                           </h4>
+                           <div id="brandcollapse1" class="accordion-collapse collapse show"
+                              data-bs-parent="#accordionExample2">
+                              <!-- Brand -->
+                              <div class="mb-3">
+
+                                 <div class="search-box-2 mb-3">
+                                    <div class="position-relative">
+                                       <input type="text" class="form_fi2" placeholder="Search" aria-label="Search">
+                                       <button class="btn-search2" type="submit">
+                                          <i><img src="images/search-ic.png" alt="search" class="fa-search"></i>
+                                       </button>
+                                    </div>
+                                 </div>
+                                 <div class="custom-scroll">
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox">
+                                       <label class="form-check-label">MuscleBlaze</label>
+                                    </div>
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox">
+                                       <label class="form-check-label">Nutrabay</label>
+                                    </div>
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox">
+                                       <label class="form-check-label">GNC</label>
+                                    </div>
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox">
+                                       <label class="form-check-label">Nutrabay</label>
+                                    </div>
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox">
+                                       <label class="form-check-label">MuscleBlaze</label>
+                                    </div>
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox">
+                                       <label class="form-check-label">Nutrabay</label>
+                                    </div>
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox">
+                                       <label class="form-check-label">GNC</label>
+                                    </div>
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox">
+                                       <label class="form-check-label">Nutrabay</label>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
+                        </div>
+
+
+
+
+
+
+                        <div class="accordion custom-accordion" id="accordionExample3">
+
+                           <div class="mb-2 position-relative">
+                              <h4 class="accordion-header mb-2">
+                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#discountcollapse3">
+                                    <i class="fa-solid fa-chevron-up me-2"></i> Discount
+                                 </button>
+                              </h4>
+                              <a href="#" class="clear-filters">Clear</a>
+                           </div>
+
+                           <div id="discountcollapse3" class="accordion-collapse collapse show"
+                              data-bs-parent="#accordionExample3">
+
+                              <!-- Discount -->
+                              <div class="mb-3">
+
+
+                                 <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label">10% or above</label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label">20% or above</label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label">30% or above</label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label">40% or above</label>
+                                 </div>
+                              </div>
+
+                           </div>
+
+                        </div>
+
+
+
+                        <div class="accordion custom-accordion" id="accordionExample4">
+
+                           <div class="mb-2 position-relative">
+                              <h4 class="accordion-header mb-2" id="rating1">
+                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#ratingcollapse1">
+                                    <i class="fa-solid fa-chevron-up me-2"></i> Rating
+                                 </button>
+                              </h4>
+                              <a href="#" class="clear-filters">Clear</a>
+                           </div>
+
+                           <div id="ratingcollapse1" class="accordion-collapse collapse show"
+                              data-bs-parent="#accordionExample4">
+
+                              <!-- Discount -->
+                              <div class="mb-3">
+
+
+                                 <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radio1">
+                                    <div class="form-check-label d-flex">
+                                       <div class="stars mb-1 me-2">
+                                          <!-- Example: 4.5 stars -->
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                       </div> & Up
+                                    </div>
+                                 </div>
+                                 <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radio1">
+                                    <div class="form-check-label d-flex">
+                                       <div class="stars mb-1 me-2">
+                                          <!-- Example: 4.5 stars -->
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                       </div> & Up
+                                    </div>
+                                 </div>
+                                 <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radio1">
+                                    <div class="form-check-label d-flex">
+                                       <div class="stars mb-1 me-2">
+                                          <!-- Example: 4.5 stars -->
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                       </div> & Up
+                                    </div>
+                                 </div>
+                                 <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radio1">
+                                    <div class="form-check-label d-flex">
+                                       <div class="stars mb-1 me-2">
+                                          <!-- Example: 4.5 stars -->
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                       </div> & Up
+                                    </div>
+                                 </div>
+                              </div>
+
+                           </div>
+
+                        </div>
+
+                        <!-- Price -->
+                        <div class="accordion custom-accordion mb-3" id="accordionExample5">
+
+                           <div class="mb-2 position-relative">
+                              <h4 class="accordion-header mb-2" id="pricerange">
+                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#pricerangecollapse1">
+                                    <i class="fa-solid fa-chevron-up me-2"></i> Price
+                                 </button>
+                              </h4>
+                              <a href="#" class="clear-filters">Clear</a>
+                           </div>
+
+                           <div id="pricerangecollapse1" class="accordion-collapse collapse show"
+                              data-bs-parent="#accordionExample5">
+                              <div id="slider-range"></div>
+                              <p class="mt-2">
+                                 <input type="text" id="amount" readonly="" style="border:0;">
+                              </p>
+                           </div>
+                        </div>
+
+                        <!-- Gender -->
+                        <div class="accordion custom-accordion" id="accordionExample6">
+
+                           <div class="mb-2 position-relative">
+                              <h4 class="accordion-header mb-2">
+                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#discountcollapse2">
+                                    <i class="fa-solid fa-chevron-up me-2"></i> Gender
+                                 </button>
+                              </h4>
+                              <a href="#" class="clear-filters">Clear</a>
+                           </div>
+
+                           <div id="discountcollapse2" class="accordion-collapse collapse show"
+                              data-bs-parent="#accordionExample6">
+
+                              <!-- Discount -->
+                              <div class="mb-3">
+
+
+                                 <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label">Men</label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label">Women</label>
+                                 </div>
+                              </div>
+
+                           </div>
+
+                        </div>
+
+
+                        <!-- Goal -->
+                        <div class="accordion custom-accordion" id="accordionExample7">
+
+                           <div class="mb-2 position-relative">
+                              <h4 class="accordion-header mb-2" id="goal1">
+                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#goalcollapse1">
+                                    <i class="fa-solid fa-chevron-up me-2"></i> Goal
+                                 </button>
+                              </h4>
+                              <a href="#" class="clear-filters">Clear</a>
+                           </div>
+
+                           <div id="goalcollapse1" class="accordion-collapse collapse show"
+                              data-bs-parent="#accordionExample7">
+
+                              <!-- Discount -->
+                              <div class="mb-3">
+
+
+                                 <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label">Boost Energy</label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label">Increases Stamina</label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label">Lean Muscle Mass</label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label">Meal Replacement</label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label">Muscle Building</label>
+                                 </div>
+                              </div>
+
+                           </div>
+
+                        </div>
+
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+            <div class="col-md-8">
+               <div class="product-top d-flex justify-content-between align-items-center mb-3">
+                  <h1 class="mb-0">WHEY PROTEINS</h1>
+                  <div class="sort-by d-flex align-items-center">
+                     <label class="me-2 mb-0">Sort by:</label>
+                     <select class="form-select" aria-label="Default select example">
+                        <option selected>Popularity</option>
+                        <option value="1">Price - Low to High</option>
+                        <option value="2">Price - High to Low</option>
+                        <option value="3">Discount - High to Low</option>
+                        <option value="4">Customer Ratings</option>
+                     </select>
+                  </div>
+               </div>
+
+
+               <div class="row mt-4">
+
+                  <!--Product 1 -->
+                  <div class="col-lg-4 col-md-6 col-6 col-blk">
+                     <div class="product-wrap mb-0">
+                        <div class="position-relative">
+                           <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                 src="images/best-sellers-img-01.png" alt="image" class="product-box-img radius-20"></a>
+                           <div class="absolute-block">
+                              <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                              <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                           </div>
+                        </div>
+                        <div class="product-box-content radius-20">
+                           <h4>Wellcore - Pure Micronised Creatine Monohy </h4>
+                           <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star-half-alt"></i>
+                           </div>
+                           <div class="d-flex">
+                              <div class="price_rate">
+                                 <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                 </div>
+                              </div>
+                              <span class="ofr-disc">-40%</span>
+                           </div>
+                           <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                    alt="icon"></i></a>
+                           <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                    alt="icon"></i></a>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- End -->
+
+                  <!--Product 2 -->
+                  <div class="col-lg-4 col-md-6 col-6 col-blk">
+                     <div class="product-wrap mb-0">
+                        <div class="position-relative">
+                           <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                 src="images/best-sellers-img-02.png" alt="image" class="product-box-img radius-20"></a>
+                           <div class="absolute-block">
+                              <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                              <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                           </div>
+                        </div>
+                        <div class="product-box-content radius-20">
+                           <h4>MuscleBlaze Whey Protein - 1.8 Kg (3.9 Lb), R.. </h4>
+                           <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star-half-alt"></i>
+                           </div>
+                           <div class="d-flex">
+                              <div class="price_rate">
+                                 <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                 </div>
+                              </div>
+                              <span class="ofr-disc">-40%</span>
+                           </div>
+                           <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                    alt="icon"></i></a>
+                           <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                    alt="icon"></i></a>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- End -->
+
+                  <!--Product 3 -->
+                  <div class="col-lg-4 col-md-6 col-6 col-blk">
+                     <div class="product-wrap mb-0">
+                        <div class="position-relative">
+                           <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                 src="images/best-sellers-img-03.png" alt="image" class="product-box-img radius-20"></a>
+                           <div class="absolute-block">
+                              <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                              <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                           </div>
+                        </div>
+                        <div class="product-box-content radius-20">
+                           <h4>Nutrabay Wellness Fish Oil Omega 3 - 1000mg </h4>
+                           <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star-half-alt"></i>
+                           </div>
+                           <div class="d-flex">
+                              <div class="price_rate">
+                                 <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                 </div>
+                              </div>
+                              <span class="ofr-disc">-40%</span>
+                           </div>
+                           <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                    alt="icon"></i></a>
+                           <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                    alt="icon"></i></a>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- End -->
+
+                  <!--Product 4 -->
+                  <div class="col-lg-4 col-md-6 col-6 col-blk">
+                     <div class="product-wrap mb-0">
+                        <div class="position-relative">
+                           <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                 src="images/best-sellers-img-04.png" alt="image" class="product-box-img radius-20"></a>
+                           <div class="absolute-block">
+                              <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                              <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                           </div>
+                        </div>
+                        <div class="product-box-content radius-20">
+                           <h4>Nutrabay Gold 100% Whey Protein Concent </h4>
+                           <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star-half-alt"></i>
+                           </div>
+                           <div class="d-flex">
+                              <div class="price_rate">
+                                 <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                 </div>
+                              </div>
+                              <span class="ofr-disc">-40%</span>
+                           </div>
+                           <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                    alt="icon"></i></a>
+                           <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                    alt="icon"></i></a>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- End -->
+
+                  <!--Product 5 -->
+                  <div class="col-lg-4 col-md-6 col-6 col-blk">
+                     <div class="product-wrap mb-0">
+                        <div class="position-relative">
+                           <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                 src="images/best-sellers-img-01.png" alt="image" class="product-box-img radius-20"></a>
+                           <div class="absolute-block">
+                              <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                              <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                           </div>
+                        </div>
+                        <div class="product-box-content radius-20">
+                           <h4>Wellcore - Pure Micronised Creatine Monohy </h4>
+                           <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star-half-alt"></i>
+                           </div>
+                           <div class="d-flex">
+                              <div class="price_rate">
+                                 <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                 </div>
+                              </div>
+                              <span class="ofr-disc">-40%</span>
+                           </div>
+                           <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                    alt="icon"></i></a>
+                           <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                    alt="icon"></i></a>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- End -->
+
+                  <!--Product 6 -->
+                  <div class="col-lg-4 col-md-6 col-6 col-blk">
+                     <div class="product-wrap mb-0">
+                        <div class="position-relative">
+                           <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                 src="images/recently-bought-01.png" alt="image" class="product-box-img radius-20"></a>
+                           <div class="absolute-block">
+                              <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                              <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                           </div>
+                        </div>
+                        <div class="product-box-content radius-20">
+                           <h4>Nutrabay Pure Whey Protein Concentrate - 1... </h4>
+                           <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star-half-alt"></i>
+                           </div>
+                           <div class="d-flex">
+                              <div class="price_rate">
+                                 <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                 </div>
+                              </div>
+                              <span class="ofr-disc">-40%</span>
+                           </div>
+                           <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                    alt="icon"></i></a>
+                           <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                    alt="icon"></i></a>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- End -->
+
+                  <!--Product 7 -->
+                  <div class="col-lg-4 col-md-6 col-6 col-blk">
+                     <div class="product-wrap mb-0">
+                        <div class="position-relative">
+                           <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                 src="images/recently-bought-02.png" alt="image" class="product-box-img radius-20"></a>
+                           <div class="absolute-block">
+                              <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                              <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                           </div>
+                        </div>
+                        <div class="product-box-content radius-20">
+                           <h4>Beta Alanine | Amino Acid Supplement </h4>
+                           <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star-half-alt"></i>
+                           </div>
+                           <div class="d-flex">
+                              <div class="price_rate">
+                                 <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                 </div>
+                              </div>
+                              <span class="ofr-disc">-40%</span>
+                           </div>
+                           <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                    alt="icon"></i></a>
+                           <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                    alt="icon"></i></a>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- End -->
+
+                  <!--Product 8 -->
+                  <div class="col-lg-4 col-md-6 col-6 col-blk">
+                     <div class="product-wrap mb-0">
+                        <div class="position-relative">
+                           <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                 src="images/recently-bought-03.png" alt="image" class="product-box-img radius-20"></a>
+                           <div class="absolute-block">
+                              <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                              <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                           </div>
+                        </div>
+                        <div class="product-box-content radius-20">
+                           <h4>Nutrabay Pro Active Multivitamin for Men - 3... </h4>
+                           <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star-half-alt"></i>
+                           </div>
+                           <div class="d-flex">
+                              <div class="price_rate">
+                                 <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                 </div>
+                              </div>
+                              <span class="ofr-disc">-40%</span>
+                           </div>
+                           <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                    alt="icon"></i></a>
+                           <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                    alt="icon"></i></a>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- End -->
+
+                  <!--Product 9 -->
+                  <div class="col-lg-4 col-md-6 col-6 col-blk">
+                     <div class="product-wrap mb-0">
+                        <div class="position-relative">
+                           <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                 src="images/recently-bought-04.png" alt="image" class="product-box-img radius-20"></a>
+                           <div class="absolute-block">
+                              <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                              <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                           </div>
+                        </div>
+                        <div class="product-box-content radius-20">
+                           <h4>MuscleBlaze BCAA Pro Essential Amino Acid... </h4>
+                           <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star-half-alt"></i>
+                           </div>
+                           <div class="d-flex">
+                              <div class="price_rate">
+                                 <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                 </div>
+                              </div>
+                              <span class="ofr-disc">-40%</span>
+                           </div>
+                           <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
+                                    alt="icon"></i></a>
+                           <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
+                                    alt="icon"></i></a>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- End -->
+               </div>
+
+
+               <div class="pagination">
+                  <a href="#" class="page prev"><i><img src="images/l-r.png" alt="icon"></i></a>
+                  <a href="#" class="page active">1</a>
+                  <a href="#" class="page">2</a>
+                  <a href="#" class="page">3</a>
+                  <a href="#" class="page">4</a>
+                  <a href="#" class="page">5</a>
+                  <a href="#" class="page next"><i><img src="images/R-r.png" alt="icon"></i></a>
+               </div>
+
+
+            </div>
+
+
+         </div>
+      </div>
+   </div>
+
+   <footer class="footer">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-4">
+               <div class="footer-col col1">
+                  <img src="images/footer-logo.png" alt="footer-logo" class="footer-logo">
+                  <p>It’s More Than Just Supplements
+                     It’s a Commitment to Your Best Self.</p>
+                  <ul class="social-links">
+                     <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                     <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                     <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-md-4 col-6">
+               <div class="footer-col col2">
+                  <ul class="links">
+                     <li><a href="about.html"><i class="me-1"><img src="images/ic-xs-01.png" alt="icon"></i>About Us</a>
+                     </li>
+                     <li><a href="terms-condition.html"><i class="me-1"><img src="images/ic-xs-01.png"
+                                 alt="icon"></i>Terms and
+                           Conditions</a></li>
+                     <li><a href="privacy-policy.html"><i class="me-1"><img src="images/ic-xs-01.png"
+                                 alt="icon"></i>privacy policy</a>
+                     </li>
+                     <li><a href="return-policy.html"><i class="me-1"><img src="images/ic-xs-01.png"
+                                 alt="icon"></i>Return policy</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-md-4 col-6 d-flex justify-content-end">
+               <div class="footer-col col3">
+                  <label>Address:</label>
+                  <p>The Malabar Chamber of Commerce, Thayatheru Rd, Caltex, Kannur</p>
+                  <label>Phone:</label>
+                  <p><a href="tel:+919895202021">+91 9895202021</a></p>
+                  <label>Address:</label>
+                  <a href="mailto:info@spicenutrition.com">info@spicenutrition.com</a>
+               </div>
+            </div>
+         </div>
+         <p class="copy-rite">© 2025 spicenutrition.com All rights reserved</p>
+      </div>
+   </footer>
+
+
+
+   <!-- Optional JavaScript -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+   <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+   <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   <script src="js/wow.js"></script>
+   <script src="js/page.js"></script>
+   <script src="js/swiper-call.js"></script>
+
+
+
+   <script>
+      $(document).ready(function () {
+         $(".heart-icon").on("click", function (e) {
+            e.preventDefault();
+
+            $(this).toggleClass("clicked animated");
+
+            // Remove animation class after animation ends
+            setTimeout(() => {
+               $(this).removeClass("animated");
+            }, 300);
+         });
+      });
+   </script>
+
+   <script>
+      $(function () {
+         $("#slider-range").slider({
+            range: true,
+            min: 100,
+            max: 100000,
+            values: [1000, 50000], // you can set default range values
+            slide: function (event, ui) {
+               $("#amount").val("₹" + ui.values[0] + " - ₹" + ui.values[1]);
+            }
+         });
+
+         // Set initial value
+         $("#amount").val("₹" + $("#slider-range").slider("values", 0) +
+            " - ₹" + $("#slider-range").slider("values", 1));
+      });
+   </script>
+
+
+   <script>
+
+      document.addEventListener("DOMContentLoaded", function () {
+         const sidebar = document.getElementById("filterSidebar");
+
+         function toggleOffcanvas() {
+            if (window.innerWidth < 768) {
+               sidebar.classList.add("offcanvas", "offcanvas-start");
+               sidebar.setAttribute("tabindex", "-1");
+            } else {
+               sidebar.classList.remove("offcanvas", "offcanvas-start", "show");
+               sidebar.removeAttribute("tabindex");
+            }
+         }
+
+         toggleOffcanvas(); // run on load
+         window.addEventListener("resize", toggleOffcanvas);
+      });
+
+
+   </script>
+</body>
+
+
+</html>

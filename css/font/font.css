@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'Satoshi-Medium';
+  src: url('Satoshi-Medium.woff2') format('woff2'),
+       url('Satoshi-Medium.woff') format('woff'),
+       url('Satoshi-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+    font-family: 'Halyard Display';
+    src: url('HalyardDisplayMedium-Regular.eot');
+    src: url('HalyardDisplayMedium-Regular.eot?#iefix') format('embedded-opentype'),
+        url('HalyardDisplayMedium-Regular.woff2') format('woff2'),
+        url('HalyardDisplayMedium-Regular.woff') format('woff'),
+        url('HalyardDisplayMedium-Regular.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Display';
+    src: url('HalyardDisplay-Regular.eot');
+    src: url('HalyardDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+        url('HalyardDisplay-Regular.woff2') format('woff2'),
+        url('HalyardDisplay-Regular.woff') format('woff'),
+        url('HalyardDisplay-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Display';
+    src: url('HalyardDisplayLight-Regular.eot');
+    src: url('HalyardDisplayLight-Regular.eot?#iefix') format('embedded-opentype'),
+        url('HalyardDisplayLight-Regular.woff2') format('woff2'),
+        url('HalyardDisplayLight-Regular.woff') format('woff'),
+        url('HalyardDisplayLight-Regular.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Display';
+    src: url('HalyardDisplaySemiBold-Regular.eot');
+    src: url('HalyardDisplaySemiBold-Regular.eot?#iefix') format('embedded-opentype'),
+        url('HalyardDisplaySemiBold-Regular.woff2') format('woff2'),
+        url('HalyardDisplaySemiBold-Regular.woff') format('woff'),
+        url('HalyardDisplaySemiBold-Regular.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Halyard Display';
+    src: url('HalyardDisplay-Bold.eot');
+    src: url('HalyardDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+        url('HalyardDisplay-Bold.woff2') format('woff2'),
+        url('HalyardDisplay-Bold.woff') format('woff'),
+        url('HalyardDisplay-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
