@@ -1,5 +1,12 @@
-.menu{width:100%;}
-.fa-angle-down{font-size:12px;margin-left:10px;}
+.menu {
+  width: 100%;
+}
+
+.fa-angle-down {
+  font-size: 12px;
+  margin-left: 10px;
+}
+
 .header .item-right {
   flex: 0 0 17%;
   display: flex;
@@ -18,9 +25,11 @@
 .header .menu>ul>li {
   display: inline-block;
 }
+
 .header .menu>ul>li:last-child a {
   border-right: none;
 }
+
 .header .menu>ul>li>a {
   font-size: 16px;
   font-weight: 500;
@@ -31,7 +40,7 @@
   text-decoration: none;
   padding: 5px 30px;
   font-family: 'Satoshi-Medium';
-  display:inline-block;
+  display: inline-block;
 }
 
 .header .menu>ul>li .sub-menu {
@@ -44,24 +53,37 @@
   margin-top: 15px;
   opacity: 0;
   visibility: hidden;
-  min-width:200px;
+  min-width: 200px;
 }
 
-.list-item ul li a{font-size: 16px;font-weight: 500;color: #000000;font-family: 'Satoshi-Medium';padding-top:2px;padding-bottom:2px;display:block;}
-.list-item ul li a:hover{color:var(--primary-color);}
+.list-item ul li a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  font-family: 'Satoshi-Medium';
+  padding-top: 2px;
+  padding-bottom: 2px;
+  display: block;
+}
 
-.header .menu > ul > li {
+.list-item ul li a:hover {
+  color: var(--primary-color);
+}
+
+.header .menu>ul>li {
   position: relative;
 }
 
-.header .menu > ul > li::after {
+.header .menu>ul>li::after {
   content: '';
   position: absolute;
-  left: 0%; /* position at the right edge of the item */
+  left: 0%;
+  /* position at the right edge of the item */
   top: 50%;
   transform: translateY(-50%);
   width: 1px;
-  height: 60%; /* adjust as needed */
+  height: 60%;
+  /* adjust as needed */
   background: #222222;
 }
 
@@ -78,9 +100,9 @@
 
 @media(max-width: 1280px) {
 
-.header .menu>ul>li>a{
-  font-size:14px;
-}
+  .header .menu>ul>li>a {
+    font-size: 14px;
+  }
 
 }
 
@@ -256,7 +278,7 @@
     transform: translate(-100%);
     transition: all 0.5s ease;
     z-index: 1099;
-    display:block;
+    display: block;
   }
 
   .header .menu.active {
@@ -334,7 +356,11 @@
     color: #000000;
     font-size: 25px;
   }
-  .header .menu .mobile-menu-head .mobile-menu-close img{width:20px;}
+
+  .header .menu .mobile-menu-head .mobile-menu-close img {
+    width: 20px;
+  }
+
   .header .menu .menu-main {
     height: 100%;
     overflow-x: hidden;
