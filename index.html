@@ -144,73 +144,163 @@
 
    <a href="javascript:" id="return-to-top"><i class="fas fa-angle-up pulse"></i></a>
 
+
+   <div class="marquee-wrap">
+      <div class="marquee">
+         <div class="marquee-content">
+            <span class="marquee-item"> Flat QR 25 OFF on First Order! Use Code: WELCOME25</span>
+         </div>
+      </div>
+   </div>
+
    <header class="header">
       <div class="container">
-        <div class="inner-wrap">
-          <div class="d-flex align-items-center justify-content-between">
-            <div class="logo">
-              <a href="index.html"><img src="images/logo.png" alt="logo"></a>
-            </div>
+         <div class="inner-wrap">
+            <div class="d-flex align-items-center justify-content-between">
+               <div class="logo">
+                  <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+               </div>
 
-            <div class="top_block_02">
-              <div class="select_block">
-                <select>
-                  <option>Categories</option>
-                  <option>1</option>
-                  <option>1</option>
-                </select>
-              </div>
-              <div class="search-dropdown me-2">
-                <form>
-                  <div class="input-group position-relative">
-                    <input type="text" class="form_fi" placeholder="What are you looking for?" aria-label="Search">
-                    <button class="btn-search" type="submit">
-                      <i><img src="images/search.svg" alt="search" class="fa-search"></i>
-                    </button>
+               <div class="top_block_02">
+                  <div class="select_block">
+                     <select>
+                        <option>Categories</option>
+                        <option>1</option>
+                        <option>1</option>
+                     </select>
                   </div>
-                </form>
-              </div>
-            </div>
+                  <div class="search-dropdown me-2">
+                     <form>
+                        <div class="input-group position-relative">
+                           <input type="text" class="form_fi" placeholder="What are you looking for?"
+                              aria-label="Search">
+                           <button class="btn-search" type="submit">
+                              <i><img src="images/search.svg" alt="search" class="fa-search"></i>
+                           </button>
+                        </div>
+                     </form>
+                  </div>
+               </div>
 
-            <div class="dropdown" id="languageDropdown">
-              <div class="dropdown-toggle">
-                <img src="https://flagcdn.com/w20/qa.png" alt="Qatar Flag">
-                <span>العربية</span>
-              </div>
-              <div class="dropdown-menu">
-                <div class="option" data-lang="ar">
-                  <img src="https://flagcdn.com/w20/qa.png" alt="Qatar">
-                  <span>العربية</span>
-                </div>
-                <div class="option" data-lang="en">
-                  <img src="https://flagcdn.com/w20/us.png" alt="English">
-                  <span>English</span>
-                </div>
-                <div class="option" data-lang="fr">
-                  <img src="https://flagcdn.com/w20/fr.png" alt="French">
-                  <span>Français</span>
-                </div>
-              </div>
-            </div>
+               <div class="dropdown" id="languageDropdown">
+                  <div class="dropdown-toggle">
+                     <img src="https://flagcdn.com/w20/qa.png" alt="Qatar Flag">
+                     <span>العربية</span>
+                  </div>
+                  <div class="dropdown-menu">
+                     <div class="option" data-lang="ar">
+                        <img src="https://flagcdn.com/w20/qa.png" alt="Qatar">
+                        <span>العربية</span>
+                     </div>
+                     <div class="option" data-lang="en">
+                        <img src="https://flagcdn.com/w20/us.png" alt="English">
+                        <span>English</span>
+                     </div>
+                     <div class="option" data-lang="fr">
+                        <img src="https://flagcdn.com/w20/fr.png" alt="French">
+                        <span>Français</span>
+                     </div>
+                  </div>
+               </div>
 
-            <div class="right-blk">
-              <ul>
-                <li>
-                  <a href="wishlist.html"><img src="images/heart.svg" alt="image">Wishlist</a>
-                </li>
+               <div class="right-blk">
+                  <ul>
+                     <li>
+                        <a href="wishlist.html"><img src="images/heart.svg" alt="image">Wishlist</a>
+                     </li>
 
-                <li>
-                  <a href="cart.html" class="custom_ic"><span class="cartCout">0</span><img src="images/cart.svg" alt="image">Cart</a>
-                </li>
-                <li>
-                  <a href="#" data-bs-toggle="modal" data-bs-target="#loginmodal"><img src="images/person.svg" alt="image">Login/Signup</a>
-                </li>
-              </ul>
+                     <li>
+                        <a href="cart.html" class="custom_ic"><span class="cartCout">0</span><img src="images/cart.svg"
+                              alt="image">Cart</a>
+                     </li>
+                     <li>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#loginmodal"><img src="images/person.svg"
+                              alt="image">Login/Signup</a>
+                     </li>
+                  </ul>
+               </div>
             </div>
-          </div>
-        </div>
+         </div>
       </div>
-    </header>
+      <div class="menu-wrap">
+         <div class="container">
+
+            <div class="d-flex">
+               <div class="all-categories">
+                  <i><img src="images/menu_icon.svg" alt="icon"></i>
+                  <div class="all-categories-level" id="customMenuWrap">
+                     <button class="menu-btn" id="customMenuToggle" aria-haspopup="true" aria-expanded="false">All
+                        Categories <i class="fa-solid fa-chevron-down"></i></button>
+
+                     <nav class="custom-dropdown" id="customMainDropdown" role="menu" aria-label="Main menu">
+                        <ul>
+                           <li><a href="#" role="menuitem">Categories 1</a></li>
+                           <li class="has-children">
+                              <button class="custom-item-btn" aria-haspopup="true" aria-expanded="false">Categories 2
+                                 <span class="custom-caret">▾</span></button>
+                              <div class="custom-submenu" role="menu">
+                                 <ul>
+                                    <li><a href="#" role="menuitem">Sub Categories 1 </a></li>
+                                    <li><a href="#" role="menuitem">Sub Categories 2 </a></li>
+                                    <li><a href="#" role="menuitem">Sub Categories 3 </a></li>
+                                 </ul>
+                              </div>
+                           </li>
+                           <li><a href="#" role="menuitem">Categories 3</a></li>
+                           <li><a href="#" role="menuitem">Categories 4</a></li>
+                        </ul>
+                     </nav>
+                  </div>
+               </div>
+
+
+               <div class="header-item item-center">
+                  <div class="menu-overlay"></div>
+                  <nav class="menu">
+                     <div class="mobile-menu-head">
+                        <div class="go-back"><i class="fa fa-angle-left"></i></div>
+                        <div class="current-menu-title"></div>
+                        <div class="mobile-menu-close">×</div>
+                     </div>
+                     <ul class="menu-main">
+                        <li>
+                           <a href="#">Mobiles </a>
+                        </li>
+                        <li>
+                           <a href="#">Electronics</a>
+                        </li>
+                        <li>
+                           <a href="#">Clothing</a>
+                        </li>
+                        <li>
+                           <a href="#">Furniture</a>
+                        </li>
+                        <li>
+                           <a href="#"> Toys</a>
+                        </li>
+                        <li>
+                           <a href="#"> Household</a>
+                        </li>
+                        <li>
+                           <a href="#"> Beauty</a>
+                        </li>
+                        <li>
+                           <a href="#"> Gaming</a>
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
+               <div class="mobile-menu-trigger">
+                  <span></span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+
+
+
+
 
    <div class="search-dropdown2" style="display: none;">
       <form class="d-flex">
@@ -238,9 +328,9 @@
       </ul>
    </div>
 
-  
 
- 
+
+
 
    <section class="popular-products custompad pt-0 wow animate__fadeIn" data-wow-duration="2s">
       <div class="container">
@@ -3553,28 +3643,28 @@
    <script src="js/swiper-call.js"></script>
 
    <script>
-      
-const dropdown = document.getElementById('languageDropdown');
-  const toggle = dropdown.querySelector('.dropdown-toggle');
-  const menu2 = dropdown.querySelector('.dropdown-menu');
 
-  toggle.addEventListener('click', () => {
-    menu2.style.display = menu2.style.display === 'block' ? 'none' : 'block';
-  });
+      const dropdown = document.getElementById('languageDropdown');
+      const toggle = dropdown.querySelector('.dropdown-toggle');
+      const menu2 = dropdown.querySelector('.dropdown-menu');
 
-  dropdown.querySelectorAll('.option').forEach(option => {
-    option.addEventListener('click', () => {
-      toggle.querySelector('img').src = option.querySelector('img').src;
-      toggle.querySelector('span').innerText = option.querySelector('span').innerText;
-      menu2.style.display = 'none';
-    });
-  });
+      toggle.addEventListener('click', () => {
+         menu2.style.display = menu2.style.display === 'block' ? 'none' : 'block';
+      });
 
-  document.addEventListener('click', (e) => {
-    if (!dropdown.contains(e.target)) {
-      menu2.style.display = 'none';
-    }
-  });
+      dropdown.querySelectorAll('.option').forEach(option => {
+         option.addEventListener('click', () => {
+            toggle.querySelector('img').src = option.querySelector('img').src;
+            toggle.querySelector('span').innerText = option.querySelector('span').innerText;
+            menu2.style.display = 'none';
+         });
+      });
+
+      document.addEventListener('click', (e) => {
+         if (!dropdown.contains(e.target)) {
+            menu2.style.display = 'none';
+         }
+      });
    </script>
 
    <script>
@@ -3591,6 +3681,7 @@ const dropdown = document.getElementById('languageDropdown');
          });
       });
    </script>
+
 
 
 

@@ -444,10 +444,10 @@ img {
 }
 
 .marquee-wrap {
-  position: absolute;
-  bottom: 0px;
+  /* position: absolute;
+  bottom: 0px; */
   width: 100%;
-  z-index: 5;
+  /* z-index: 5; */
 }
 
 .marquee {
@@ -468,8 +468,8 @@ img {
   display: inline-flex;
   align-items: center;
   padding: 20px 40px;
-  font-family: 'Halyard Display';
-  font-size: 20px;
+  font-family: 'Satoshi-Medium';
+  font-size: 16px;
   font-weight: 500;
   color: #fff;
   position: relative;
@@ -4447,7 +4447,7 @@ ul.social-share li {
 }
 header {
     width: 100%;
-    position: absolute;
+    position: relative;
     z-index: 55;
     top: 0px;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
@@ -4646,3 +4646,62 @@ header .container {
     margin-right: 8px;
     border-radius: 50%;
 }
+
+header .menu-wrap{background-color:#FCDB04;padding-top:10px;padding-bottom:10px;width:100%;}
+.all-categories{width:220px;display:flex;align-items: center;}
+.header-item{flex: 1} 
+
+
+.all-categories-level{position:relative;display:inline-block}
+
+
+.menu-btn{background:#fff;color:#222222;font-size:16px;background-color: transparent;bordeR:none;font-family: 'Satoshi-Medium';font-weight:500;}
+
+
+.custom-dropdown{
+position:absolute;
+top:calc(100% + 8px);
+left:0;
+width:280px;
+background:#ffffff;
+border-radius:8px;
+box-shadow:0 8px 20px rgba(16,24,40,0.08);
+padding:6px;
+z-index:1000;
+display:none;
+}
+
+
+.custom-dropdown.open{display:block}
+
+
+.custom-dropdown ul{list-style:none;margin:0;padding:6px;}
+.custom-dropdown li{position:relative}
+
+
+.custom-dropdown a, .custom-dropdown button.custom-item-btn{
+display:flex;align-items:center;justify-content:space-between;
+width:100%;padding:8px 10px;border-radius:6px;border:none;background:transparent;text-align:left;cursor:pointer;font-size:14px;color:#0f172a;text-decoration:none;
+}
+.custom-dropdown a:hover, .custom-dropdown button.custom-item-btn:hover{background:#f1f5f9}
+
+
+.custom-caret{margin-left:8px;opacity:0.7}
+
+
+.custom-submenu{
+position:relative; /* changed from absolute to relative */
+top:auto;
+left:auto;
+min-width:200px;
+background:#fff;border-radius:8px;padding:6px;box-shadow:0 8px 20px rgba(16,24,40,0.06);
+display:none;
+white-space:nowrap;
+}
+.custom-submenu.open{display:block}
+
+
+.has-children > .custom-item-btn::after{content:''}
+
+
+.custom-dropdown a:focus, .custom-dropdown button.custom-item-btn:focus{outline:2px solid #dbeafe;outline-offset:2px}

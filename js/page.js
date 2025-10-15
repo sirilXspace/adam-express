@@ -1,3 +1,77 @@
+(function(){
+const customMenuWrapEl = document.getElementById('customMenuWrap');
+const customMenuToggleEl = document.getElementById('customMenuToggle');
+const customMainDropdownEl = document.getElementById('customMainDropdown');
+
+
+function openCustomDropdown(){
+customMainDropdownEl.classList.add('open');
+customMenuToggleEl.setAttribute('aria-expanded','true');
+}
+function closeCustomDropdown(){
+customMainDropdownEl.classList.remove('open');
+customMenuToggleEl.setAttribute('aria-expanded','false');
+customMainDropdownEl.querySelectorAll('.custom-submenu.open').forEach(s=>s.classList.remove('open'));
+customMainDropdownEl.querySelectorAll('.has-children > .custom-item-btn[aria-expanded="true"]').forEach(b=>b.setAttribute('aria-expanded','false'));
+}
+
+
+customMenuToggleEl.addEventListener('click', (e)=>{
+const isOpen = customMainDropdownEl.classList.contains('open');
+if(isOpen) closeCustomDropdown(); else openCustomDropdown();
+});
+
+
+document.addEventListener('click', (e)=>{
+if(!customMenuWrapEl.contains(e.target)) closeCustomDropdown();
+});
+
+
+document.addEventListener('keydown', (e)=>{
+if(e.key === 'Escape') closeCustomDropdown();
+});
+
+
+customMainDropdownEl.querySelectorAll('.has-children').forEach(li => {
+const btn = li.querySelector('.custom-item-btn');
+const submenu = li.querySelector('.custom-submenu');
+
+
+btn.addEventListener('click', (ev)=>{
+ev.stopPropagation();
+const willOpen = !submenu.classList.contains('open');
+const parentUl = li.parentElement;
+parentUl.querySelectorAll(':scope > .has-children > .custom-submenu.open').forEach(sib => sib.classList.remove('open'));
+parentUl.querySelectorAll(':scope > .has-children > .custom-item-btn[aria-expanded="true"]').forEach(b=>b.setAttribute('aria-expanded','false'));
+
+
+if(willOpen){
+submenu.classList.add('open');
+btn.setAttribute('aria-expanded','true');
+} else {
+submenu.classList.remove('open');
+btn.setAttribute('aria-expanded','false');
+}
+});
+
+
+btn.addEventListener('keydown', (ev)=>{
+if(ev.key === 'Enter' || ev.key === ' '){ ev.preventDefault(); btn.click(); }
+});
+});
+
+
+customMainDropdownEl.querySelectorAll('a, button.custom-item-btn').forEach(el => {
+el.addEventListener('keydown', (e)=>{
+if(e.key === 'Escape'){
+closeCustomDropdown(); customMenuToggleEl.focus();
+}
+});
+});
+
+
+})();
+
 const menu = document.querySelector(".menu");
 const menuMain = menu.querySelector(".menu-main");
 const goBack = menu.querySelector(".go-back");
@@ -103,4 +177,3 @@ $(document).ready(function () {
 $(function () {
   $("#datepicker2").datepicker();
 });
-
