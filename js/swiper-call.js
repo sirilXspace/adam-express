@@ -17,29 +17,33 @@
 
    
       var category = new Swiper(".category-slider", {
-         slidesPerView: 2,
-         spaceBetween: 20,
-         pagination: {
-            el: ".custom-pagination", // Custom pagination placement
-            clickable: true,
+         slidesPerView: 3,
+         spaceBetween: 5,
+         navigation: {
+            nextEl: '.swiper-button-next1n',
+            prevEl: '.swiper-button-prev1n',
          },
          breakpoints: {
+            1340: {
+               slidesPerView: 7,
+               spaceBetween: 25,
+            },
             1199: {
                slidesPerView: 6,
                spaceBetween: 25,
             },
             992: {
-               slidesPerView: 4,
+               slidesPerView: 5,
                spaceBetween: 25,
             },
             767: {
-               slidesPerView: 3,
+               slidesPerView: 4,
                spaceBetween: 25,
             },
-            576: {
-               slidesPerView: 3,
+            600: {
+               slidesPerView: 4,
                spaceBetween: 25,
-            },
+            }
          },
       });
    
@@ -47,47 +51,88 @@
    
       var trendingproductslider = new Swiper(".trending-product-slider", {
          slidesPerView: 2,
-         spaceBetween: 7,
-         navigation: {
-            nextEl: '.swiper-button-next1',
-            prevEl: '.swiper-button-prev1',
+         spaceBetween: 10,
+         autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
          },
          breakpoints: {
-            // when window width is >= 992
+            // when window width is >= 1280
+            1280: {
+               slidesPerView: 6,
+               spaceBetween: 15,
+            },
+            // when window width is >= 1024
+            1024: {
+               slidesPerView: 5,
+               spaceBetween: 15,
+            },
+               // when window width is >= 992
             992: {
                slidesPerView: 4,
-               spaceBetween: 40,
+               spaceBetween: 15,
             },
-            // when window width is >= 767
-            767: {
+            // when window width is >= 575
+            575: {
                slidesPerView: 3,
-               spaceBetween: 25,
+               spaceBetween: 10,
+            },
+         },
+      });
+
+      var featuredproductslider = new Swiper(".featured-product-slider", {
+         slidesPerView: 2,
+         spaceBetween: 10,
+         autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+         },
+         breakpoints: {
+            // when window width is >= 1280
+            1280: {
+               slidesPerView: 6,
+               spaceBetween: 15,
+            },
+            // when window width is >= 1024
+            1024: {
+               slidesPerView: 5,
+               spaceBetween: 15,
+            },
+               // when window width is >= 992
+            992: {
+               slidesPerView: 4,
+               spaceBetween: 15,
+            },
+            // when window width is >= 575
+            575: {
+               slidesPerView: 3,
+               spaceBetween: 10,
             },
          },
       });
    
 
    
-      var recentlyboughtslider = new Swiper(".recently-bought-slider", {
-         slidesPerView: 2,
-         spaceBetween: 7,
-         navigation: {
-            nextEl: '.swiper-button-next2',
-            prevEl: '.swiper-button-prev2',
-         },
-         breakpoints: {
-            // when window width is >= 992
-            992: {
-               slidesPerView: 4,
-               spaceBetween: 40,
-            },
-            // when window width is >= 767
-            767: {
-               slidesPerView: 3,
-               spaceBetween: 25,
-            },
-         },
-      });
+      // var recentlyboughtslider = new Swiper(".recently-bought-slider", {
+      //    slidesPerView: 2,
+      //    spaceBetween: 7,
+      //    navigation: {
+      //       nextEl: '.swiper-button-next2',
+      //       prevEl: '.swiper-button-prev2',
+      //    },
+      //    breakpoints: {
+      //       // when window width is >= 992
+      //       992: {
+      //          slidesPerView: 4,
+      //          spaceBetween: 40,
+      //       },
+      //       // when window width is >= 767
+      //       767: {
+      //          slidesPerView: 3,
+      //          spaceBetween: 25,
+      //       },
+      //    },
+      // });
    
 
    
