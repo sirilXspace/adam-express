@@ -25,39 +25,44 @@
 
 
    <!-- Login -->
-   <div class="modal fade logreg-modal" id="loginmodal" tabindex="-1" aria-hidden="true">
+   <div class="modal fade login-modal" id="loginmodal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog">
          <div class="modal-content">
-            <div class="d-flex justify-content-center mb-4">
-               <button type="button" class="c_close c_custom" data-bs-dismiss="modal" aria-label="Close"><i><img
-                        src="images/close-btn2.png" alt="icon"></i></button>
-               <img src="images/logo-white.png" alt="logo" class="mt-5 logoinmodal">
-            </div>
+            <button type="button" class="btn-closeme" data-bs-dismiss="modal" aria-label="Close"><img
+                  src="images/close-btn.png" alt="icon"></button>
             <div class="modal-body">
-               <div class="login-box">
-                  <h2 class="text-white">Login Or Sign-Up</h2>
-                  <p>Login to access your Art Factory account</p>
-
-                  <form>
-                     <div class="mb-3 text-start">
-                        <label class="form-label text-white">Whatsapp Number</label>
-                        <input type="text" class="form-control" placeholder="9847123547">
-                     </div>
-                     <button type="submit" class="btn btn-login" data-bs-toggle="modal"
-                        data-bs-target="#otpmodal">Login</button>
-                  </form>
-
-                  <div class="divider"><span>Or login with</span></div>
-
-                  <div class="social-login">
-                     <a href="#"><img src="images/gplus.png" width="24" alt="icon"></a>
-                     <a href="#"><img src="images/mail-ic.png" width="24" alt="icon"></a>
+               <!-- Top icons -->
+               <div class="top-icons">
+                  <img src="images/login_bg.png" alt="icon1" />
+               </div>
+               <div class="modal-body-content">
+                  <!-- Login header -->
+                  <div class="login-header">Login</div>
+                  <div class="login-subtext">
+                     Login To Access Your Ridaya Account
                   </div>
-                  <p class="not-send text-center mt-3">No Registered Click here to <a href="" class="theme-color"
-                        data-bs-toggle="modal" data-bs-target="#registermodal">Register</a>
+                  <!-- Form -->
+                  <form>
+                     <div class="mb-3 position-relative">
+                        <label class="form-control-label mt-4 mb-2">Email Address</label>
+                        <input type="text" class="form-control" placeholder="janedeo@gmail.com" value="" />
+                     </div>
+                     <div class="mb-3 position-relative">
+                        <label for="password" class="form-control-label mb-2">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter password">
+                        <i class="fas fa-eye password-toggle" id="togglePassword"></i>
+                     </div>
+                     <a href="#" class="float-end fg-pwd">Forgot password?</a>
+                     <button type="submit" class="btn btn-login" data-bs-toggle="modal" data-bs-target="#otpmodal">
+                        Login
+                     </button>
+                     <p class="clikregister text-center mt-2 mb-0" data-bs-toggle="modal"
+                        data-bs-target="#registermodal">
+                        Don’t Have an account? <a href="#" class="text-black text-decoration-underline">Sign Up</a>
+                     </p>
+                  </form>
                </div>
             </div>
-
          </div>
       </div>
    </div>
@@ -101,42 +106,47 @@
 
 
    <!-- Register -->
-   <div class="modal fade logreg-modal" id="registermodal" tabindex="-1" aria-hidden="true">
+   <div class="modal fade login-modal" id="registermodal" tabindex="-1" aria-modal="true">
       <div class="modal-dialog">
          <div class="modal-content">
-            <div class="d-flex justify-content-center mb-4">
-               <button type="button" class="c_close c_custom" data-bs-dismiss="modal" aria-label="Close"><i><img
-                        src="images/close-btn2.png" alt="icon"></i></button>
-               <img src="images/logo-white.png" alt="logo" class="mt-5 logoinmodal">
-            </div>
+
             <div class="modal-body">
-               <div class="login-box mt-3">
-                  <h2 class="text-white">Fill the Details</h2>
-                  <p>Fill in your information so we can get in touch with you and serve you better.</p>
-
+               <div class="modal-body-content">
+                  <!-- Login header -->
+                  <div class="login-header d-flex justify-content-between">Signup <button type="button"
+                        class="bg-transparent border-0" data-bs-dismiss="modal" aria-label="Close"><img
+                           src="images/close-btn.png" alt="icon"></button></div>
+                  <!-- Form -->
                   <form>
-                     <div class="mb-3 text-start">
-                        <label class="form-label text-white">Full Name</label>
-                        <input type="text" class="form-control" placeholder="John Doe">
+                     <div class="mb-2">
+                        <label class="form-control-label mb-2">Full Name</label>
+                        <input type="text" class="form-control" placeholder="John Doe" value="John Doe">
                      </div>
-                     <div class="mb-3 text-start">
-                        <label class="form-label text-white">Email Address</label>
-                        <input type="text" class="form-control" placeholder="john.doe@gmail.com">
+                     <div class="mb-2">
+                        <label class="form-control-label mb-2">Email Address</label>
+                        <input type="email" class="form-control" placeholder="Email Address">
                      </div>
-                     <div class="mb-3 text-start">
-                        <label class="form-label text-white">Date of Birth</label>
-                        <input type="text" class="form-control" placeholder="select date" id="datepicker2">
+                     <div class="mb-3 position-relative">
+                        <label for="password" class="form-control-label mb-2">Password</label>
+                        <input type="password" class="form-control" placeholder="Enter password" id="password2">
+                        <i class="fas fa-eye password-toggle" id="togglePassword2"></i>
                      </div>
-                     <div class="mb-3 text-start">
-                        <label class="form-label text-white">Referral Code</label>
-                        <input type="text" class="form-control" placeholder="SN12345">
+                     <div class="mb-2">
+                        <label class="form-control-label mb-2">Phone Number</label>
+                        <input type="text" class="form-control" placeholder="Phone Number">
                      </div>
-                     <button type="submit" class="btn btn-login">CONTINUE</button>
+                     <p class="clikregister text-center mt-2" data-bs-toggle="modal" data-bs-target="#registermodal">
+                        By signing up, you agree with our <a href="#" class="text-black text-decoration-underline">Terms
+                           & Conditions</a> and <a href="#" class="text-black text-decoration-underline">Privacy
+                           Policy</a>
+                     </p>
+                     <button type="submit" class="btn btn-login">Continue</button>
+                     <p class="clikregister text-center mt-2 mb-0" data-bs-toggle="modal" data-bs-target="#loginmodal">
+                        Already Have an account? <a href="#" class="text-black text-decoration-underline"> Log In </a>
+                     </p>
                   </form>
-
                </div>
             </div>
-
          </div>
       </div>
    </div>
@@ -2065,12 +2075,12 @@
                   <img src="images/footer-logo.png" alt="footer-logo" class="footer-logo">
                   <p>© Adam Express All Rights Reserved</p>
                   <div class="connectwith-us">
-                  <h4>CONNECT WITH US</h4>
-                  <ul class="social-links">
-                     <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                     <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                     <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                  </ul>
+                     <h4>CONNECT WITH US</h4>
+                     <ul class="social-links">
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                     </ul>
                   </div>
                </div>
             </div>
@@ -2079,12 +2089,12 @@
                   <ul class="links">
                      <li><a href="about.html"><i class="me-2"><img src="images/ic-xs-01.png" alt="icon"></i>Home</a>
                      </li>
-                     <li><a href="about.html"><i class="me-2"><img src="images/ic-xs-01.png"
-                                 alt="icon"></i>ABout us</a></li>
-                     <li><a href="blog.html"><i class="me-2"><img src="images/ic-xs-01.png"
-                                 alt="icon"></i>BLOG</a>
+                     <li><a href="about.html"><i class="me-2"><img src="images/ic-xs-01.png" alt="icon"></i>ABout us</a>
                      </li>
-                     <li><a href="return-policy.html"><i class="me-2"><img src="images/ic-xs-01.png" alt="icon"></i>return policy</a>
+                     <li><a href="blog.html"><i class="me-2"><img src="images/ic-xs-01.png" alt="icon"></i>BLOG</a>
+                     </li>
+                     <li><a href="return-policy.html"><i class="me-2"><img src="images/ic-xs-01.png"
+                                 alt="icon"></i>return policy</a>
                      </li>
                      <li><a href="terms-condition.html"><i class="me-2"><img src="images/ic-xs-01.png"
                                  alt="icon"></i>terms & conditions</a></li>
@@ -2098,7 +2108,8 @@
                <div class="footer-col col3">
                   <h5>Contact Us</h5>
                   <p><a href="tel:+971245414758"><i class="fa-brands fa-whatsapp me-2"></i>+971 24 541 4758</a></p>
-                  <a href="mailto:info@artfactory.com"><i class="fa-regular fa-envelope me-2"></i>info@artfactory.com</a>
+                  <a href="mailto:info@artfactory.com"><i
+                        class="fa-regular fa-envelope me-2"></i>info@artfactory.com</a>
                </div>
             </div>
          </div>

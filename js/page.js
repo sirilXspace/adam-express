@@ -185,3 +185,24 @@ $(document).ready(function () {
 $(function () {
   $("#datepicker2").datepicker();
 });
+
+
+  const passwordInput = document.getElementById('password');
+  const togglePassword = document.getElementById('togglePassword');
+
+  togglePassword.addEventListener('click', () => {
+    const type = passwordInput.type === 'password' ? 'text' : 'password';
+    passwordInput.type = type;
+    togglePassword.classList.toggle('fa-eye');
+    togglePassword.classList.toggle('fa-eye-slash');
+  });
+
+  const passwordInput2 = document.getElementById('password2');
+  const togglePassword2 = document.getElementById('togglePassword2');
+
+  togglePassword2.addEventListener('click', () => {
+    const type = passwordInput2.type === 'password' ? 'text' : 'password';
+    passwordInput2.type = type;
+    togglePassword2.classList.toggle('fa-eye');
+    togglePassword2.classList.toggle('fa-eye-slash');
+  });
