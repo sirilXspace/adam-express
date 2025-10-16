@@ -364,6 +364,7 @@
     .add-cart {
         font-size: 14px;
     }
+
 }
 
 @media (max-width: 991.98px) {
@@ -1065,6 +1066,13 @@
     .advt-banner .ad-blk:last-child {
         margin-bottom: 0px;
     }
+    .custompad {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .c_margin{margin-top:20px;}
+    .offer-img{width:260px;}
+    .offersmobile-slider{width:calc(100% - 280px);}
 }
 
 @media (max-width: 575.98px) {
@@ -1072,11 +1080,6 @@
     .shopby-combo {
         margin-top: 30px;
         margin-bottom: 30px;
-    }
-
-    .custompad {
-        padding-top: 30px;
-        padding-bottom: 30px;
     }
 
     .category-slider .img-box,
@@ -1118,10 +1121,6 @@
 
     .assured img {
         width: 90px;
-    }
-
-    .c_margin {
-        margin-top: 20px;
     }
 
     .title {
@@ -1606,6 +1605,8 @@
     .viewall {
         font-size: 13px;
     }
+    .offer-img{width:100%;}
+    .offersmobile-slider{width:100%;margin-left:0px;margin-top:20px;}
 
 }
 

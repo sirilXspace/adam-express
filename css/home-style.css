@@ -776,6 +776,19 @@ img {
   pointer-events: none;
   /* disable click */
 }
+.swiper-button-prev2n.swiper-button-disabled,
+.swiper-button-next2n.swiper-button-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  /* disable click */
+}
+
+.swiper-button-prev3n.swiper-button-disabled,
+.swiper-button-next3n.swiper-button-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  /* disable click */
+}
 
 .swiper-button-prev1.swiper-button-disabled,
 .swiper-button-next1.swiper-button-disabled {
@@ -4880,9 +4893,38 @@ header .menu-wrap {
   font-family: 'Satoshi-Regular';
   font-weight: 400;
   display: flex;
+  gap:10px;
   align-items: center;
 }
 
 .advt-banner a {
   display: block;
 }
+
+.swiper-button-next3n, .swiper-button-prev3n {
+    position: absolute;
+    top: var(--swiper-navigation-top-offset, 50%);
+    width: calc(var(--swiper-navigation-size) / 44 * 27);
+    height: var(--swiper-navigation-size);
+    margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-button-next3n {
+    right:10px
+}
+.swiper-button-prev3n {
+    left: 10px;
+}
+
+.mySwiperBanner2 .swiper-pagination{bottom:0px;justify-content:center;align-items: center;display: flex;}
+.mySwiperBanner2 .swiper-pagination-bullet{background-color:rgb(255, 255, 255,.5);}
+.mySwiperBanner2 .swiper-pagination-bullet-active{background-color:#E27000 !important;width:15px;height:15px;}
+
+.offer-img{width:260px;}
+.offer-img img{width:100%;border-radius: 10px;}
+.offersmobile-slider{width:calc(100% - 280px);margin-left:20px;}
