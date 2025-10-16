@@ -197,3 +197,98 @@ var offersmobileslider = new Swiper(".offersmobile-slider", {
     },
   },
 });
+
+
+var offerselecslider = new Swiper(".offerselec-slider", {
+  slidesPerView: 2,
+  spaceBetween: 10,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    1280: {
+      slidesPerView: 4,
+      spaceBetween: 15,
+    },
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 15,
+    },
+    767: {
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+    600: {
+      slidesPerView: 1,
+      spaceBetween: 15,
+    },
+    575: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+  },
+});
+
+
+var trendingslider = new Swiper(".trending-slider", {
+  slidesPerView: 2,
+  spaceBetween: 10,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    // when window width is >= 1280
+    1280: {
+      slidesPerView: 6,
+      spaceBetween: 15,
+    },
+    // when window width is >= 1024
+    1024: {
+      slidesPerView: 5,
+      spaceBetween: 15,
+    },
+    // when window width is >= 992
+    992: {
+      slidesPerView: 4,
+      spaceBetween: 15,
+    },
+    // when window width is >= 575
+    575: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+  },
+});
+
+var trendingfurnitureslider = new Swiper(".trending-furnitureslider", {
+  slidesPerView: 2,
+  spaceBetween: 10,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    // when window width is >= 1280
+    1280: {
+      slidesPerView: 6,
+      spaceBetween: 15,
+    },
+    // when window width is >= 1024
+    1024: {
+      slidesPerView: 5,
+      spaceBetween: 15,
+    },
+    // when window width is >= 992
+    992: {
+      slidesPerView: 4,
+      spaceBetween: 15,
+    },
+    // when window width is >= 575
+    575: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+  },
+});

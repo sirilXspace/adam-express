@@ -10,7 +10,6 @@ html {
   margin: 0px;
   padding: 0px;
   font-size: 14px;
-  font-family: 'Halyard Display';
   background-color: #F5F5F5;
   font-weight: 400;
 }
@@ -96,7 +95,7 @@ img {
 }
 
 :root {
-  --primary-color: #43A047;
+  --primary-color: #FCDB04;
   --secondary-color: #f7f8fa;
 }
 
@@ -587,6 +586,7 @@ img {
 
 .product-wrap h4 {
   font-size: 14px;
+  line-height:normal;
   color: #000;
   font-family: 'Satoshi-Regular';
   font-weight: 400;
@@ -1199,26 +1199,29 @@ img {
 }
 
 footer {
-  background-color: #0B0B0B;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  background-color: #DFDFDF;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 footer .col1 p {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 30px;
-  font-weight: 300;
-  font-family: "Lexend", sans-serif;
-  color: rgb(255, 255, 255, .7);
+  font-weight: 400;
+  font-family: 'Satoshi-Regular';
+  color: rgb(34, 34, 34,.7);
 }
 
 footer .footer-logo {
   margin-bottom: 20px;
 }
-
+footer .footer-col .links{
+  column-count: 2;
+  column-gap: 30px; 
+}
 footer ul.social-links li {
 
-  background-color: #27272A;
+  background-color: #FCDB04;
   border-radius: 50px;
   text-align: center;
   display: inline-block;
@@ -1227,24 +1230,23 @@ footer ul.social-links li {
 
 footer ul.social-links li a {
   display: block;
-  width: 50px;
-  height: 50px;
-  line-height: 55px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
 }
 
 footer ul.social-links li i {
-  color: #057EC5;
-  font-size: 24px;
+  color: #222222;
+  font-size: 18px;
 }
 
 footer ul.links li a {
-  color: #FFFFFF;
+  color: #222222;
   font-size: 20px;
-  font-weight: 400;
-  font-family: "Lexend", sans-serif;
+  font-weight: 700;
+  font-family: 'Satoshi-Bold';
   display: block;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
   text-transform: uppercase;
 }
 
@@ -1260,56 +1262,31 @@ footer ul.links li:last-child a {
   padding-bottom: 0px;
 }
 
-footer .col2 .links {
-  margin-left: 15%;
+footer ul.links li:nth-child(3) a {
+  padding-top: 0px;
 }
 
-footer .col3 {
-  max-width: 300px;
+footer .col3 h5 {
+    font-family: 'Satoshi-Bold';
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #222222;
+    text-transform: uppercase;
 }
-
-footer .col3 label {
-  display: block;
-  font-size: 16px;
-  color: rgb(255, 255, 255, .7);
-  margin-bottom: 5px;
-  font-family: "Lexend", sans-serif;
-  font-weight: 300;
-}
-
 footer .col3 a {
-  color: #FFFFFF;
-  font-family: "Lexend", sans-serif;
-  font-size: 20px;
-  font-weight: 400;
+    color: #222222;
+    font-family: 'Satoshi-Medium';
+    font-size: 20px;
+    font-weight: 500;
 }
 
-footer .col3 a:hover {
-  color: #057EC5;
-}
-
-footer .col3 p {
-  color: #FFFFFF;
-  font-family: "Lexend", sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-}
-
-footer .copy-rite {
-  color: rgb(255, 255, 255, .7);
-  font-size: 17px;
-  font-weight: 300;
-  margin-bottom: 0px;
-  padding-top: 40px;
-  text-align: center;
-  border-top: 1px solid rgb(255, 255, 255, .7);
-  margin-top: 20px;
-}
-
-footer .social-links {
+footer .connectwith-us {
   margin-top: 40px;
 }
-
+footer .social-links {
+  margin-top: 20px;
+}
 .search-dropdown2 {
   position: fixed;
   bottom: 70px;
@@ -4921,10 +4898,17 @@ header .menu-wrap {
     left: 10px;
 }
 
-.mySwiperBanner2 .swiper-pagination{bottom:0px;justify-content:center;align-items: center;display: flex;}
+.mySwiperBanner2 .swiper-pagination{bottom:20px;justify-content:center;align-items: center;display: flex;}
 .mySwiperBanner2 .swiper-pagination-bullet{background-color:rgb(255, 255, 255,.5);}
 .mySwiperBanner2 .swiper-pagination-bullet-active{background-color:#E27000 !important;width:15px;height:15px;}
 
 .offer-img{width:260px;}
 .offer-img img{width:100%;border-radius: 10px;}
 .offersmobile-slider{width:calc(100% - 280px);margin-left:20px;}
+.offerselec-slider{width:calc(100% - 280px);margin-left:20px;}
+
+.connectwith-us h4{
+  font-size: 16px;
+  font-family: 'Satoshi-Medium';
+  font-weight: 500;
+}

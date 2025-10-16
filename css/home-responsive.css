@@ -41,6 +41,7 @@
         font-size: 20px;
         line-height: 30px;
     }
+    footer ul.links li a,footer .col3 a{font-size:18px;}
 }
 
 @media(max-width: 1280px) {
@@ -64,22 +65,11 @@
     }
 
     footer .col1 p {
-        font-size: 17px;
-        line-height: 27px;
-    }
-
-    footer ul.links li a {
-        font-size: 17px;
-        line-height: 27px;
-    }
-
-    footer .col3 label {
         font-size: 14px;
     }
 
-    footer .col3 p {
-        font-size: 17px;
-        line-height: 27px;
+    footer ul.links li a, footer .col3 a {
+        font-size: 14px;
     }
 
     .product-top h1 {
@@ -364,6 +354,7 @@
     .add-cart {
         font-size: 14px;
     }
+    footer .col3 h5{font-size:18px;}
 
 }
 
@@ -416,7 +407,7 @@
     }
 
     footer .footer-logo {
-        width: 225px;
+        width: 175px;
     }
 
     footer ul.links li a {
@@ -431,16 +422,16 @@
     }
 
     footer ul.links li a {
-        padding-bottom: 15px;
+        padding-bottom: 25px;
     }
 
     footer ul.social-links li a {
-        width: 45px;
-        height: 45px;
+        width: 35px;
+        height: 35px;
     }
 
     footer ul.social-links li i {
-        font-size: 19px;
+        font-size: 14px;
     }
 
     .ratings-container {
@@ -607,16 +598,15 @@
     }
 
     footer ul.links li a {
-        padding-top: 10px;
         padding-bottom: 10px;
     }
 
     footer .col1 {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     footer .col2 .links {
-        margin-top: 15px;
+        margin-top: 0px;
     }
 
     footer .col3 p,
@@ -654,8 +644,8 @@
     }
 
     footer {
-        padding-top: 50px;
-        padding-bottom: 100px;
+        padding-top: 30px;
+        padding-bottom: 70px;
     }
 
     .search-icon2 img {
@@ -1073,6 +1063,9 @@
     .c_margin{margin-top:20px;}
     .offer-img{width:260px;}
     .offersmobile-slider{width:calc(100% - 280px);}
+    .offerselec-slider{width:calc(100% - 280px);}
+    footer .connectwith-us{margin-top:20px;}
+    footer .col3 h5{font-size:15px;}
 }
 
 @media (max-width: 575.98px) {
@@ -1215,7 +1208,7 @@
 
     footer {
         padding-top: 30px;
-        padding-bottom: 70px;
+        padding-bottom: 80px;
     }
 
     #return-to-top i {
@@ -1607,6 +1600,8 @@
     }
     .offer-img{width:100%;}
     .offersmobile-slider{width:100%;margin-left:0px;margin-top:20px;}
+    .offerselec-slider{width:100%;margin-left:0px;margin-top:20px;}
+    .connectwith-us h4{font-size:14px;}
 
 }
 
