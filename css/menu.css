@@ -187,12 +187,12 @@
   object-fit: cover;
 }
 
-.header .menu>ul>li .sub-menu.mega-menu>.list-item>ul>li>a:hover,
+/* .header .menu>ul>li .sub-menu.mega-menu>.list-item>ul>li>a:hover,
 .header .menu>ul>li .sub-menu>ul>li>a:hover,
 .header .item-right a:hover,
 .header .menu>ul>li:hover>a {
   color: var(--primary-color);
-}
+} */
 
 /* banner section */
 .banner-section {

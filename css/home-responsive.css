@@ -311,6 +311,9 @@
     .viewall {
         font-size: 16px;
     }
+    .filters .custom-accordion .accordion-button{font-size:14px;}
+    .filters .form-check-label{font-size:14px;}
+    .product-page .product-box-img-wrap{height:125px;}
 }
 
 @media (max-width: 1199.98px) {
@@ -355,6 +358,7 @@
         font-size: 14px;
     }
     footer .col3 h5{font-size:18px;}
+    .product-page .product-box-img-wrap{height:103px;}
 
 }
 
@@ -534,6 +538,65 @@
     header .top_block_02 {
         display: none;
     }
+     .filter-btn {
+        position: fixed;
+        bottom: 120px;
+        right: 20px;
+        background: #222222;
+        width: 48px;
+        height: 48px;
+        border: none;
+        border-radius: 10px;
+        color: #fff;
+        text-align: center;
+        z-index: 999;
+    }
+
+    #filterSidebar.offcanvas-start {
+        width: 80%;
+        /* sidebar width */
+    }
+
+    /* Make sidebar scrollable */
+    #filterSidebar .offcanvas-body {
+        overflow-y: auto;
+        max-height: calc(100vh - 56px);
+        /* full height minus header */
+        padding: 0px;
+    }
+
+    .filter-sidebar .box h3 {
+        font-size: 16px;
+    }
+
+    .filter-sidebar .form-check-label,
+    .custom-accordion .accordion-button,
+    .filters .custom-accordion .accordion-button {
+        font-size: 13px;
+    }
+
+    .filter-sidebar .box {
+        padding: 20px 15px
+    }
+
+    .filter-sidebar .box .accordion-button {
+        padding: 5px 0px
+    }
+
+    .filter-sidebar .box .stars {
+        font-size: 11px;
+    }
+
+    .filters .form-check-input {
+        width: 15px;
+        height: 15px;
+        margin-top: 4px;
+        margin-right: 10px;
+    }
+
+    .filter-btn i img {
+        width: 30px;
+    }
 
 }
 
@@ -655,66 +718,6 @@
     .cartCout {
         left: 25px;
         top: 0px;
-    }
-
-    .filter-btn {
-        position: fixed;
-        bottom: 120px;
-        right: 20px;
-        background: #222222;
-        width: 48px;
-        height: 48px;
-        border: none;
-        border-radius: 10px;
-        color: #fff;
-        text-align: center;
-        z-index: 999;
-    }
-
-    #filterSidebar.offcanvas-start {
-        width: 80%;
-        /* sidebar width */
-    }
-
-    /* Make sidebar scrollable */
-    #filterSidebar .offcanvas-body {
-        overflow-y: auto;
-        max-height: calc(100vh - 56px);
-        /* full height minus header */
-        padding: 0px;
-    }
-
-    .filter-sidebar .box h3 {
-        font-size: 16px;
-    }
-
-    .filter-sidebar .form-check-label,
-    .custom-accordion .accordion-button,
-    .filters .custom-accordion .accordion-button {
-        font-size: 13px;
-    }
-
-    .filter-sidebar .box {
-        padding: 20px 15px
-    }
-
-    .filter-sidebar .box .accordion-button {
-        padding: 5px 0px
-    }
-
-    .filter-sidebar .box .stars {
-        font-size: 11px;
-    }
-
-    .filters .form-check-input {
-        width: 15px;
-        height: 15px;
-        margin-top: 4px;
-        margin-right: 10px;
-    }
-
-    .filter-btn i img {
-        width: 30px;
     }
 
     .breadcrumb-item.active,

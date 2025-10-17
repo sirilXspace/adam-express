@@ -1350,10 +1350,12 @@ footer .social-links {
   border-radius: 20px;
   margin-bottom: 15px;
   padding: 20px;
+  background-color:#fff;
 }
 
 .filter-sidebar .box h3 {
-  font-weight: 600;
+  font-family: 'Satoshi-Bold';
+  font-weight: 700;
   font-size: 20px;
   border-bottom: 1px solid #DFDFDF;
   padding-bottom: 15px;
@@ -1361,7 +1363,7 @@ footer .social-links {
 }
 
 .filter-sidebar .box .accordion-button {
-  padding: 10px 0px;
+  padding: 15px 0px;
   border: none;
 }
 
@@ -1385,7 +1387,7 @@ footer .social-links {
 }
 
 .custom-accordion .accordion-button:not(.collapsed) {
-  color: #28a745;
+  color: #EE8222;
   /* active green */
 }
 
@@ -1416,20 +1418,20 @@ footer .social-links {
 .clear-filters {
   position: absolute;
   right: 0px;
-  top: 0px;
-  font-family: 'Halyard Display';
+  top: 10px;
+  font-family: 'Satoshi-Medium';
   font-weight: 500;
   font-size: 14px;
-  color: #43A047;
+  color: #EE8222;
   cursor: pointer;
   z-index: 999;
 }
 
 .filters .custom-accordion .accordion-button {
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   color: #222222;
-  font-family: 'Halyard Display';
+  font-family: 'Satoshi-Bold';
 }
 
 .search-box-2 {
@@ -1458,8 +1460,8 @@ footer .social-links {
 
 .filters .form-check-label {
   font-size: 16px;
-  font-family: 'Halyard Display';
-  font-weight: normal;
+  font-family: 'Satoshi-Regular';
+  font-weight: 400;
   color: #222222;
 }
 
@@ -1471,18 +1473,18 @@ footer .social-links {
 }
 
 .filters .form-check {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 14px;
+  margin-bottom: 14px;
 }
 
 /* Apply only inside your custom area */
 .custom-scroll {
-  max-height: 145px;
+  max-height: 150px;
   /* adjust height */
   overflow-y: auto;
   scrollbar-width: thin;
   /* Firefox */
-  scrollbar-color: #28a745 #e0e0e0;
+  scrollbar-color: #EE8222 #e0e0e0;
   /* thumb color | track color */
 }
 
@@ -1498,7 +1500,7 @@ footer .social-links {
 }
 
 .custom-scroll::-webkit-scrollbar-thumb {
-  background: #28a745;
+  background: #EE8222;
   /* green thumb */
   border-radius: 10px;
 }
@@ -1521,11 +1523,11 @@ footer .social-links {
 
 .ui-slider-horizontal {
   height: 1px;
-  border-color: #43A047;
+  border-color: #EE8222;
 }
 
 .ui-widget.ui-widget-content {
-  border: 1px solid #43A047;
+  border: 1px solid #EE8222;
 }
 
 .ui-slider-horizontal .ui-slider-handle {
@@ -1539,26 +1541,26 @@ footer .social-links {
 }
 
 .product-top h1 {
-  font-family: 'Halyard Display';
-  font-weight: bold;
+  font-family: 'Satoshi-Bold';
+  font-weight: 700;
   font-size: 24px;
 }
 
 .sort-by label {
-  color: #43A047;
+  color: #EE8222;
   font-size: 16px;
-  font-family: 'Halyard Display';
+  font-family: 'Satoshi-Regular';
   font-weight: 400;
   margin-right: 10px;
   min-width: 75px;
 }
 
 .sort-by .form-select {
-  background-color: #F2F2F2;
+  background-color: #fff;
   border: none;
   font-size: 18px;
-  font-family: 'Halyard Display';
-  font-weight: 600;
+  font-family: 'Satoshi-Bold';
+  font-weight: 700;
   color: #222222;
 }
 
@@ -1574,7 +1576,7 @@ footer .social-links {
   justify-content: center;
   align-items: center;
   gap: 12px;
-  margin: 30px 0 0;
+  margin: 0px 0 0;
 }
 
 .page {
@@ -1584,17 +1586,19 @@ footer .social-links {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  color: var(--primary-color);
+  color: #222222;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
   transition: all 0.3s ease;
+  font-family: 'Satoshi-Bold';
+  font-weight: 700;
 }
 
 /* active page */
 .page.active {
-  background: var(--primary-color);
+  background: #EE8222;
   color: #fff;
-  border-color: var(--primary-color);
+  border-color: #EE8222;
 }
 
 /* hover effect */
@@ -1611,12 +1615,12 @@ footer .social-links {
 
 .product-page .col-blk,
 .wishlist .col-blk {
-  margin-bottom: 2rem;
+  margin-bottom: 25px;
 }
 
-.product-page .pagination {
+/* .product-page .pagination {
   margin-bottom: 50px;
-}
+} */
 
 .select-flavor {
   min-width: 300px;
@@ -2963,7 +2967,7 @@ footer .social-links {
 
 .payment-tab .nav-link.active {
   background: #f8f9fa;
-  border-left: 5px solid #28a745;
+  border-left: 5px solid #EE8222;
   color: #000;
 }
 
@@ -5102,3 +5106,7 @@ header .menu-wrap {
 
     .backtome{color:rgb(30, 30, 30,.5);font-size:16px;}
     .backtome .fa-chevron-left{font-size:12px;}
+
+    hr.style1{border-color:#DFDFDF;margin-top:15px;margin-bottom:15px;}
+    .product-page{padding-bottom:40px;}
+    .product-page .product-box-img-wrap{height:136px;}
