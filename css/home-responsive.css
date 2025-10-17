@@ -86,7 +86,7 @@
 
     .product_description h3,
     .price-blk p {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .mrp-price p,
@@ -314,6 +314,10 @@
     .filters .custom-accordion .accordion-button{font-size:14px;}
     .filters .form-check-label{font-size:14px;}
     .product-page .product-box-img-wrap{height:125px;}
+    .yr-warranty{font-size:12px;}
+    .yr-warranty img{width:20px;}
+    .select-size span{font-size:14px;}
+    .add-cart2{padding:10px 35px;font-size:14px;}
 }
 
 @media (max-width: 1199.98px) {
@@ -597,6 +601,8 @@
     .filter-btn i img {
         width: 30px;
     }
+    .frequent-bought .my-accordion-button{font-size:16px;}
+    .all-flavors{margin-top:30px;}
 
 }
 
@@ -745,7 +751,7 @@
     }
 
     .ratings-container {
-        margin-top: 30px;
+        margin-top: 0px;
         height: auto;
     }
 
@@ -1075,6 +1081,14 @@
     .login-modal .btn-login{font-size:17px;}
     .clikregister{font-size:14px;}
     .back-login{font-size:14px;}
+    .accord_wrap{padding-right:0px;margin-top:0px;}
+    .Together-block{padding:4%}
+    .side-product-card-current-price{font-size:15px;}
+    .side-product-card-original-price{font-size:12px;}
+    .side-product-card-discount{font-size:10px;}
+   .frequent-bought-together{padding-bottom:0px;}
+   .frequent-bought{margin-top:20px;}
+
 }
 
 @media (max-width: 575.98px) {
@@ -1094,8 +1108,8 @@
         width: 30px;
     }
 
-    .add-cart,
-    .buynow_btn {
+    .add-cart
+    {
         margin-top: 7px;
         padding: 5px 15px;
         font-size: 12px;
@@ -1266,7 +1280,7 @@
     }
 
     .ratings-container {
-        margin-top: 20px;
+        margin-top: 0px;
     }
 
     .text-rating,
@@ -1278,7 +1292,12 @@
     .price-blk p {
         font-size: 20px;
     }
-
+    .product_description h3{
+        font-size: 17px;
+    }
+    .price-blk p {
+        font-size: 16px;
+    }
     .mrp-price {
         margin-top: 5px;
     }
@@ -1312,6 +1331,7 @@
         flex-wrap: wrap;
         gap: 10px;
         margin-bottom: 10px;
+        margin-top:10px;
     }
 
     .btn-blk {
@@ -1492,7 +1512,7 @@
         line-height: 20px;
     }
 
-    .form-control {
+    .login-modal .form-control {
         padding: 10px 10px;
     }
 
@@ -1611,6 +1631,9 @@
     .offersmobile-slider{width:100%;margin-left:0px;margin-top:20px;}
     .offerselec-slider{width:100%;margin-left:0px;margin-top:20px;}
     .connectwith-us h4{font-size:14px;}
+    .specs-table th{font-size:12px;}
+    .add-cart2{margin-top:5px;}
+    .all-flavors{margin-top:20px;}
 
 }
 
@@ -1707,6 +1730,8 @@
         width: 90px;
         height: 90px;
     }
+    .price-blk p{font-size:14px;}
+    .yr-warranty,.mrp-price p, .select-size{font-size:9px;}
 
 
 }
