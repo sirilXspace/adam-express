@@ -206,3 +206,24 @@ $(function () {
     togglePassword2.classList.toggle('fa-eye');
     togglePassword2.classList.toggle('fa-eye-slash');
   });
+
+
+  const rpasswordInput = document.getElementById('rpassword');
+  const rtogglePassword = document.getElementById('rtogglePassword');
+
+  rtogglePassword.addEventListener('click', () => {
+    const type = rpasswordInput.type === 'password' ? 'text' : 'password';
+    rpasswordInput.type = type;
+    rtogglePassword.classList.toggle('fa-eye');
+    rtogglePassword.classList.toggle('fa-eye-slash');
+  });
+
+   const rpasswordInput2 = document.getElementById('rpassword2');
+  const rtogglePassword2 = document.getElementById('rtogglePassword2');
+
+  rtogglePassword2.addEventListener('click', () => {
+    const type = rpasswordInput2.type === 'password' ? 'text' : 'password';
+    rpasswordInput2.type = type;
+    rtogglePassword2.classList.toggle('fa-eye');
+    rtogglePassword2.classList.toggle('fa-eye-slash');
+  });

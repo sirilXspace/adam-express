@@ -5048,11 +5048,12 @@ header .menu-wrap {
 
 .otp-wrapper .resend {
   font-size: 14px;
-  color: #f37021;
+  color: rgb(34, 34, 34,.5);
   cursor: pointer;
   margin-left: 5px;
 }
 
+.resend span{color: rgb(34, 34, 34);}
 .back-login {
   color: #1e1e1e;
   text-align: left;
@@ -5098,3 +5099,6 @@ header .menu-wrap {
 
     .clikregister{font-size:13px;}
     .login-modal .modal-dialog{max-width:600px;}
+
+    .backtome{color:rgb(30, 30, 30,.5);font-size:16px;}
+    .backtome .fa-chevron-left{font-size:12px;}

@@ -14,9 +14,6 @@
    <link href="css/home-responsive.css" rel="stylesheet">
    <link href="css/menu.css" rel="stylesheet">
    <link href="css/font/font.css" rel="stylesheet">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
 
 </head>
@@ -52,8 +49,9 @@
                         <input type="password" class="form-control" id="password" placeholder="Enter password">
                         <i class="fas fa-eye password-toggle" id="togglePassword"></i>
                      </div>
-                     <a href="#" class="float-end fg-pwd">Forgot password?</a>
-                     <button type="submit" class="btn btn-login" data-bs-toggle="modal" data-bs-target="#otpmodal">
+                     <a href="#" class="float-end fg-pwd" data-bs-toggle="modal" data-bs-target="#fogotpwd">Forgot
+                        password?</a>
+                     <button type="submit" class="btn btn-login">
                         Login
                      </button>
                      <p class="clikregister text-center mt-2 mb-0" data-bs-toggle="modal"
@@ -67,42 +65,6 @@
       </div>
    </div>
 
-
-   <!-- OTP -->
-   <div class="modal fade logreg-modal" id="otpmodal" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog">
-         <div class="modal-content">
-            <div class="d-flex justify-content-center mb-4">
-               <button type="button" class="c_close c_custom" data-bs-dismiss="modal" aria-label="Close"><i><img
-                        src="images/close-btn2.png" alt="icon"></i></button>
-               <img src="images/logo-white.png" alt="logo" class="mt-5 logoinmodal">
-            </div>
-            <div class="modal-body">
-               <div class="login-box">
-                  <p><a data-bs-toggle="modal" data-bs-target="#loginmodal"><i
-                           class="fa-solid fa-chevron-left me-2"></i>Back to Login</a></p>
-                  <h2 class="text-white">Verify code</h2>
-                  <p>An authentication code has been sent to +91 9842715341</p>
-
-                  <form>
-                     <div class="mb-3 text-start">
-                        <label class="form-label text-white">Enter Code</label>
-                        <input type="text" class="form-control" placeholder="4571">
-                     </div>
-                     <p class="not-send text-end">Didn’t receive a code?
-                        <a href="" class="theme-color">Resend</a>
-                     </p>
-                     <button type="submit" class="btn btn-login">Verify</button>
-                  </form>
-
-
-
-               </div>
-            </div>
-
-         </div>
-      </div>
-   </div>
 
 
    <!-- Register -->
@@ -144,6 +106,120 @@
                      <p class="clikregister text-center mt-2 mb-0" data-bs-toggle="modal" data-bs-target="#loginmodal">
                         Already Have an account? <a href="#" class="text-black text-decoration-underline"> Log In </a>
                      </p>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Forgot Passwrod -->
+   <div class="modal fade login-modal" id="fogotpwd" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <button type="button" class="btn-closeme" data-bs-dismiss="modal" aria-label="Close"><img
+                  src="images/close-btn.png" alt="icon"></button>
+            <div class="modal-body">
+               <!-- Top icons -->
+               <div class="top-icons">
+                  <img src="images/forgot-pwd_bg.png" alt="forgot-password" />
+               </div>
+               <div class="modal-body-content">
+                  <!-- Login header -->
+                  <a href="#" class="backtome d-flex align-items-center" data-bs-toggle="modal"
+                     data-bs-target="#loginmodal"> <i class="fa-solid fa-chevron-left me-2"></i> Back to Login</a>
+                  <div class="login-header">Forgot Password</div>
+                  <div class="login-subtext">
+                     Enter your registrered email address.
+                  </div>
+                  <!-- Form -->
+                  <form>
+                     <div class="mb-3 position-relative">
+                        <label class="form-control-label mt-4 mb-2">Email Address</label>
+                        <input type="text" class="form-control" placeholder="janedeo@gmail.com" value="" />
+                     </div>
+                     <button type="submit" class="btn btn-login" data-bs-toggle="modal" data-bs-target="#otpmodal">
+                        Continue
+                     </button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- OTP -->
+   <div class="modal fade login-modal" id="otpmodal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <button type="button" class="btn-closeme" data-bs-dismiss="modal" aria-label="Close"><img
+                  src="images/close-btn.png" alt="icon"></button>
+
+            <div class="modal-body">
+               <!-- Top icons -->
+               <div class="top-icons">
+                  <img src="images/otp_bg.png" alt="bg" />
+               </div>
+               <div class="modal-body-content">
+                  <form class="otp-wrapper">
+                     <a href="#" class="back-login" data-bs-toggle="modal" data-bs-target="#loginmodal">&larr; Back To
+                        Login</a>
+                     <div class="login-header">Verify Code</div>
+                     <div class="login-subtext">
+                        An authentication code has been sent to janedoe@gmail.com
+                     </div>
+
+                     <div class="mb-3 mt-4">
+                        <label for="otp-code" class="form-control-label">Enter Code</label>
+                        <input type="text" class="form-control mt-2" id="otp-code" placeholder="Enter OTP" />
+                     </div>
+
+                     <div class="mb-3 text-end resend">
+                        Didn't receive a code?
+                        <span onclick="resendCode()">Resend</span>
+                     </div>
+
+                     <button type="submit" class="btn btn-login" data-bs-toggle="modal"
+                        data-bs-target="#resetpassword">Verify</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Reset Pasword -->
+   <div class="modal fade login-modal" id="resetpassword" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <button type="button" class="btn-closeme" data-bs-dismiss="modal" aria-label="Close"><img
+                  src="images/close-btn.png" alt="icon"></button>
+
+            <div class="modal-body">
+               <!-- Top icons -->
+               <div class="top-icons">
+                  <img src="images/reset_bg.png" alt="bg" />
+               </div>
+               <div class="modal-body-content">
+                  <form class="otp-wrapper">
+                     <a href="#" class="back-login" data-bs-toggle="modal" data-bs-target="#loginmodal">&larr; Back To
+                        Login</a>
+                     <div class="login-header">Reset Password</div>
+
+
+                     <div class="mb-3 mt-4 position-relative">
+                        <label for="password" class="form-control-label mb-2">Enter new password</label>
+                        <input type="password" class="form-control" id="rpassword" placeholder="Enter password">
+                        <i class="fas fa-eye password-toggle" id="rtogglePassword"></i>
+                     </div>
+                     <div class="mb-3 position-relative">
+                        <label for="password" class="form-control-label mb-2">Re-enter new password</label>
+                        <input type="password" class="form-control" id="rpassword2" placeholder="Enter password">
+                        <i class="fas fa-eye password-toggle" id="rtogglePassword2"></i>
+                     </div>
+
+
+                     <button type="submit" class="btn btn-login">Reset Password</button>
                   </form>
                </div>
             </div>
