@@ -316,6 +316,7 @@
     .yr-warranty img{width:20px;}
     .select-size span{font-size:14px;}
     .add-cart2{padding:10px 35px;font-size:14px;}
+    .wishlist .col-wsh{width:20%;}
 }
 
 @media (max-width: 1199.98px) {
@@ -362,6 +363,7 @@
     footer .col3 h5{font-size:18px;}
     .product-page .product-box-img-wrap{height:103px;}
     .return-item{font-size:16px;}
+     .wishlist .col-wsh{width:33.333%;}
 
 }
 
@@ -1105,6 +1107,7 @@
     .timeline li.completed .date,.timeline li .date{font-size:9px;margin-top:2px;}
     .write-review .modal-body{padding:20px 20px}
     .rate-star .star{font-size:33px;}
+    .wishlist .col-wsh{width:33.33%;}
 
 }
 
@@ -1652,6 +1655,7 @@
     .circle{width:25px;height:25px;font-size:10px;}
     .tracking-updates{margin-top:20px;}
     .return-item{font-size:13px;}
+    .wishlist .col-wsh{width:50%;}
 
 }
 

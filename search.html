@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-   <title>Spice Nutrition</title>
+   <title>Adam Xpress</title>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="shortcut icon" href="images/favicon.png">
@@ -14,250 +14,373 @@
    <link href="css/home-responsive.css" rel="stylesheet">
    <link href="css/menu.css" rel="stylesheet">
    <link href="css/font/font.css" rel="stylesheet">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
 
 </head>
 
 <body>
 
+
    <!-- Login -->
-   <div class="modal fade logreg-modal" id="loginmodal" tabindex="-1" aria-hidden="true">
+   <div class="modal fade login-modal" id="loginmodal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog">
          <div class="modal-content">
-            <div class="d-flex justify-content-center mb-4">
-               <button type="button" class="c_close c_custom" data-bs-dismiss="modal" aria-label="Close"><i><img
-                        src="images/close-btn2.png" alt="icon"></i></button>
-               <img src="images/logo-white.png" alt="logo" class="mt-5 logoinmodal">
-            </div>
+            <button type="button" class="btn-closeme" data-bs-dismiss="modal" aria-label="Close"><img
+                  src="images/close-btn.png" alt="icon"></button>
             <div class="modal-body">
-               <div class="login-box">
-                  <h2 class="text-white">Login Or Sign-Up</h2>
-                  <p>Login to access your Spice Nutrition account</p>
-
-                  <form>
-                     <div class="mb-3 text-start">
-                        <label class="form-label text-white">Whatsapp Number</label>
-                        <input type="text" class="form-control" placeholder="9847123547">
-                     </div>
-                     <button type="submit" class="btn btn-login" data-bs-toggle="modal"
-                        data-bs-target="#otpmodal">Login</button>
-                  </form>
-
-                  <div class="divider"><span>Or login with</span></div>
-
-                  <div class="social-login">
-                     <a href="#"><img src="images/gplus.png" width="24" alt="icon"></a>
-                     <a href="#"><img src="images/mail-ic.png" width="24" alt="icon"></a>
+               <!-- Top icons -->
+               <div class="top-icons">
+                  <img src="images/login_bg.png" alt="icon1" />
+               </div>
+               <div class="modal-body-content">
+                  <!-- Login header -->
+                  <div class="login-header">Login</div>
+                  <div class="login-subtext">
+                     Login To Access Your Ridaya Account
                   </div>
-                   <p class="not-send text-center mt-3">No Registered Click here to <a href="" class="theme-color" data-bs-toggle="modal"
-                        data-bs-target="#registermodal">Register</a>
-               </div>
-            </div>
-
-         </div>
-      </div>
-   </div>
-
-
-   <!-- OTP -->
-   <div class="modal fade logreg-modal" id="otpmodal" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog">
-         <div class="modal-content">
-            <div class="d-flex justify-content-center mb-4">
-               <button type="button" class="c_close c_custom" data-bs-dismiss="modal" aria-label="Close"><i><img
-                        src="images/close-btn2.png" alt="icon"></i></button>
-               <img src="images/logo-white.png" alt="logo" class="mt-5 logoinmodal">
-            </div>
-            <div class="modal-body">
-               <div class="login-box">
-                  <p><a data-bs-toggle="modal" data-bs-target="#loginmodal"><i
-                           class="fa-solid fa-chevron-left me-2"></i>Back to Login</a></p>
-                  <h2 class="text-white">Verify code</h2>
-                  <p>An authentication code has been sent to +91 9842715341</p>
-
+                  <!-- Form -->
                   <form>
-                     <div class="mb-3 text-start">
-                        <label class="form-label text-white">Enter Code</label>
-                        <input type="text" class="form-control" placeholder="4571">
+                     <div class="mb-3 position-relative">
+                        <label class="form-control-label mt-4 mb-2">Email Address</label>
+                        <input type="text" class="form-control" placeholder="janedeo@gmail.com" value="" />
                      </div>
-                     <p class="not-send text-end">Didn’t receive a code?
-                        <a href="" class="theme-color">Resend</a>
+                     <div class="mb-3 position-relative">
+                        <label for="password" class="form-control-label mb-2">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter password">
+                        <i class="fas fa-eye password-toggle" id="togglePassword"></i>
+                     </div>
+                     <a href="#" class="float-end fg-pwd" data-bs-toggle="modal" data-bs-target="#fogotpwd">Forgot
+                        password?</a>
+                     <button type="submit" class="btn btn-login">
+                        Login
+                     </button>
+                     <p class="clikregister text-center mt-2 mb-0" data-bs-toggle="modal"
+                        data-bs-target="#registermodal">
+                        Don’t Have an account? <a href="#" class="text-black text-decoration-underline">Sign Up</a>
                      </p>
-                     <button type="submit" class="btn btn-login">Verify</button>
                   </form>
-
-
-
                </div>
             </div>
-
          </div>
       </div>
    </div>
+
 
 
    <!-- Register -->
-   <div class="modal fade logreg-modal" id="registermodal" tabindex="-1" aria-hidden="true">
+   <div class="modal fade login-modal" id="registermodal" tabindex="-1" aria-modal="true">
       <div class="modal-dialog">
          <div class="modal-content">
-            <div class="d-flex justify-content-center mb-4">
-               <button type="button" class="c_close c_custom" data-bs-dismiss="modal" aria-label="Close"><i><img
-                        src="images/close-btn2.png" alt="icon"></i></button>
-               <img src="images/logo-white.png" alt="logo" class="mt-5 logoinmodal">
-            </div>
+
             <div class="modal-body">
-               <div class="login-box mt-3">
-                  <h2 class="text-white">Fill the Details</h2>
-                  <p>Fill in your information so we can get in touch with you and serve you better.</p>
-
+               <div class="modal-body-content">
+                  <!-- Login header -->
+                  <div class="login-header d-flex justify-content-between">Signup <button type="button"
+                        class="bg-transparent border-0" data-bs-dismiss="modal" aria-label="Close"><img
+                           src="images/close-btn.png" alt="icon"></button></div>
+                  <!-- Form -->
                   <form>
-                     <div class="mb-3 text-start">
-                        <label class="form-label text-white">Full Name</label>
-                        <input type="text" class="form-control" placeholder="John Doe">
+                     <div class="mb-2">
+                        <label class="form-control-label mb-2">Full Name</label>
+                        <input type="text" class="form-control" placeholder="John Doe" value="John Doe">
                      </div>
-                      <div class="mb-3 text-start">
-                        <label class="form-label text-white">Email Address</label>
-                        <input type="text" class="form-control" placeholder="john.doe@gmail.com">
+                     <div class="mb-2">
+                        <label class="form-control-label mb-2">Email Address</label>
+                        <input type="email" class="form-control" placeholder="Email Address">
                      </div>
-                      <div class="mb-3 text-start">
-                        <label class="form-label text-white">Date of Birth</label>
-                        <input type="text" class="form-control" placeholder="select date" id="datepicker2">
+                     <div class="mb-3 position-relative">
+                        <label for="password" class="form-control-label mb-2">Password</label>
+                        <input type="password" class="form-control" placeholder="Enter password" id="password2">
+                        <i class="fas fa-eye password-toggle" id="togglePassword2"></i>
                      </div>
-                      <div class="mb-3 text-start">
-                        <label class="form-label text-white">Referral Code</label>
-                        <input type="text" class="form-control" placeholder="SN12345">
+                     <div class="mb-2">
+                        <label class="form-control-label mb-2">Phone Number</label>
+                        <input type="text" class="form-control" placeholder="Phone Number">
                      </div>
-                     <button type="submit" class="btn btn-login">CONTINUE</button>
+                     <p class="clikregister text-center mt-2" data-bs-toggle="modal" data-bs-target="#registermodal">
+                        By signing up, you agree with our <a href="#" class="text-black text-decoration-underline">Terms
+                           & Conditions</a> and <a href="#" class="text-black text-decoration-underline">Privacy
+                           Policy</a>
+                     </p>
+                     <button type="submit" class="btn btn-login">Continue</button>
+                     <p class="clikregister text-center mt-2 mb-0" data-bs-toggle="modal" data-bs-target="#loginmodal">
+                        Already Have an account? <a href="#" class="text-black text-decoration-underline"> Log In </a>
+                     </p>
                   </form>
-
                </div>
             </div>
-
          </div>
       </div>
    </div>
-   
+
+   <!-- Forgot Passwrod -->
+   <div class="modal fade login-modal" id="fogotpwd" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <button type="button" class="btn-closeme" data-bs-dismiss="modal" aria-label="Close"><img
+                  src="images/close-btn.png" alt="icon"></button>
+            <div class="modal-body">
+               <!-- Top icons -->
+               <div class="top-icons">
+                  <img src="images/forgot-pwd_bg.png" alt="forgot-password" />
+               </div>
+               <div class="modal-body-content">
+                  <!-- Login header -->
+                  <a href="#" class="backtome d-flex align-items-center" data-bs-toggle="modal"
+                     data-bs-target="#loginmodal"> <i class="fa-solid fa-chevron-left me-2"></i> Back to Login</a>
+                  <div class="login-header">Forgot Password</div>
+                  <div class="login-subtext">
+                     Enter your registrered email address.
+                  </div>
+                  <!-- Form -->
+                  <form>
+                     <div class="mb-3 position-relative">
+                        <label class="form-control-label mt-4 mb-2">Email Address</label>
+                        <input type="text" class="form-control" placeholder="janedeo@gmail.com" value="" />
+                     </div>
+                     <button type="submit" class="btn btn-login" data-bs-toggle="modal" data-bs-target="#otpmodal">
+                        Continue
+                     </button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- OTP -->
+   <div class="modal fade login-modal" id="otpmodal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <button type="button" class="btn-closeme" data-bs-dismiss="modal" aria-label="Close"><img
+                  src="images/close-btn.png" alt="icon"></button>
+
+            <div class="modal-body">
+               <!-- Top icons -->
+               <div class="top-icons">
+                  <img src="images/otp_bg.png" alt="bg" />
+               </div>
+               <div class="modal-body-content">
+                  <form class="otp-wrapper">
+                     <a href="#" class="back-login" data-bs-toggle="modal" data-bs-target="#loginmodal">&larr; Back To
+                        Login</a>
+                     <div class="login-header">Verify Code</div>
+                     <div class="login-subtext">
+                        An authentication code has been sent to janedoe@gmail.com
+                     </div>
+
+                     <div class="mb-3 mt-4">
+                        <label for="otp-code" class="form-control-label">Enter Code</label>
+                        <input type="text" class="form-control mt-2" id="otp-code" placeholder="Enter OTP" />
+                     </div>
+
+                     <div class="mb-3 text-end resend">
+                        Didn't receive a code?
+                        <span onclick="resendCode()">Resend</span>
+                     </div>
+
+                     <button type="submit" class="btn btn-login" data-bs-toggle="modal"
+                        data-bs-target="#resetpassword">Verify</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Reset Pasword -->
+   <div class="modal fade login-modal" id="resetpassword" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <button type="button" class="btn-closeme" data-bs-dismiss="modal" aria-label="Close"><img
+                  src="images/close-btn.png" alt="icon"></button>
+
+            <div class="modal-body">
+               <!-- Top icons -->
+               <div class="top-icons">
+                  <img src="images/reset_bg.png" alt="bg" />
+               </div>
+               <div class="modal-body-content">
+                  <form class="otp-wrapper">
+                     <a href="#" class="back-login" data-bs-toggle="modal" data-bs-target="#loginmodal">&larr; Back To
+                        Login</a>
+                     <div class="login-header">Reset Password</div>
+
+
+                     <div class="mb-3 mt-4 position-relative">
+                        <label for="password" class="form-control-label mb-2">Enter new password</label>
+                        <input type="password" class="form-control" id="rpassword" placeholder="Enter password">
+                        <i class="fas fa-eye password-toggle" id="rtogglePassword"></i>
+                     </div>
+                     <div class="mb-3 position-relative">
+                        <label for="password" class="form-control-label mb-2">Re-enter new password</label>
+                        <input type="password" class="form-control" id="rpassword2" placeholder="Enter password">
+                        <i class="fas fa-eye password-toggle" id="rtogglePassword2"></i>
+                     </div>
+
+
+                     <button type="submit" class="btn btn-login">Reset Password</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
    <a href="javascript:" id="return-to-top"><i class="fas fa-angle-up pulse"></i></a>
 
-   <header class="header inner-header">
+
+
+
+   <header class="header">
       <div class="container">
          <div class="inner-wrap">
-            <div class="d-flex  align-items-center justify-content-between">
+            <div class="d-flex align-items-center justify-content-between">
                <div class="logo">
                   <a href="index.html"><img src="images/logo.png" alt="logo"></a>
                </div>
-               <div class="header-item">
-                  <div class="menu-overlay"></div>
-                  <nav class="menu">
-                     <div class="mobile-menu-head">
-                        <div class="go-back"><i class="fa fa-angle-left"></i></div>
-                        <a class="current-menu-title" href="#"></a>
-                        <div class="mobile-menu-close"><i><img src="images/close.png" alt="icon"></i></div>
-                     </div>
-                     <ul class="menu-main">
 
-                        <li><a href="index.html">Home</a></li>
-                        <li class="menu-item-has-children">
-                           <a href="product.html" class="d-none d-xl-block">Shop<i class="fa fa-angle-down"></i></a>
-                           <a href="#" class="d-xl-none d-block">Shop<i class="fa fa-angle-down"></i></a>
-                           <div class="sub-menu mega-menu mega-menu-column-4">
-                              <div class="list-item">
-                                 <h4 class="title">Protein & Nutrition</h4>
-                                 <ul>
-                                    <li><a href="product.html">Whey Protein</a></li>
-                                    <li><a href="product.html">Plant Protein</a></li>
-                                    <li><a href="product.html">Mass Gainers</a></li>
-                                    <li><a href="product.html">Creatine</a></li>
-                                    <li><a href="product.html">BCAAs & EAAs</a></li>
-                                 </ul>
-                              </div>
-                              <div class="list-item">
-                                 <h4 class="title">Vitamins & Wellness</h4>
-                                 <ul>
-                                    <li><a href="product.html">Multivitamins</a></li>
-                                    <li><a href="product.html">Omega & Fish Oil</a></li>
-                                    <li><a href="product.html">Immunity Boosters</a></li>
-                                    <li><a href="product.html">Joint Support</a></li>
-                                    <li><a href="product.html">Greens & Superfoods</a></li>
-                                 </ul>
-                              </div>
-                              <div class="list-item">
-                                 <h4 class="title">Performance & Energy</h4>
-                                 <ul>
-                                    <li><a href="product.html">Pre-Workout</a></li>
-                                    <li><a href="product.html">Intra-Workout</a></li>
-                                    <li><a href="product.html">Post-Workout</a></li>
-                                    <li><a href="product.html">Energy Drinks</a></li>
-                                    <li><a href="product.html">Nitric Oxide Boosters</a></li>
-                                 </ul>
-                              </div>
-                              <div class="list-item">
-                                 <h4 class="title">Fitness Essentials</h4>
-                                 <ul>
-                                    <li><a href="product.html">Protein Bars & Snacks</a></li>
-                                    <li><a href="product.html">Shakers & Bottles</a></li>
-                                    <li><a href="product.html">Gym Accessories</a></li>
-                                    <li><a href="product.html">Meal Replacements</a></li>
-                                    <li><a href="product.html">Fat Burners</a></li>
-                                 </ul>
-                              </div>
-                           </div>
-
-                        </li>
-
-
-                        <li class="menu-item-has-children">
-                           <a href="#" class="d-none d-xl-block">Brands<i class="fa fa-angle-down"></i></a>
-                           <a href="#" class="d-xl-none d-block">Brands<i class="fa fa-angle-down"></i></a>
-
-                           <div class="sub-menu">
-                              <div class="list-item">
-                                 <ul>
-                                    <li><a href="#">Brands 01</a></li>
-                                    <li><a href="#">Brands 02</a></li>
-                                    <li><a href="#">Brands 03</a></li>
-                                    <li><a href="#">Brands 04</a></li>
-                                    <li><a href="#">Brands 05</a></li>
-                                 </ul>
-                              </div>
-                           </div>
-                        </li>
-                        <li><a href="blog.html">Blogs</a></li>
-
-
-                     </ul>
-                  </nav>
-               </div>
-               <div class="right-blk d-flex">
+               <div class="top_block_02">
+                  <div class="select_block">
+                     <select>
+                        <option>Categories</option>
+                        <option>1</option>
+                        <option>1</option>
+                     </select>
+                  </div>
                   <div class="search-dropdown me-2">
-                     <form class="d-flex">
+                     <form>
                         <div class="input-group position-relative">
-                           <input type="text" class="form_fi" placeholder="Search" aria-label="Search">
+                           <input type="text" class="form_fi" placeholder="What are you looking for?"
+                              aria-label="Search">
                            <button class="btn-search" type="submit">
                               <i><img src="images/search.svg" alt="search" class="fa-search"></i>
                            </button>
                         </div>
                      </form>
                   </div>
-                  <ul>
-                     <li><a href="wishlist.html"><img src="images/heart.svg" alt="image"></a></li>
-                     <li><a href="my-account-wallet-point.html"><img src="images/wallet2.svg" alt="image"></a></li>
-                     <li><a href="cart.html" class="custom_ic"><span class="cartCout">0</span><img src="images/cart.svg"
-                              alt="image"></a></li>
-                     <li><a href="#" data-bs-toggle="modal" data-bs-target="#loginmodal"><img src="images/person.svg"
-                              alt="image"></a></li>
-                  </ul>
-                  <div class="mobile-menu-trigger">
-                     <span></span>
+               </div>
+
+               <div class="dropdown" id="languageDropdown">
+                  <div class="dropdown-toggle">
+                     <img src="https://flagcdn.com/w20/qa.png" alt="Qatar Flag">
+                     <span>العربية</span>
                   </div>
+                  <div class="dropdown-menu">
+                     <div class="option" data-lang="ar">
+                        <img src="https://flagcdn.com/w20/qa.png" alt="Qatar">
+                        <span>العربية</span>
+                     </div>
+                     <div class="option" data-lang="en">
+                        <img src="https://flagcdn.com/w20/us.png" alt="English">
+                        <span>English</span>
+                     </div>
+                     <div class="option" data-lang="fr">
+                        <img src="https://flagcdn.com/w20/fr.png" alt="French">
+                        <span>Français</span>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="right-blk">
+                  <ul>
+                     <li>
+                        <a href="wishlist.html"><img src="images/heart.svg" alt="image">Wishlist</a>
+                     </li>
+
+                     <li>
+                        <a href="cart.html" class="custom_ic"><span class="cartCout">0</span><img src="images/cart.svg"
+                              alt="image">Cart</a>
+                     </li>
+                     <li>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#loginmodal"><img src="images/person.svg"
+                              alt="image">Login/Signup</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="menu-wrap">
+         <div class="container">
+
+            <div class="d-flex">
+               <div class="all-categories">
+                  <i><img src="images/menu_icon.svg" alt="icon"></i>
+                  <div class="all-categories-level" id="customMenuWrap">
+                     <button class="menu-btn" id="customMenuToggle" aria-haspopup="true" aria-expanded="false">All
+                        Categories <i class="fa-solid fa-chevron-down"></i></button>
+
+                     <nav class="custom-dropdown" id="customMainDropdown" role="menu" aria-label="Main menu">
+                        <ul>
+                           <li><a href="#" role="menuitem">Categories 1</a></li>
+                           <li class="has-children">
+                              <button class="custom-item-btn" aria-haspopup="true" aria-expanded="false">Categories 2
+                                 <span class="custom-caret">▾</span></button>
+                              <div class="custom-submenu" role="menu">
+                                 <ul>
+                                    <li><a href="#" role="menuitem">Sub Categories 1 </a></li>
+                                    <li><a href="#" role="menuitem">Sub Categories 2 </a></li>
+                                    <li><a href="#" role="menuitem">Sub Categories 3 </a></li>
+                                 </ul>
+                              </div>
+                           </li>
+                           <li><a href="#" role="menuitem">Categories 3</a></li>
+                           <li><a href="#" role="menuitem">Categories 4</a></li>
+                        </ul>
+                     </nav>
+                  </div>
+               </div>
+
+
+               <div class="header-item item-center">
+                  <div class="menu-overlay"></div>
+                  <nav class="menu">
+                     <div class="mobile-menu-head">
+                        <div class="go-back"><i class="fa fa-angle-left"></i></div>
+                        <div class="current-menu-title"></div>
+                        <div class="mobile-menu-close">×</div>
+                     </div>
+                     <ul class="menu-main">
+                        <li>
+                           <a href="#">Mobiles </a>
+                        </li>
+                        <li>
+                           <a href="#">Electronics</a>
+                        </li>
+                        <li>
+                           <a href="#">Clothing</a>
+                        </li>
+                        <li>
+                           <a href="#">Furniture</a>
+                        </li>
+                        <li>
+                           <a href="#"> Toys</a>
+                        </li>
+                        <li>
+                           <a href="#"> Household</a>
+                        </li>
+                        <li>
+                           <a href="#"> Beauty</a>
+                        </li>
+                        <li>
+                           <a href="#"> Gaming</a>
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
+               <div class="mobile-menu-trigger">
+                  <span></span>
                </div>
             </div>
          </div>
       </div>
    </header>
+
+
+
+
 
    <div class="search-dropdown2" style="display: none;">
       <form class="d-flex">
@@ -278,29 +401,35 @@
          <li><a href="javascript:void(0)" class="search-btn search-icon"><img src="images/search_IC.svg"
                   alt="Search Icon"></a></li>
          <li><a href="wishlist.html"><img src="images/wishlist_IC.svg" alt="image"></a></li>
-         <li><a href="my-account-wallet-point.html"><img src="images/wallet2.svg" alt="image"></a></li>
-         <li><a href="cart.html" class="custom_ic"><img src="images/bag_IC.svg" alt="image"><span class="cartCout">0</span></a>
+         <li><a href="cart.html" class="custom_ic"><img src="images/bag_IC.svg" alt="image"><span
+                  class="cartCout">0</span></a>
          </li>
       </ul>
    </div>
 
-
-
-
    <!-- Filter Button (only on mobile) -->
-   <button class="filter-btn d-md-none mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#filterSidebar">
-      <i class="fa fa-filter me-2"></i>
+   <button class="filter-btn d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#filterSidebar">
+      <i class="me-2"><img src="images/filter_ic.png" alt="filter_ic"></i>
    </button>
 
-   <div class="product-page custompad-2 pb-0">
+   <div class="bread-crumb-wrap">
+      <div class="container">
+         <nav style="--bs-breadcrumb-divider: '&gt;';" aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+               <li class="breadcrumb-item"><a href="#">Home</a></li>
+               <li class="breadcrumb-item active" aria-current="page">Laptops</li>
+            </ol>
+         </nav>
+      </div>
+   </div>
+
+   <div class="product-page">
       <div class="container">
          <div class="row">
-            <div class="col-md-4" id="filterSidebar">
-
-               <p class="f-24 fw-normal">Browse By</p>
+            <div class="col-lg-3" id="filterSidebar">
 
                <!-- Offcanvas Header (only on mobile) -->
-               <div class="offcanvas-header d-md-none">
+               <div class="offcanvas-header d-lg-none">
                   <h5 class="offcanvas-title">Filters</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                </div>
@@ -309,60 +438,6 @@
                <div class="filter-sidebar">
                   <!-- Sidebar Content -->
                   <div class="offcanvas-body">
-                     <!-- Categories -->
-                     <div class="accordion custom-accordion box shadow-sm" id="accordionExample1">
-
-                        <h3>Categories</h3>
-                        <!-- Item 1 -->
-                        <div class="accordion-item">
-                           <h4 class="accordion-header" id="cat1">
-                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                 data-bs-target="#catcollapse1">
-                                 <i class="fa-solid fa-chevron-right me-2"></i> Protein Powders
-                              </button>
-                           </h4>
-                           <div id="catcollapse1" class="accordion-collapse collapse"
-                              data-bs-parent="#accordionExample1">
-                              <div class="accordion-body px-3 py-1">
-                                 <ul class="list-unstyled mb-0">
-                                    <li><a href="#">Whey Protein</a></li>
-                                    <li><a href="#">Casein Protein</a></li>
-                                    <li><a href="#">Plant Protein</a></li>
-                                 </ul>
-                              </div>
-                           </div>
-                        </div>
-
-                        <!-- Item 2 -->
-                        <div class="accordion-item">
-                           <h4 class="accordion-header" id="cat2">
-                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                 data-bs-target="#catcollapse2">
-                                 <i class="fa-solid fa-chevron-right me-2"></i> Pre Workout
-                              </button>
-                           </h4>
-                           <div id="catcollapse2" class="accordion-collapse collapse"
-                              data-bs-parent="#accordionExample1">
-                              <div class="accordion-body px-3 py-1">
-                                 <ul class="list-unstyled mb-0">
-                                    <li><a href="#">Energy Boosters</a></li>
-                                    <li><a href="#">Pump Formula</a></li>
-                                 </ul>
-                              </div>
-                           </div>
-                        </div>
-
-                        <!-- Item 3 (no subcategories) -->
-                        <div class="accordion-item">
-                           <h2 class="accordion-header">
-                              <button class="accordion-button collapsed no-collapse" type="button">
-                                 <i class="fa-solid fa-chevron-right me-2"></i> Mass and Weight Gainers
-                              </button>
-                           </h2>
-                        </div>
-                     </div>
-
-
 
                      <!-- Filters -->
                      <div class="filters box shadow-sm">
@@ -371,7 +446,7 @@
                            <a href="#" class="clear-filters">Clear Filters</a>
                         </div>
 
-                        <div class="accordion custom-accordion" id="accordionExample2">
+                        <div class="accordion custom-accordion" id="accordionExample1">
 
                            <h4 class="accordion-header mb-2" id="brand1">
                               <button class="accordion-button" type="button" data-bs-toggle="collapse"
@@ -388,167 +463,38 @@
                                     <div class="position-relative">
                                        <input type="text" class="form_fi2" placeholder="Search" aria-label="Search">
                                        <button class="btn-search2" type="submit">
-                                          <i><img src="images/search-ic.png" alt="search" class="fa-search"></i>
+                                          <i><img src="images/search-ic.svg" alt="search" class="fa-search"></i>
                                        </button>
                                     </div>
                                  </div>
                                  <div class="custom-scroll">
                                     <div class="form-check">
                                        <input class="form-check-input" type="checkbox">
-                                       <label class="form-check-label">MuscleBlaze</label>
+                                       <label class="form-check-label">Samsung</label>
                                     </div>
                                     <div class="form-check">
                                        <input class="form-check-input" type="checkbox">
-                                       <label class="form-check-label">Nutrabay</label>
+                                       <label class="form-check-label">Apple</label>
                                     </div>
                                     <div class="form-check">
                                        <input class="form-check-input" type="checkbox">
-                                       <label class="form-check-label">GNC</label>
+                                       <label class="form-check-label">Asus</label>
                                     </div>
                                     <div class="form-check">
                                        <input class="form-check-input" type="checkbox">
-                                       <label class="form-check-label">Nutrabay</label>
-                                    </div>
-                                    <div class="form-check">
-                                       <input class="form-check-input" type="checkbox">
-                                       <label class="form-check-label">MuscleBlaze</label>
-                                    </div>
-                                    <div class="form-check">
-                                       <input class="form-check-input" type="checkbox">
-                                       <label class="form-check-label">Nutrabay</label>
-                                    </div>
-                                    <div class="form-check">
-                                       <input class="form-check-input" type="checkbox">
-                                       <label class="form-check-label">GNC</label>
-                                    </div>
-                                    <div class="form-check">
-                                       <input class="form-check-input" type="checkbox">
-                                       <label class="form-check-label">Nutrabay</label>
+                                       <label class="form-check-label">MSI</label>
                                     </div>
                                  </div>
                               </div>
+                              <hr class="style1">
                            </div>
 
                         </div>
 
 
-
-
-
-
-                        <div class="accordion custom-accordion" id="accordionExample3">
-
-                           <div class="mb-2 position-relative">
-                              <h4 class="accordion-header mb-2">
-                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#discountcollapse2">
-                                    <i class="fa-solid fa-chevron-up me-2"></i> Discount
-                                 </button>
-                              </h4>
-                              <a href="#" class="clear-filters">Clear</a>
-                           </div>
-
-                           <div id="discountcollapse2" class="accordion-collapse collapse show"
-                              data-bs-parent="#accordionExample3">
-
-                              <!-- Discount -->
-                              <div class="mb-3">
-
-
-                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label">10% or above</label>
-                                 </div>
-                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label">20% or above</label>
-                                 </div>
-                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label">30% or above</label>
-                                 </div>
-                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label">40% or above</label>
-                                 </div>
-                              </div>
-
-                           </div>
-
-                        </div>
-
-
-
-                        <div class="accordion custom-accordion" id="accordionExample4">
-
-                           <div class="mb-2 position-relative">
-                              <h4 class="accordion-header mb-2" id="rating1">
-                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#ratingcollapse1">
-                                    <i class="fa-solid fa-chevron-up me-2"></i> Rating
-                                 </button>
-                              </h4>
-                              <a href="#" class="clear-filters">Clear</a>
-                           </div>
-
-                           <div id="ratingcollapse1" class="accordion-collapse collapse show"
-                              data-bs-parent="#accordionExample4">
-
-                              <!-- Discount -->
-                              <div class="mb-3">
-
-
-                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio">
-                                    <div class="form-check-label d-flex">
-                                       <div class="stars mb-1 me-2">
-                                          <!-- Example: 4.5 stars -->
-                                          <i class="fa-solid fa-star"></i>
-                                          <i class="fa-solid fa-star"></i>
-                                          <i class="fa-solid fa-star"></i>
-                                          <i class="fa-solid fa-star"></i>
-                                       </div> & Up
-                                    </div>
-                                 </div>
-                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio">
-                                    <div class="form-check-label d-flex">
-                                       <div class="stars mb-1 me-2">
-                                          <!-- Example: 4.5 stars -->
-                                          <i class="fa-solid fa-star"></i>
-                                          <i class="fa-solid fa-star"></i>
-                                          <i class="fa-solid fa-star"></i>
-                                       </div> & Up
-                                    </div>
-                                 </div>
-                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio">
-                                    <div class="form-check-label d-flex">
-                                       <div class="stars mb-1 me-2">
-                                          <!-- Example: 4.5 stars -->
-                                          <i class="fa-solid fa-star"></i>
-                                          <i class="fa-solid fa-star"></i>
-                                       </div> & Up
-                                    </div>
-                                 </div>
-                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio">
-                                    <div class="form-check-label d-flex">
-                                       <div class="stars mb-1 me-2">
-                                          <!-- Example: 4.5 stars -->
-                                          <i class="fa-solid fa-star"></i>
-                                          <i class="fa-solid fa-star"></i>
-                                       </div> & Up
-                                    </div>
-                                 </div>
-                              </div>
-
-                           </div>
-
-                        </div>
 
                         <!-- Price -->
-                        <div class="accordion custom-accordion mb-3" id="accordionExample5">
+                        <div class="accordion custom-accordion mb-3" id="accordionExample2">
 
                            <div class="mb-2 position-relative">
                               <h4 class="accordion-header mb-2" id="pricerange">
@@ -561,29 +507,162 @@
                            </div>
 
                            <div id="pricerangecollapse1" class="accordion-collapse collapse show"
-                              data-bs-parent="#accordionExample5">
+                              data-bs-parent="#accordionExample2">
                               <div id="slider-range"></div>
                               <p class="mt-2">
                                  <input type="text" id="amount" readonly="" style="border:0;">
                               </p>
-
                            </div>
+                           <hr class="style1">
                         </div>
 
-                        <!-- Gender -->
-                        <div class="accordion custom-accordion" id="accordionExample6">
+
+
+                        <!-- Processor -->
+                        <div class="accordion custom-accordion" id="accordionExample3">
 
                            <div class="mb-2 position-relative">
                               <h4 class="accordion-header mb-2">
                                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#discountcollapse3">
-                                    <i class="fa-solid fa-chevron-up me-2"></i> Gender
+                                    data-bs-target="#processorcollapse1">
+                                    <i class="fa-solid fa-chevron-up me-2"></i> Processor
                                  </button>
                               </h4>
                               <a href="#" class="clear-filters">Clear</a>
                            </div>
 
-                           <div id="discountcollapse3" class="accordion-collapse collapse show"
+                           <div id="processorcollapse1" class="accordion-collapse collapse show"
+                              data-bs-parent="#accordionExample3">
+
+                              <!-- Discount -->
+                              <div class="mb-3">
+
+
+                                 <div class="form-check">
+                                    <input class="form-check-input" type="radio">
+                                    <label class="form-check-label">Core i3</label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input class="form-check-input" type="radio">
+                                    <label class="form-check-label">Core i5</label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input class="form-check-input" type="radio">
+                                    <label class="form-check-label">Core i7</label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input class="form-check-input" type="radio">
+                                    <label class="form-check-label">Ryzen 7</label>
+                                 </div>
+                              </div>
+
+                           </div>
+                           <hr class="style1">
+
+                        </div>
+
+                        <!-- Storage Capacity -->
+                        <div class="accordion custom-accordion" id="accordionExample4">
+
+                           <div class="mb-2 position-relative">
+                              <h4 class="accordion-header mb-2">
+                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#storagecapacitycollapse1">
+                                    <i class="fa-solid fa-chevron-up me-2"></i> Storage Capacity
+                                 </button>
+                              </h4>
+                              <a href="#" class="clear-filters">Clear</a>
+                           </div>
+
+                           <div id="storagecapacitycollapse1" class="accordion-collapse collapse show"
+                              data-bs-parent="#accordionExample4">
+
+                              <!-- Discount -->
+                              <div class="mb-3">
+
+
+                                 <div class="form-check">
+                                    <input class="form-check-input" type="radio">
+                                    <label class="form-check-label">512 GB & More</label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input class="form-check-input" type="radio">
+                                    <label class="form-check-label">256 GB</label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input class="form-check-input" type="radio">
+                                    <label class="form-check-label">128 GB</label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input class="form-check-input" type="radio">
+                                    <label class="form-check-label">64 GB</label>
+                                 </div>
+                              </div>
+
+
+                           </div>
+                           <hr class="style1">
+
+                        </div>
+
+                        <!--  RAM Capacity -->
+                        <div class="accordion custom-accordion" id="accordionExample5">
+
+                           <div class="mb-2 position-relative">
+                              <h4 class="accordion-header mb-2">
+                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#ramcapacitycollapse1">
+                                    <i class="fa-solid fa-chevron-up me-2"></i> RAM Capacity
+                                 </button>
+                              </h4>
+                              <a href="#" class="clear-filters">Clear</a>
+                           </div>
+
+                           <div id="ramcapacitycollapse1" class="accordion-collapse collapse show"
+                              data-bs-parent="#accordionExample5">
+
+                              <!-- Discount -->
+                              <div class="mb-3">
+
+
+                                 <div class="form-check">
+                                    <input class="form-check-input" type="radio">
+                                    <label class="form-check-label">4 GB</label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input class="form-check-input" type="radio">
+                                    <label class="form-check-label">8 GB</label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input class="form-check-input" type="radio">
+                                    <label class="form-check-label">16 GB</label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input class="form-check-input" type="radio">
+                                    <label class="form-check-label">32 GB</label>
+                                 </div>
+                              </div>
+
+
+                           </div>
+                           <hr class="style1">
+
+                        </div>
+
+                        <!--  Screen Size -->
+                        <div class="accordion custom-accordion" id="accordionExample6">
+
+                           <div class="mb-2 position-relative">
+                              <h4 class="accordion-header mb-2">
+                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#screensizecollapse1">
+                                    <i class="fa-solid fa-chevron-up me-2"></i> Screen Size
+                                 </button>
+                              </h4>
+                              <a href="#" class="clear-filters">Clear</a>
+                           </div>
+
+                           <div id="screensizecollapse1" class="accordion-collapse collapse show"
                               data-bs-parent="#accordionExample6">
 
                               <!-- Discount -->
@@ -591,63 +670,26 @@
 
 
                                  <div class="form-check">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label">Men</label>
+                                    <input class="form-check-input" type="radio">
+                                    <label class="form-check-label">Below 13 inch</label>
                                  </div>
                                  <div class="form-check">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label">Women</label>
+                                    <input class="form-check-input" type="radio">
+                                    <label class="form-check-label">14 inch - 14.9 inch</label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input class="form-check-input" type="radio">
+                                    <label class="form-check-label">15 inch- 15.9 inch</label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input class="form-check-input" type="radio">
+                                    <label class="form-check-label">16 inch- 16.9 inch</label>
                                  </div>
                               </div>
 
-                           </div>
-
-                        </div>
-
-
-                        <!-- Goal -->
-                        <div class="accordion custom-accordion" id="accordionExample7">
-
-                           <div class="mb-2 position-relative">
-                              <h4 class="accordion-header mb-2" id="goal1">
-                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#goalcollapse1">
-                                    <i class="fa-solid fa-chevron-up me-2"></i> Goal
-                                 </button>
-                              </h4>
-                              <a href="#" class="clear-filters">Clear</a>
-                           </div>
-
-                           <div id="goalcollapse1" class="accordion-collapse collapse show"
-                              data-bs-parent="#accordionExample7">
-
-                              <!-- Discount -->
-                              <div class="mb-3">
-
-
-                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label">Boost Energy</label>
-                                 </div>
-                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label">Increases Stamina</label>
-                                 </div>
-                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label">Lean Muscle Mass</label>
-                                 </div>
-                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label">Meal Replacement</label>
-                                 </div>
-                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label">Muscle Building</label>
-                                 </div>
-                              </div>
 
                            </div>
+
 
                         </div>
 
@@ -656,10 +698,10 @@
 
                </div>
             </div>
-            <div class="col-md-8">
-               <div class="product-top d-flex justify-content-between align-items-center mb-3">
-                  <p class="mb-0 f-24 fw-normal">Showing results for protein</p>
-                  <div class="sort-by d-flex align-items-center">
+            <div class="col-lg-9">
+               <div class="product-top d-flex flex-wrap justify-content-between align-items-center mb-3">
+                  <h1 class="mb-0">Showing results for Laptop</h1>
+                  <div class="sort-by d-flex align-items-center mt-2 mt-sm-0">
                      <label class="me-2 mb-0">Sort by:</label>
                      <select class="form-select" aria-label="Default select example">
                         <option selected>Popularity</option>
@@ -675,324 +717,517 @@
                <div class="row mt-4">
 
                   <!--Product 1 -->
-                  <div class="col-lg-4 col-md-6 col-6 col-blk">
+                  <div class="col-lg-3 col-md-4 col-6 col-blk">
                      <div class="product-wrap mb-0">
                         <div class="position-relative">
                            <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
-                                 src="images/best-sellers-img-01.png" alt="image" class="product-box-img radius-20"></a>
+                                 src="images/laptop-img-01.png" alt="image" class="product-box-img radius-20"></a>
                            <div class="absolute-block">
-                              <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                              <span class="ofr-disc">-40%</span>
                               <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
                            </div>
                         </div>
                         <div class="product-box-content radius-20">
-                           <h4>Wellcore - Pure Micronised Creatine Monohy </h4>
+                           <h4 class="truncate-2">Apple MacBook Air (13.3 inch, M1, 8GB, 256GB, macOS Big Sur, Sp...
+                           </h4>
                            <div class="stars">
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
-                              <i class="fas fa-star-half-alt"></i>
+                              <i class="fas fa-star-half-alt"></i><span>(16K)</span>
                            </div>
                            <div class="d-flex">
                               <div class="price_rate">
-                                 <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                 <div class="price_box">QR 12,900.00<span class="no-offer">₹19,900.00</span>
                                  </div>
                               </div>
-                              <span class="ofr-disc">-40%</span>
                            </div>
-                           <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
-                                    alt="icon"></i></a>
-                           <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
-                                    alt="icon"></i></a>
+                           <button class="add-cart">Add To Cart </button>
                         </div>
                      </div>
                   </div>
                   <!-- End -->
 
                   <!--Product 2 -->
-                  <div class="col-lg-4 col-md-6 col-6 col-blk">
+                  <div class="col-lg-3 col-md-4 col-6 col-blk">
                      <div class="product-wrap mb-0">
                         <div class="position-relative">
                            <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
-                                 src="images/best-sellers-img-02.png" alt="image" class="product-box-img radius-20"></a>
+                                 src="images/laptop-img-02.png" alt="image" class="product-box-img radius-20"></a>
                            <div class="absolute-block">
-                              <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                              <span class="ofr-disc">-40%</span>
                               <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
                            </div>
                         </div>
                         <div class="product-box-content radius-20">
-                           <h4>MuscleBlaze Whey Protein - 1.8 Kg (3.9 Lb), R.. </h4>
+                           <h4 class="truncate-2">HP Victus 15-fa2703TX Intel Co... </h4>
                            <div class="stars">
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
-                              <i class="fas fa-star-half-alt"></i>
+                              <i class="fas fa-star-half-alt"></i><span>(16K)</span>
                            </div>
                            <div class="d-flex">
                               <div class="price_rate">
-                                 <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                 <div class="price_box">QR 12,900.00<span class="no-offer">₹19,900.00</span>
                                  </div>
                               </div>
-                              <span class="ofr-disc">-40%</span>
                            </div>
-                           <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
-                                    alt="icon"></i></a>
-                           <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
-                                    alt="icon"></i></a>
+                           <button class="add-cart">Add To Cart </button>
                         </div>
                      </div>
                   </div>
                   <!-- End -->
 
                   <!--Product 3 -->
-                  <div class="col-lg-4 col-md-6 col-6 col-blk">
+                  <div class="col-lg-3 col-md-4 col-6 col-blk">
                      <div class="product-wrap mb-0">
                         <div class="position-relative">
                            <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
-                                 src="images/best-sellers-img-03.png" alt="image" class="product-box-img radius-20"></a>
+                                 src="images/laptop-img-03.png" alt="image" class="product-box-img radius-20"></a>
                            <div class="absolute-block">
-                              <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                              <span class="ofr-disc">-40%</span>
                               <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
                            </div>
                         </div>
                         <div class="product-box-content radius-20">
-                           <h4>Nutrabay Wellness Fish Oil Omega 3 - 1000mg </h4>
+                           <h4 class="truncate-2">Lenovo Yoga Slim 7 14IMH9 Intel Core Ultra 5 Laptop (16GB, 1TB S...
+                           </h4>
                            <div class="stars">
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
-                              <i class="fas fa-star-half-alt"></i>
+                              <i class="fas fa-star-half-alt"></i><span>(16K)</span>
                            </div>
                            <div class="d-flex">
                               <div class="price_rate">
-                                 <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                 <div class="price_box">QR 12,900.00<span class="no-offer">₹19,900.00</span>
                                  </div>
                               </div>
-                              <span class="ofr-disc">-40%</span>
                            </div>
-                           <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
-                                    alt="icon"></i></a>
-                           <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
-                                    alt="icon"></i></a>
+                           <button class="add-cart">Add To Cart </button>
                         </div>
                      </div>
                   </div>
                   <!-- End -->
 
                   <!--Product 4 -->
-                  <div class="col-lg-4 col-md-6 col-6 col-blk">
+                  <div class="col-lg-3 col-md-4 col-6 col-blk">
                      <div class="product-wrap mb-0">
                         <div class="position-relative">
                            <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
-                                 src="images/best-sellers-img-04.png" alt="image" class="product-box-img radius-20"></a>
+                                 src="images/laptop-img-04.png" alt="image" class="product-box-img radius-20"></a>
                            <div class="absolute-block">
-                              <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                              <span class="ofr-disc">-40%</span>
                               <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
                            </div>
                         </div>
                         <div class="product-box-content radius-20">
-                           <h4>Nutrabay Gold 100% Whey Protein Concent </h4>
+                           <h4 class="truncate-2">HP 15-fd0489TU Intel Core i3 13th Gen Laptop (8GB, 512GB SSD, Wi...
+                           </h4>
                            <div class="stars">
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
-                              <i class="fas fa-star-half-alt"></i>
+                              <i class="fas fa-star-half-alt"></i><span>(16K)</span>
                            </div>
                            <div class="d-flex">
                               <div class="price_rate">
-                                 <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                 <div class="price_box">QR 12,900.00<span class="no-offer">₹19,900.00</span>
                                  </div>
                               </div>
-                              <span class="ofr-disc">-40%</span>
                            </div>
-                           <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
-                                    alt="icon"></i></a>
-                           <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
-                                    alt="icon"></i></a>
+                           <button class="add-cart">Add To Cart </button>
                         </div>
                      </div>
                   </div>
                   <!-- End -->
 
                   <!--Product 5 -->
-                  <div class="col-lg-4 col-md-6 col-6 col-blk">
+                  <div class="col-lg-3 col-md-4 col-6 col-blk">
                      <div class="product-wrap mb-0">
                         <div class="position-relative">
                            <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
-                                 src="images/best-sellers-img-01.png" alt="image" class="product-box-img radius-20"></a>
+                                 src="images/laptop-img-05.png" alt="image" class="product-box-img radius-20"></a>
                            <div class="absolute-block">
-                              <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                              <span class="ofr-disc">-40%</span>
                               <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
                            </div>
                         </div>
                         <div class="product-box-content radius-20">
-                           <h4>Wellcore - Pure Micronised Creatine Monohy </h4>
+                           <h4 class="truncate-2">ASUS Vivobook 16 X1605VA-MB1627WS Intel Core i5 13th G... </h4>
                            <div class="stars">
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
-                              <i class="fas fa-star-half-alt"></i>
+                              <i class="fas fa-star-half-alt"></i><span>(16K)</span>
                            </div>
                            <div class="d-flex">
                               <div class="price_rate">
-                                 <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                 <div class="price_box">QR 12,900.00<span class="no-offer">₹19,900.00</span>
                                  </div>
                               </div>
-                              <span class="ofr-disc">-40%</span>
                            </div>
-                           <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
-                                    alt="icon"></i></a>
-                           <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
-                                    alt="icon"></i></a>
+                           <button class="add-cart">Add To Cart </button>
                         </div>
                      </div>
                   </div>
                   <!-- End -->
 
                   <!--Product 6 -->
-                  <div class="col-lg-4 col-md-6 col-6 col-blk">
+                  <div class="col-lg-3 col-md-4 col-6 col-blk">
                      <div class="product-wrap mb-0">
                         <div class="position-relative">
                            <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
-                                 src="images/recently-bought-01.png" alt="image" class="product-box-img radius-20"></a>
+                                 src="images/laptop-img-06.png" alt="image" class="product-box-img radius-20"></a>
                            <div class="absolute-block">
-                              <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                              <span class="ofr-disc">-40%</span>
                               <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
                            </div>
                         </div>
                         <div class="product-box-content radius-20">
-                           <h4>Nutrabay Pure Whey Protein Concentrate - 1... </h4>
+                           <h4 class="truncate-2">Lenovo IdeaPad Slim 3 15ABR8 AMD Ryzen 5 Thin & Light Lapto... </h4>
                            <div class="stars">
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
-                              <i class="fas fa-star-half-alt"></i>
+                              <i class="fas fa-star-half-alt"></i><span>(16K)</span>
                            </div>
                            <div class="d-flex">
                               <div class="price_rate">
-                                 <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                 <div class="price_box">QR 12,900.00<span class="no-offer">₹19,900.00</span>
                                  </div>
                               </div>
-                              <span class="ofr-disc">-40%</span>
                            </div>
-                           <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
-                                    alt="icon"></i></a>
-                           <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
-                                    alt="icon"></i></a>
+                           <button class="add-cart">Add To Cart </button>
                         </div>
                      </div>
                   </div>
                   <!-- End -->
 
                   <!--Product 7 -->
-                  <div class="col-lg-4 col-md-6 col-6 col-blk">
+                  <div class="col-lg-3 col-md-4 col-6 col-blk">
                      <div class="product-wrap mb-0">
                         <div class="position-relative">
                            <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
-                                 src="images/recently-bought-02.png" alt="image" class="product-box-img radius-20"></a>
+                                 src="images/laptop-img-07.png" alt="image" class="product-box-img radius-20"></a>
                            <div class="absolute-block">
-                              <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                              <span class="ofr-disc">-40%</span>
                               <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
                            </div>
                         </div>
                         <div class="product-box-content radius-20">
-                           <h4>Beta Alanine | Amino Acid Supplement </h4>
+                           <h4 class="truncate-2">ASUS TUF F16 FX677VU-RL055WS Intel Core 5 Gaming... </h4>
                            <div class="stars">
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
-                              <i class="fas fa-star-half-alt"></i>
+                              <i class="fas fa-star-half-alt"></i><span>(16K)</span>
                            </div>
                            <div class="d-flex">
                               <div class="price_rate">
-                                 <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                 <div class="price_box">QR 12,900.00<span class="no-offer">₹19,900.00</span>
                                  </div>
                               </div>
-                              <span class="ofr-disc">-40%</span>
                            </div>
-                           <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
-                                    alt="icon"></i></a>
-                           <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
-                                    alt="icon"></i></a>
+                           <button class="add-cart">Add To Cart </button>
                         </div>
                      </div>
                   </div>
                   <!-- End -->
 
                   <!--Product 8 -->
-                  <div class="col-lg-4 col-md-6 col-6 col-blk">
+                  <div class="col-lg-3 col-md-4 col-6 col-blk">
                      <div class="product-wrap mb-0">
                         <div class="position-relative">
                            <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
-                                 src="images/recently-bought-03.png" alt="image" class="product-box-img radius-20"></a>
+                                 src="images/laptop-img-08.png" alt="image" class="product-box-img radius-20"></a>
                            <div class="absolute-block">
-                              <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                              <span class="ofr-disc">-40%</span>
                               <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
                            </div>
                         </div>
                         <div class="product-box-content radius-20">
-                           <h4>Nutrabay Pro Active Multivitamin for Men - 3... </h4>
+                           <h4 class="truncate-2">DELL Inspiron 14 Plus Intel Core Ultra 7 Thin and Light Laptop (1...
+                           </h4>
                            <div class="stars">
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
-                              <i class="fas fa-star-half-alt"></i>
+                              <i class="fas fa-star-half-alt"></i><span>(16K)</span>
                            </div>
                            <div class="d-flex">
                               <div class="price_rate">
-                                 <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                 <div class="price_box">QR 12,900.00<span class="no-offer">₹19,900.00</span>
                                  </div>
                               </div>
-                              <span class="ofr-disc">-40%</span>
                            </div>
-                           <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
-                                    alt="icon"></i></a>
-                           <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
-                                    alt="icon"></i></a>
+                           <button class="add-cart">Add To Cart </button>
                         </div>
                      </div>
                   </div>
                   <!-- End -->
 
                   <!--Product 9 -->
-                  <div class="col-lg-4 col-md-6 col-6 col-blk">
+                  <div class="col-lg-3 col-md-4 col-6 col-blk">
                      <div class="product-wrap mb-0">
                         <div class="position-relative">
                            <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
-                                 src="images/recently-bought-04.png" alt="image" class="product-box-img radius-20"></a>
+                                 src="images/laptop-img-09.png" alt="image" class="product-box-img radius-20"></a>
                            <div class="absolute-block">
-                              <div class="assured"><img src="images/assured.svg" alt="assured"></div>
+                              <span class="ofr-disc">-40%</span>
                               <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
                            </div>
                         </div>
                         <div class="product-box-content radius-20">
-                           <h4>MuscleBlaze BCAA Pro Essential Amino Acid... </h4>
+                           <h4 class="truncate-2">acer Nitro V15 AMD Ryzen 5 Gaming Laptop (16GB, 512GB S... </h4>
                            <div class="stars">
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
-                              <i class="fas fa-star-half-alt"></i>
+                              <i class="fas fa-star-half-alt"></i><span>(16K)</span>
                            </div>
                            <div class="d-flex">
                               <div class="price_rate">
-                                 <div class="price_box">₹12,900.00<span class="no-offer">₹19,900.00</span>
+                                 <div class="price_box">QR 12,900.00<span class="no-offer">₹19,900.00</span>
                                  </div>
                               </div>
-                              <span class="ofr-disc">-40%</span>
                            </div>
-                           <a href="#" class="add-cart">Add To Cart <i class="ms-2"><img src="images/cart-ic.svg"
-                                    alt="icon"></i></a>
-                           <a href="#" class="buynow_btn">Buy Now<i class="ms-2"><img src="images/buy-now.png"
-                                    alt="icon"></i></a>
+                           <button class="add-cart">Add To Cart </button>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- End -->
+
+                  <!--Product 10 -->
+                  <div class="col-lg-3 col-md-4 col-6 col-blk">
+                     <div class="product-wrap mb-0">
+                        <div class="position-relative">
+                           <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                 src="images/laptop-img-10.png" alt="image" class="product-box-img radius-20"></a>
+                           <div class="absolute-block">
+                              <span class="ofr-disc">-40%</span>
+                              <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                           </div>
+                        </div>
+                        <div class="product-box-content radius-20">
+                           <h4 class="truncate-2">Lenovo LOQ 15IAX9 Intel Core i5 12th Gen Gaming Laptop (16GB... </h4>
+                           <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star-half-alt"></i><span>(16K)</span>
+                           </div>
+                           <div class="d-flex">
+                              <div class="price_rate">
+                                 <div class="price_box">QR 12,900.00<span class="no-offer">₹19,900.00</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <button class="add-cart">Add To Cart </button>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- End -->
+
+                  <!--Product 11 -->
+                  <div class="col-lg-3 col-md-4 col-6 col-blk">
+                     <div class="product-wrap mb-0">
+                        <div class="position-relative">
+                           <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                 src="images/laptop-img-11.png" alt="image" class="product-box-img radius-20"></a>
+                           <div class="absolute-block">
+                              <span class="ofr-disc">-40%</span>
+                              <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                           </div>
+                        </div>
+                        <div class="product-box-content radius-20">
+                           <h4 class="truncate-2">ASUS TUF FA506NCG-HN200WS AMD Ryzen 7 Gami... </h4>
+                           <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star-half-alt"></i><span>(16K)</span>
+                           </div>
+                           <div class="d-flex">
+                              <div class="price_rate">
+                                 <div class="price_box">QR 12,900.00<span class="no-offer">₹19,900.00</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <button class="add-cart">Add To Cart </button>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- End -->
+
+                  <!--Product 12 -->
+                  <div class="col-lg-3 col-md-4 col-6 col-blk">
+                     <div class="product-wrap mb-0">
+                        <div class="position-relative">
+                           <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                 src="images/laptop-img-12.png" alt="image" class="product-box-img radius-20"></a>
+                           <div class="absolute-block">
+                              <span class="ofr-disc">-40%</span>
+                              <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                           </div>
+                        </div>
+                        <div class="product-box-content radius-20">
+                           <h4 class="truncate-2">ASUS ROG Strix G16 Intel Core i7 13th Gen Gaming Laptop (16GB,...
+                           </h4>
+                           <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star-half-alt"></i><span>(16K)</span>
+                           </div>
+                           <div class="d-flex">
+                              <div class="price_rate">
+                                 <div class="price_box">QR 12,900.00<span class="no-offer">₹19,900.00</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <button class="add-cart">Add To Cart </button>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- End -->
+
+                  <!--Product 13 -->
+                  <div class="col-lg-3 col-md-4 col-6 col-blk">
+                     <div class="product-wrap mb-0">
+                        <div class="position-relative">
+                           <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                 src="images/laptop-img-10.png" alt="image" class="product-box-img radius-20"></a>
+                           <div class="absolute-block">
+                              <span class="ofr-disc">-40%</span>
+                              <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                           </div>
+                        </div>
+                        <div class="product-box-content radius-20">
+                           <h4 class="truncate-2">Lenovo IdeaPad Slim 5 14Q8X9 Qualcomm Snapdragon X Plus T...</h4>
+                           <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star-half-alt"></i><span>(16K)</span>
+                           </div>
+                           <div class="d-flex">
+                              <div class="price_rate">
+                                 <div class="price_box">QR 12,900.00<span class="no-offer">₹19,900.00</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <button class="add-cart">Add To Cart </button>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- End -->
+
+                  <!--Product 14 -->
+                  <div class="col-lg-3 col-md-4 col-6 col-blk">
+                     <div class="product-wrap mb-0">
+                        <div class="position-relative">
+                           <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                 src="images/laptop-img-11.png" alt="image" class="product-box-img radius-20"></a>
+                           <div class="absolute-block">
+                              <span class="ofr-disc">-40%</span>
+                              <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                           </div>
+                        </div>
+                        <div class="product-box-content radius-20">
+                           <h4 class="truncate-2">MSI Thin A15 B7UC-611IN AMD Ryzen 5 Gaming Laptop (16GB,... </h4>
+                           <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star-half-alt"></i><span>(16K)</span>
+                           </div>
+                           <div class="d-flex">
+                              <div class="price_rate">
+                                 <div class="price_box">QR 12,900.00<span class="no-offer">₹19,900.00</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <button class="add-cart">Add To Cart </button>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- End -->
+
+                  <!--Product 15 -->
+                  <div class="col-lg-3 col-md-4 col-6 col-blk">
+                     <div class="product-wrap mb-0">
+                        <div class="position-relative">
+                           <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                 src="images/laptop-img-12.png" alt="image" class="product-box-img radius-20"></a>
+                           <div class="absolute-block">
+                              <span class="ofr-disc">-40%</span>
+                              <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                           </div>
+                        </div>
+                        <div class="product-box-content radius-20">
+                           <h4 class="truncate-2">HP Victus 15-fb3025AX AMD Ryzen 9 Gaming Laptop (16GB... </h4>
+                           <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star-half-alt"></i><span>(16K)</span>
+                           </div>
+                           <div class="d-flex">
+                              <div class="price_rate">
+                                 <div class="price_box">QR 12,900.00<span class="no-offer">₹19,900.00</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <button class="add-cart">Add To Cart </button>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- End -->
+
+                  <!--Product 16 -->
+                  <div class="col-lg-3 col-md-4 col-6 col-blk">
+                     <div class="product-wrap mb-0">
+                        <div class="position-relative">
+                           <a href="product-details.html" class="mb-3 product-box-img-wrap"><img
+                                 src="images/laptop-img-14.png" alt="image" class="product-box-img radius-20"></a>
+                           <div class="absolute-block">
+                              <span class="ofr-disc">-40%</span>
+                              <a class="heart-icon"><i class="fa-regular fa-heart"></i></a>
+                           </div>
+                        </div>
+                        <div class="product-box-content radius-20">
+                           <h4 class="truncate-2">DELL G15-5530 Intel Core i5 13th Gen Gaming Laptop with RGB K...</h4>
+                           <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star-half-alt"></i><span>(16K)</span>
+                           </div>
+                           <div class="d-flex">
+                              <div class="price_rate">
+                                 <div class="price_box">QR 12,900.00<span class="no-offer">₹19,900.00</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <button class="add-cart">Add To Cart </button>
                         </div>
                      </div>
                   </div>
@@ -1024,40 +1259,46 @@
             <div class="col-md-4">
                <div class="footer-col col1">
                   <img src="images/footer-logo.png" alt="footer-logo" class="footer-logo">
-                  <p>It’s More Than Just Supplements
-                     It’s a Commitment to Your Best Self.</p>
-                  <ul class="social-links">
-                     <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                     <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                     <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                  </ul>
+                  <p>© Adam Express All Rights Reserved</p>
+                  <div class="connectwith-us">
+                     <h4>CONNECT WITH US</h4>
+                     <ul class="social-links">
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                     </ul>
+                  </div>
                </div>
             </div>
-            <div class="col-md-4 col-6">
+            <div class="col-md-5 col-sm-7">
                <div class="footer-col col2">
-                 <ul class="links">
-                     <li><a href="about.html"><i class="me-1"><img src="images/ic-xs-01.png" alt="icon"></i>About Us</a></li>
-                     <li><a href="terms-condition.html"><i class="me-1"><img src="images/ic-xs-01.png" alt="icon"></i>Terms and
-                           Conditions</a></li>
-                     <li><a href="privacy-policy.html"><i class="me-1"><img src="images/ic-xs-01.png" alt="icon"></i>privacy policy</a>
+                  <ul class="links">
+                     <li><a href="about.html"><i class="me-2"><img src="images/ic-xs-01.png" alt="icon"></i>Home</a>
                      </li>
-                     <li><a href="return-policy.html"><i class="me-1"><img src="images/ic-xs-01.png" alt="icon"></i>Return policy</a>
+                     <li><a href="about.html"><i class="me-2"><img src="images/ic-xs-01.png" alt="icon"></i>ABout us</a>
+                     </li>
+                     <li><a href="blog.html"><i class="me-2"><img src="images/ic-xs-01.png" alt="icon"></i>BLOG</a>
+                     </li>
+                     <li><a href="return-policy.html"><i class="me-2"><img src="images/ic-xs-01.png"
+                                 alt="icon"></i>return policy</a>
+                     </li>
+                     <li><a href="terms-condition.html"><i class="me-2"><img src="images/ic-xs-01.png"
+                                 alt="icon"></i>terms & conditions</a></li>
+                     <li><a href="privacy-policy.html"><i class="me-2"><img src="images/ic-xs-01.png"
+                                 alt="icon"></i>privacy policy</a>
                      </li>
                   </ul>
                </div>
             </div>
-            <div class="col-md-4 col-6 d-flex justify-content-end">
+            <div class="col-md-3 col-sm-5 d-flex justify-content-sm-end">
                <div class="footer-col col3">
-                  <label>Address:</label>
-                  <p>The Malabar Chamber of Commerce, Thayatheru Rd, Caltex, Kannur</p>
-                  <label>Phone:</label>
-                  <p><a href="tel:+919895202021">+91 9895202021</a></p>
-                  <label>Address:</label>
-                  <a href="mailto:info@spicenutrition.com">info@spicenutrition.com</a>
+                  <h5>Contact Us</h5>
+                  <p><a href="tel:+971245414758"><i class="fa-brands fa-whatsapp me-2"></i>+971 24 541 4758</a></p>
+                  <a href="mailto:info@adamexpress.com"><i
+                        class="fa-regular fa-envelope me-2"></i>info@adamexpress.com</a>
                </div>
             </div>
          </div>
-         <p class="copy-rite">© 2025 spicenutrition.com All rights reserved</p>
       </div>
    </footer>
 
@@ -1067,6 +1308,8 @@
    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+   <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
    <script src="js/bootstrap.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -1116,7 +1359,7 @@
          const sidebar = document.getElementById("filterSidebar");
 
          function toggleOffcanvas() {
-            if (window.innerWidth < 768) {
+            if (window.innerWidth < 992) {
                sidebar.classList.add("offcanvas", "offcanvas-start");
                sidebar.setAttribute("tabindex", "-1");
             } else {

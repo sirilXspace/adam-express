@@ -1587,6 +1587,7 @@ footer .social-links {
   font-family: 'Satoshi-Bold';
   font-weight: 700;
   color: #222222;
+  max-width:180px;
 }
 
 .fw-30 {
@@ -3673,7 +3674,7 @@ footer .social-links {
 }
 
 .add_add_link {
-  color: var(--primary-color);
+  color: #EE8222;
   font-size: 16px;
   font-weight: 500;
 }
@@ -3777,7 +3778,7 @@ footer .social-links {
 
 /* When the checkbox is checked, add a blue background */
 .radio-blk input:checked~.checkmark {
-  background-color: #fff;
+  background-color: #222222;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -3811,7 +3812,7 @@ footer .social-links {
 
 .address-option.active .radio-blk {
   background-color: var(--primary-color);
-  color: #ffffff;
+  color: #222222;
 }
 
 .wallet-points-page .box {
@@ -3896,6 +3897,7 @@ footer .social-links {
   font-size: 24px;
   font-weight: 500;
   line-height: 36px;
+  font-family: 'Satoshi-Bold';
 }
 
 .blog-wrap .blog-content p {
@@ -3907,13 +3909,13 @@ footer .social-links {
 .date {
   font-size: 14px;
   font-weight: 400;
-  color: var(--primary-color);
+  color: #EE8222;
   margin-bottom: 10px;
   display: block;
 }
 
 .read_more {
-  color: var(--primary-color);
+  color: #EE8222;
   font-size: 16px;
   font-weight: 500;
 }
@@ -3939,7 +3941,8 @@ footer .social-links {
 
 .blog-content h1 {
   font-size: 44px;
-  font-weight: 600;
+  font-family: 'Satoshi-Bold';
+  font-weight:700;
   margin-bottom: 15px;
 }
 
@@ -4003,7 +4006,8 @@ footer .social-links {
 
 .blog-details h3 {
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 700;
+  font-family: 'Satoshi-Bold';
   margin-bottom: 10px;
   margin-top: 20px;
 }
@@ -4029,6 +4033,7 @@ footer .social-links {
   margin-bottom: 15px;
   margin-top: 20px;
   color: #222222;
+  font-family: 'Satoshi-Medium';
 }
 
 .terms-page p {
@@ -5888,3 +5893,5 @@ hr.style1 {
 }
 
 .rate-star .star{font-size:45px;}
+
+.wishlist .col-wsh{width:16.666%;}

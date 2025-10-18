@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-   <title>Spice Nutrition</title>
+   <title>Adam Xpress</title>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="shortcut icon" href="images/favicon.png">
@@ -14,250 +14,371 @@
    <link href="css/home-responsive.css" rel="stylesheet">
    <link href="css/menu.css" rel="stylesheet">
    <link href="css/font/font.css" rel="stylesheet">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
 
 </head>
 
 <body>
 
+
    <!-- Login -->
-   <div class="modal fade logreg-modal" id="loginmodal" tabindex="-1" aria-hidden="true">
+   <div class="modal fade login-modal" id="loginmodal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog">
          <div class="modal-content">
-            <div class="d-flex justify-content-center mb-4">
-               <button type="button" class="c_close c_custom" data-bs-dismiss="modal" aria-label="Close"><i><img
-                        src="images/close-btn2.png" alt="icon"></i></button>
-               <img src="images/logo-white.png" alt="logo" class="mt-5 logoinmodal">
-            </div>
+            <button type="button" class="btn-closeme" data-bs-dismiss="modal" aria-label="Close"><img
+                  src="images/close-btn.png" alt="icon"></button>
             <div class="modal-body">
-               <div class="login-box">
-                  <h2 class="text-white">Login Or Sign-Up</h2>
-                  <p>Login to access your Spice Nutrition account</p>
-
-                  <form>
-                     <div class="mb-3 text-start">
-                        <label class="form-label text-white">Whatsapp Number</label>
-                        <input type="text" class="form-control" placeholder="9847123547">
-                     </div>
-                     <button type="submit" class="btn btn-login" data-bs-toggle="modal"
-                        data-bs-target="#otpmodal">Login</button>
-                  </form>
-
-                  <div class="divider"><span>Or login with</span></div>
-
-                  <div class="social-login">
-                     <a href="#"><img src="images/gplus.png" width="24" alt="icon"></a>
-                     <a href="#"><img src="images/mail-ic.png" width="24" alt="icon"></a>
+               <!-- Top icons -->
+               <div class="top-icons">
+                  <img src="images/login_bg.png" alt="icon1" />
+               </div>
+               <div class="modal-body-content">
+                  <!-- Login header -->
+                  <div class="login-header">Login</div>
+                  <div class="login-subtext">
+                     Login To Access Your Ridaya Account
                   </div>
-                   <p class="not-send text-center mt-3">No Registered Click here to <a href="" class="theme-color" data-bs-toggle="modal"
-                        data-bs-target="#registermodal">Register</a>
-               </div>
-            </div>
-
-         </div>
-      </div>
-   </div>
-
-
-   <!-- OTP -->
-   <div class="modal fade logreg-modal" id="otpmodal" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog">
-         <div class="modal-content">
-            <div class="d-flex justify-content-center mb-4">
-               <button type="button" class="c_close c_custom" data-bs-dismiss="modal" aria-label="Close"><i><img
-                        src="images/close-btn2.png" alt="icon"></i></button>
-               <img src="images/logo-white.png" alt="logo" class="mt-5 logoinmodal">
-            </div>
-            <div class="modal-body">
-               <div class="login-box">
-                  <p><a data-bs-toggle="modal" data-bs-target="#loginmodal"><i
-                           class="fa-solid fa-chevron-left me-2"></i>Back to Login</a></p>
-                  <h2 class="text-white">Verify code</h2>
-                  <p>An authentication code has been sent to +91 9842715341</p>
-
+                  <!-- Form -->
                   <form>
-                     <div class="mb-3 text-start">
-                        <label class="form-label text-white">Enter Code</label>
-                        <input type="text" class="form-control" placeholder="4571">
+                     <div class="mb-3 position-relative">
+                        <label class="form-control-label mt-4 mb-2">Email Address</label>
+                        <input type="text" class="form-control" placeholder="janedeo@gmail.com" value="" />
                      </div>
-                     <p class="not-send text-end">Didn’t receive a code?
-                        <a href="" class="theme-color">Resend</a>
+                     <div class="mb-3 position-relative">
+                        <label for="password" class="form-control-label mb-2">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter password">
+                        <i class="fas fa-eye password-toggle" id="togglePassword"></i>
+                     </div>
+                     <a href="#" class="float-end fg-pwd" data-bs-toggle="modal" data-bs-target="#fogotpwd">Forgot
+                        password?</a>
+                     <button type="submit" class="btn btn-login">
+                        Login
+                     </button>
+                     <p class="clikregister text-center mt-2 mb-0" data-bs-toggle="modal"
+                        data-bs-target="#registermodal">
+                        Don’t Have an account? <a href="#" class="text-black text-decoration-underline">Sign Up</a>
                      </p>
-                     <button type="submit" class="btn btn-login">Verify</button>
                   </form>
-
-
-
                </div>
             </div>
-
          </div>
       </div>
    </div>
+
 
 
    <!-- Register -->
-   <div class="modal fade logreg-modal" id="registermodal" tabindex="-1" aria-hidden="true">
+   <div class="modal fade login-modal" id="registermodal" tabindex="-1" aria-modal="true">
       <div class="modal-dialog">
          <div class="modal-content">
-            <div class="d-flex justify-content-center mb-4">
-               <button type="button" class="c_close c_custom" data-bs-dismiss="modal" aria-label="Close"><i><img
-                        src="images/close-btn2.png" alt="icon"></i></button>
-               <img src="images/logo-white.png" alt="logo" class="mt-5 logoinmodal">
-            </div>
+
             <div class="modal-body">
-               <div class="login-box mt-3">
-                  <h2 class="text-white">Fill the Details</h2>
-                  <p>Fill in your information so we can get in touch with you and serve you better.</p>
-
+               <div class="modal-body-content">
+                  <!-- Login header -->
+                  <div class="login-header d-flex justify-content-between">Signup <button type="button"
+                        class="bg-transparent border-0" data-bs-dismiss="modal" aria-label="Close"><img
+                           src="images/close-btn.png" alt="icon"></button></div>
+                  <!-- Form -->
                   <form>
-                     <div class="mb-3 text-start">
-                        <label class="form-label text-white">Full Name</label>
-                        <input type="text" class="form-control" placeholder="John Doe">
+                     <div class="mb-2">
+                        <label class="form-control-label mb-2">Full Name</label>
+                        <input type="text" class="form-control" placeholder="John Doe" value="John Doe">
                      </div>
-                      <div class="mb-3 text-start">
-                        <label class="form-label text-white">Email Address</label>
-                        <input type="text" class="form-control" placeholder="john.doe@gmail.com">
+                     <div class="mb-2">
+                        <label class="form-control-label mb-2">Email Address</label>
+                        <input type="email" class="form-control" placeholder="Email Address">
                      </div>
-                      <div class="mb-3 text-start">
-                        <label class="form-label text-white">Date of Birth</label>
-                        <input type="text" class="form-control" placeholder="select date" id="datepicker2">
+                     <div class="mb-3 position-relative">
+                        <label for="password" class="form-control-label mb-2">Password</label>
+                        <input type="password" class="form-control" placeholder="Enter password" id="password2">
+                        <i class="fas fa-eye password-toggle" id="togglePassword2"></i>
                      </div>
-                      <div class="mb-3 text-start">
-                        <label class="form-label text-white">Referral Code</label>
-                        <input type="text" class="form-control" placeholder="SN12345">
+                     <div class="mb-2">
+                        <label class="form-control-label mb-2">Phone Number</label>
+                        <input type="text" class="form-control" placeholder="Phone Number">
                      </div>
-                     <button type="submit" class="btn btn-login">CONTINUE</button>
+                     <p class="clikregister text-center mt-2" data-bs-toggle="modal" data-bs-target="#registermodal">
+                        By signing up, you agree with our <a href="#" class="text-black text-decoration-underline">Terms
+                           & Conditions</a> and <a href="#" class="text-black text-decoration-underline">Privacy
+                           Policy</a>
+                     </p>
+                     <button type="submit" class="btn btn-login">Continue</button>
+                     <p class="clikregister text-center mt-2 mb-0" data-bs-toggle="modal" data-bs-target="#loginmodal">
+                        Already Have an account? <a href="#" class="text-black text-decoration-underline"> Log In </a>
+                     </p>
                   </form>
-
                </div>
             </div>
-
          </div>
       </div>
    </div>
 
+   <!-- Forgot Passwrod -->
+   <div class="modal fade login-modal" id="fogotpwd" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <button type="button" class="btn-closeme" data-bs-dismiss="modal" aria-label="Close"><img
+                  src="images/close-btn.png" alt="icon"></button>
+            <div class="modal-body">
+               <!-- Top icons -->
+               <div class="top-icons">
+                  <img src="images/forgot-pwd_bg.png" alt="forgot-password" />
+               </div>
+               <div class="modal-body-content">
+                  <!-- Login header -->
+                  <a href="#" class="backtome d-flex align-items-center" data-bs-toggle="modal"
+                     data-bs-target="#loginmodal"> <i class="fa-solid fa-chevron-left me-2"></i> Back to Login</a>
+                  <div class="login-header">Forgot Password</div>
+                  <div class="login-subtext">
+                     Enter your registrered email address.
+                  </div>
+                  <!-- Form -->
+                  <form>
+                     <div class="mb-3 position-relative">
+                        <label class="form-control-label mt-4 mb-2">Email Address</label>
+                        <input type="text" class="form-control" placeholder="janedeo@gmail.com" value="" />
+                     </div>
+                     <button type="submit" class="btn btn-login" data-bs-toggle="modal" data-bs-target="#otpmodal">
+                        Continue
+                     </button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- OTP -->
+   <div class="modal fade login-modal" id="otpmodal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <button type="button" class="btn-closeme" data-bs-dismiss="modal" aria-label="Close"><img
+                  src="images/close-btn.png" alt="icon"></button>
+
+            <div class="modal-body">
+               <!-- Top icons -->
+               <div class="top-icons">
+                  <img src="images/otp_bg.png" alt="bg" />
+               </div>
+               <div class="modal-body-content">
+                  <form class="otp-wrapper">
+                     <a href="#" class="back-login" data-bs-toggle="modal" data-bs-target="#loginmodal">&larr; Back To
+                        Login</a>
+                     <div class="login-header">Verify Code</div>
+                     <div class="login-subtext">
+                        An authentication code has been sent to janedoe@gmail.com
+                     </div>
+
+                     <div class="mb-3 mt-4">
+                        <label for="otp-code" class="form-control-label">Enter Code</label>
+                        <input type="text" class="form-control mt-2" id="otp-code" placeholder="Enter OTP" />
+                     </div>
+
+                     <div class="mb-3 text-end resend">
+                        Didn't receive a code?
+                        <span onclick="resendCode()">Resend</span>
+                     </div>
+
+                     <button type="submit" class="btn btn-login" data-bs-toggle="modal"
+                        data-bs-target="#resetpassword">Verify</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Reset Pasword -->
+   <div class="modal fade login-modal" id="resetpassword" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <button type="button" class="btn-closeme" data-bs-dismiss="modal" aria-label="Close"><img
+                  src="images/close-btn.png" alt="icon"></button>
+
+            <div class="modal-body">
+               <!-- Top icons -->
+               <div class="top-icons">
+                  <img src="images/reset_bg.png" alt="bg" />
+               </div>
+               <div class="modal-body-content">
+                  <form class="otp-wrapper">
+                     <a href="#" class="back-login" data-bs-toggle="modal" data-bs-target="#loginmodal">&larr; Back To
+                        Login</a>
+                     <div class="login-header">Reset Password</div>
+
+
+                     <div class="mb-3 mt-4 position-relative">
+                        <label for="password" class="form-control-label mb-2">Enter new password</label>
+                        <input type="password" class="form-control" id="rpassword" placeholder="Enter password">
+                        <i class="fas fa-eye password-toggle" id="rtogglePassword"></i>
+                     </div>
+                     <div class="mb-3 position-relative">
+                        <label for="password" class="form-control-label mb-2">Re-enter new password</label>
+                        <input type="password" class="form-control" id="rpassword2" placeholder="Enter password">
+                        <i class="fas fa-eye password-toggle" id="rtogglePassword2"></i>
+                     </div>
+
+
+                     <button type="submit" class="btn btn-login">Reset Password</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
    <a href="javascript:" id="return-to-top"><i class="fas fa-angle-up pulse"></i></a>
 
-   <header class="header inner-header">
+
+   <header class="header">
       <div class="container">
          <div class="inner-wrap">
-            <div class="d-flex  align-items-center justify-content-between">
+            <div class="d-flex align-items-center justify-content-between">
                <div class="logo">
                   <a href="index.html"><img src="images/logo.png" alt="logo"></a>
                </div>
-               <div class="header-item">
-                  <div class="menu-overlay"></div>
-                  <nav class="menu">
-                     <div class="mobile-menu-head">
-                        <div class="go-back"><i class="fa fa-angle-left"></i></div>
-                        <a class="current-menu-title" href="#"></a>
-                        <div class="mobile-menu-close"><i><img src="images/close.png" alt="icon"></i></div>
-                     </div>
-                     <ul class="menu-main">
 
-                        <li><a href="index.html">Home</a></li>
-                        <li class="menu-item-has-children">
-                           <a href="product.html" class="d-none d-xl-block">Shop<i class="fa fa-angle-down"></i></a>
-                           <a href="#" class="d-xl-none d-block">Shop<i class="fa fa-angle-down"></i></a>
-                           <div class="sub-menu mega-menu mega-menu-column-4">
-                              <div class="list-item">
-                                 <h4 class="title">Protein & Nutrition</h4>
-                                 <ul>
-                                    <li><a href="product.html">Whey Protein</a></li>
-                                    <li><a href="product.html">Plant Protein</a></li>
-                                    <li><a href="product.html">Mass Gainers</a></li>
-                                    <li><a href="product.html">Creatine</a></li>
-                                    <li><a href="product.html">BCAAs & EAAs</a></li>
-                                 </ul>
-                              </div>
-                              <div class="list-item">
-                                 <h4 class="title">Vitamins & Wellness</h4>
-                                 <ul>
-                                    <li><a href="product.html">Multivitamins</a></li>
-                                    <li><a href="product.html">Omega & Fish Oil</a></li>
-                                    <li><a href="product.html">Immunity Boosters</a></li>
-                                    <li><a href="product.html">Joint Support</a></li>
-                                    <li><a href="product.html">Greens & Superfoods</a></li>
-                                 </ul>
-                              </div>
-                              <div class="list-item">
-                                 <h4 class="title">Performance & Energy</h4>
-                                 <ul>
-                                    <li><a href="product.html">Pre-Workout</a></li>
-                                    <li><a href="product.html">Intra-Workout</a></li>
-                                    <li><a href="product.html">Post-Workout</a></li>
-                                    <li><a href="product.html">Energy Drinks</a></li>
-                                    <li><a href="product.html">Nitric Oxide Boosters</a></li>
-                                 </ul>
-                              </div>
-                              <div class="list-item">
-                                 <h4 class="title">Fitness Essentials</h4>
-                                 <ul>
-                                    <li><a href="product.html">Protein Bars & Snacks</a></li>
-                                    <li><a href="product.html">Shakers & Bottles</a></li>
-                                    <li><a href="product.html">Gym Accessories</a></li>
-                                    <li><a href="product.html">Meal Replacements</a></li>
-                                    <li><a href="product.html">Fat Burners</a></li>
-                                 </ul>
-                              </div>
-                           </div>
-
-                        </li>
-
-
-                        <li class="menu-item-has-children">
-                           <a href="#" class="d-none d-xl-block">Brands<i class="fa fa-angle-down"></i></a>
-                           <a href="#" class="d-xl-none d-block">Brands<i class="fa fa-angle-down"></i></a>
-
-                           <div class="sub-menu">
-                              <div class="list-item">
-                                 <ul>
-                                    <li><a href="#">Brands 01</a></li>
-                                    <li><a href="#">Brands 02</a></li>
-                                    <li><a href="#">Brands 03</a></li>
-                                    <li><a href="#">Brands 04</a></li>
-                                    <li><a href="#">Brands 05</a></li>
-                                 </ul>
-                              </div>
-                           </div>
-                        </li>
-                        <li><a href="blog.html">Blogs</a></li>
-
-
-                     </ul>
-                  </nav>
-               </div>
-               <div class="right-blk d-flex">
+               <div class="top_block_02">
+                  <div class="select_block">
+                     <select>
+                        <option>Categories</option>
+                        <option>1</option>
+                        <option>1</option>
+                     </select>
+                  </div>
                   <div class="search-dropdown me-2">
-                     <form class="d-flex">
+                     <form>
                         <div class="input-group position-relative">
-                           <input type="text" class="form_fi" placeholder="Search" aria-label="Search">
+                           <input type="text" class="form_fi" placeholder="What are you looking for?"
+                              aria-label="Search">
                            <button class="btn-search" type="submit">
                               <i><img src="images/search.svg" alt="search" class="fa-search"></i>
                            </button>
                         </div>
                      </form>
                   </div>
-                  <ul>
-                     <li><a href="wishlist.html"><img src="images/heart.svg" alt="image"></a></li>
-                     <li><a href="my-account-wallet-point.html"><img src="images/wallet2.svg" alt="image"></a></li>
-                     <li><a href="cart.html" class="custom_ic"><span class="cartCout">0</span><img src="images/cart.svg"
-                              alt="image"></a></li>
-                     <li><a href="#" data-bs-toggle="modal" data-bs-target="#loginmodal"><img src="images/person.svg"
-                              alt="image"></a></li>
-                  </ul>
-                  <div class="mobile-menu-trigger">
-                     <span></span>
+               </div>
+
+               <div class="dropdown" id="languageDropdown">
+                  <div class="dropdown-toggle">
+                     <img src="https://flagcdn.com/w20/qa.png" alt="Qatar Flag">
+                     <span>العربية</span>
                   </div>
+                  <div class="dropdown-menu">
+                     <div class="option" data-lang="ar">
+                        <img src="https://flagcdn.com/w20/qa.png" alt="Qatar">
+                        <span>العربية</span>
+                     </div>
+                     <div class="option" data-lang="en">
+                        <img src="https://flagcdn.com/w20/us.png" alt="English">
+                        <span>English</span>
+                     </div>
+                     <div class="option" data-lang="fr">
+                        <img src="https://flagcdn.com/w20/fr.png" alt="French">
+                        <span>Français</span>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="right-blk">
+                  <ul>
+                     <li>
+                        <a href="wishlist.html"><img src="images/heart.svg" alt="image">Wishlist</a>
+                     </li>
+
+                     <li>
+                        <a href="cart.html" class="custom_ic"><span class="cartCout">0</span><img src="images/cart.svg"
+                              alt="image">Cart</a>
+                     </li>
+                     <li>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#loginmodal"><img src="images/person.svg"
+                              alt="image">Login/Signup</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="menu-wrap">
+         <div class="container">
+
+            <div class="d-flex">
+               <div class="all-categories">
+                  <i><img src="images/menu_icon.svg" alt="icon"></i>
+                  <div class="all-categories-level" id="customMenuWrap">
+                     <button class="menu-btn" id="customMenuToggle" aria-haspopup="true" aria-expanded="false">All
+                        Categories <i class="fa-solid fa-chevron-down"></i></button>
+
+                     <nav class="custom-dropdown" id="customMainDropdown" role="menu" aria-label="Main menu">
+                        <ul>
+                           <li><a href="#" role="menuitem">Categories 1</a></li>
+                           <li class="has-children">
+                              <button class="custom-item-btn" aria-haspopup="true" aria-expanded="false">Categories 2
+                                 <span class="custom-caret">▾</span></button>
+                              <div class="custom-submenu" role="menu">
+                                 <ul>
+                                    <li><a href="#" role="menuitem">Sub Categories 1 </a></li>
+                                    <li><a href="#" role="menuitem">Sub Categories 2 </a></li>
+                                    <li><a href="#" role="menuitem">Sub Categories 3 </a></li>
+                                 </ul>
+                              </div>
+                           </li>
+                           <li><a href="#" role="menuitem">Categories 3</a></li>
+                           <li><a href="#" role="menuitem">Categories 4</a></li>
+                        </ul>
+                     </nav>
+                  </div>
+               </div>
+
+
+               <div class="header-item item-center">
+                  <div class="menu-overlay"></div>
+                  <nav class="menu">
+                     <div class="mobile-menu-head">
+                        <div class="go-back"><i class="fa fa-angle-left"></i></div>
+                        <div class="current-menu-title"></div>
+                        <div class="mobile-menu-close">×</div>
+                     </div>
+                     <ul class="menu-main">
+                        <li>
+                           <a href="#">Mobiles </a>
+                        </li>
+                        <li>
+                           <a href="#">Electronics</a>
+                        </li>
+                        <li>
+                           <a href="#">Clothing</a>
+                        </li>
+                        <li>
+                           <a href="#">Furniture</a>
+                        </li>
+                        <li>
+                           <a href="#"> Toys</a>
+                        </li>
+                        <li>
+                           <a href="#"> Household</a>
+                        </li>
+                        <li>
+                           <a href="#"> Beauty</a>
+                        </li>
+                        <li>
+                           <a href="#"> Gaming</a>
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
+               <div class="mobile-menu-trigger">
+                  <span></span>
                </div>
             </div>
          </div>
       </div>
    </header>
+
+
+
+
 
    <div class="search-dropdown2" style="display: none;">
       <form class="d-flex">
@@ -278,8 +399,8 @@
          <li><a href="javascript:void(0)" class="search-btn search-icon"><img src="images/search_IC.svg"
                   alt="Search Icon"></a></li>
          <li><a href="wishlist.html"><img src="images/wishlist_IC.svg" alt="image"></a></li>
-         <li><a href="my-account-wallet-point.html"><img src="images/wallet2.svg" alt="image"></a></li>
-         <li><a href="cart.html" class="custom_ic"><img src="images/bag_IC.svg" alt="image"><span class="cartCout">0</span></a>
+         <li><a href="cart.html" class="custom_ic"><img src="images/bag_IC.svg" alt="image"><span
+                  class="cartCout">0</span></a>
          </li>
       </ul>
    </div>
@@ -288,67 +409,81 @@
    <div class="terms-page custompad-2">
       <div class="container">
          <div class="d-flex flex-wrap justify-content-between align-items-center">
-            <h1 class="fw-30 text-uppercase mb-2">Privacy Policy</h1>
+            <h1 class="fw-30 text-uppercase mb-3">Privacy Policy</h1>
 
             <div class="row">
-               <p>At Spice Nutrition, we respect your privacy and are committed to protecting the personal information you share with us. This Privacy Policy explains how we collect, use, and safeguard your data when you visit our website, create an account, or make a purchase. By using our site, you agree to the practices outlined below.</p>
-               <p>Our goal is to provide you with high-quality gym supplements, sports nutrition, and wellness products that support your fitness journey. While we strive to ensure accuracy in product descriptions, availability, and pricing, we also want to make it clear that using our website means you accept the responsibilities and limitations outlined in this agreement. Please read these Terms and Conditions carefully before placing an order. If you do not agree with any part of these terms, we kindly ask that you refrain from using our website. By continuing to browse, register, or purchase through Spice Nutrition, you acknowledge that you understand and accept these conditions in full.</p>
+               <p>
+                  At Adam Xpress, your privacy and trust are very important to us. This Privacy Policy explains how we
+                  collect, use, protect, and share your personal information when you visit our website
+                  (www.adamxpress.com), create an account, or make a purchase. By using our services, you agree to the
+                  practices described in this Privacy Policy.
+               </p>
 
-               <h4>1. Information We Collect</h4>
-               <p>We may collect the following types of information:</p>
+               <h4>Information We Collect</h4>
+               <p>When you interact with Adam Xpress, we may collect the following types of information:</p>
                <ul>
-                  <li><span class="bold">Personal Information:</span> Name, email address, phone number, billing/shipping address, and payment details.</li>
-                  <li><span class="bold">Account Information:</span> Login credentials, order history, and saved preferences.</li>
-                  <li><span class="bold">Technical Data:</span> IP address, browser type, device details, and browsing behavior on our website.</li>
-                  <li><span class="bold">Marketing Data:</span> Preferences for receiving promotional offers, newsletters, or product updates.</li>
+                  <li><strong>Personal Information:</strong> Name, email address, phone number, billing and shipping
+                     addresses, payment details.</li>
+                  <li><strong>Account Information:</strong> Login credentials, order history, wishlist items.</li>
+                  <li><strong>Device Information:</strong> IP address, browser type, operating system, and device
+                     identifiers.</li>
+                  <li><strong>Usage Data:</strong> Pages visited, time spent on site, search history, and interactions
+                     with products.</li>
+                  <li><strong>Communications:</strong> Messages, reviews, or inquiries you send to us.</li>
                </ul>
 
-               <h4>2. How We Use Your Information</h4>
-               <p>We use the collected information for purposes such as:</p>
+               <h4>How We Use Your Information</h4>
+               <p>We use the information we collect to:</p>
                <ul>
-                  <li>Processing and fulfilling your orders.</li>
-                  <li>Providing customer support and responding to inquiries.</li>
-                  <li>Improving our website experience and product offerings.</li>
-                  <li>Sending order confirmations, shipping updates, and important service notifications.</li>
-                  <li>Delivering promotional offers, newsletters, and marketing campaigns (only if you opt in).</li>
-                  <li>Ensuring website security, fraud detection, and legal compliance.</li>
+                  <li>Process and deliver your orders.</li>
+                  <li>Provide customer support and respond to inquiries.</li>
+                  <li>Improve our website, products, and services.</li>
+                  <li>Send you updates, promotions, and offers (only if you’ve opted in).</li>
+                  <li>Personalize your shopping experience with product recommendations.</li>
+                  <li>Prevent fraud, protect security, and comply with legal requirements.</li>
                </ul>
 
-               <h4>3. Sharing of Information</h4>
+               <h4>Sharing of Information</h4>
+               <p>We respect your privacy and do not sell your personal data. However, we may share your information
+                  with:</p>
                <ul>
-                  <li>We do not sell or rent your personal information to third parties.</li>
-                  <li>We may share limited information with trusted service providers (e.g., payment gateways, shipping partners, IT support) strictly for order processing and business operations.</li>
-                  <li>If required by law, regulation, or court order, we may disclose information to relevant authorities.</li>
+                  <li><strong>Service Providers:</strong> Delivery partners, payment gateways, IT support, and marketing
+                     platforms who assist us in providing services.</li>
+                  <li><strong>Legal Authorities:</strong> When required by law, regulation, or to protect against fraud
+                     or unlawful activities.</li>
+                  <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets,
+                     your data may be transferred as part of the business.</li>
                </ul>
 
-               <h4>4. Data Security</h4>
+               <h4>Data Security</h4>
+               <p>
+                  We use appropriate technical and organizational measures to protect your information from unauthorized
+                  access, disclosure, alteration, or destruction. While we strive to safeguard your data, no method of
+                  online transmission or storage is 100% secure.
+               </p>
+
+               <h4>Your Rights</h4>
+               <p>As a user of Adam Xpress, you have the right to:</p>
                <ul>
-                  <li>We use encryption, secure servers, and industry-standard measures to protect your personal data.</li>
-                  <li>However, no online platform can guarantee absolute security. By using our website, you acknowledge this risk.</li>
+                  <li>Access and review the personal information we hold about you.</li>
+                  <li>Request corrections to inaccurate or incomplete data.</li>
+                  <li>Opt out of receiving promotional communications at any time.</li>
                </ul>
 
-               <h4>5. Cookies & Tracking</h4>
-               <ul>
-                  <li>Our website uses cookies and similar tracking technologies to enhance your browsing experience.</li>
-                  <li>Cookies help us remember your preferences, analyze site performance, and provide relevant offers.</li>
-                  <li>You may disable cookies in your browser settings, but some features of the website may not function properly.</li>
-               </ul>
+               <h4>Third-Party Services</h4>
+               <p>
+                  Our website may contain links to external websites or services. Please note that Adam Xpress is not
+                  responsible for the privacy practices of those third parties. We encourage you to review their privacy
+                  policies before sharing personal information.
+               </p>
 
-               <h4>6. Your Rights</h4>
-               <p>You have the right to:</p>
-               <ul>
-                  <li>Access, update, or correct your personal information.</li>
-                  <li>Request deletion of your account or data (subject to legal and accounting obligations).</li>
-                  <li>Opt out of marketing communications at any time.</li>
-               </ul>
+               <h4>Changes to This Policy</h4>
+               <p>
+                  We may update this Privacy Policy from time to time to reflect changes in our practices or for legal,
+                  operational, or regulatory reasons. The updated version will always be posted on this page with the
+                  “Last Updated” date.
+               </p>
 
-               <h4>7. Third-Party Links</h4>
-                  <p>Our website may contain links to third-party websites (e.g., payment gateways, partner promotions). We are not responsible for the privacy practices or content of these external websites.</p>
-               <h4>8. Children’s Privacy</h4>
-                  <p>Our services are not intended for individuals under the age of 18. We do not knowingly collect information from minors. If we discover that a minor has provided personal information, we will delete it immediately.</p>
-
-               <h4>9. Updates to Privacy Policy</h4>
-               <p>We may update this Privacy Policy from time to time to reflect changes in our practices, legal requirements, or services. The updated version will always be available on this page, with the “Last Updated” date clearly indicated.</p>
             </div>
 
          </div>
@@ -366,40 +501,46 @@
             <div class="col-md-4">
                <div class="footer-col col1">
                   <img src="images/footer-logo.png" alt="footer-logo" class="footer-logo">
-                  <p>It’s More Than Just Supplements
-                     It’s a Commitment to Your Best Self.</p>
-                  <ul class="social-links">
-                     <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                     <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                     <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                  </ul>
+                  <p>© Adam Express All Rights Reserved</p>
+                  <div class="connectwith-us">
+                     <h4>CONNECT WITH US</h4>
+                     <ul class="social-links">
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                     </ul>
+                  </div>
                </div>
             </div>
-            <div class="col-md-4 col-6">
+            <div class="col-md-5 col-sm-7">
                <div class="footer-col col2">
-                 <ul class="links">
-                     <li><a href="about.html"><i class="me-1"><img src="images/ic-xs-01.png" alt="icon"></i>About Us</a></li>
-                     <li><a href="terms-condition.html"><i class="me-1"><img src="images/ic-xs-01.png" alt="icon"></i>Terms and
-                           Conditions</a></li>
-                     <li><a href="privacy-policy.html"><i class="me-1"><img src="images/ic-xs-01.png" alt="icon"></i>privacy policy</a>
+                  <ul class="links">
+                     <li><a href="about.html"><i class="me-2"><img src="images/ic-xs-01.png" alt="icon"></i>Home</a>
                      </li>
-                     <li><a href="return-policy.html"><i class="me-1"><img src="images/ic-xs-01.png" alt="icon"></i>Return policy</a>
+                     <li><a href="about.html"><i class="me-2"><img src="images/ic-xs-01.png" alt="icon"></i>ABout us</a>
+                     </li>
+                     <li><a href="blog.html"><i class="me-2"><img src="images/ic-xs-01.png" alt="icon"></i>BLOG</a>
+                     </li>
+                     <li><a href="return-policy.html"><i class="me-2"><img src="images/ic-xs-01.png"
+                                 alt="icon"></i>return policy</a>
+                     </li>
+                     <li><a href="terms-condition.html"><i class="me-2"><img src="images/ic-xs-01.png"
+                                 alt="icon"></i>terms & conditions</a></li>
+                     <li><a href="privacy-policy.html"><i class="me-2"><img src="images/ic-xs-01.png"
+                                 alt="icon"></i>privacy policy</a>
                      </li>
                   </ul>
                </div>
             </div>
-            <div class="col-md-4 col-6 d-flex justify-content-end">
+            <div class="col-md-3 col-sm-5 d-flex justify-content-sm-end">
                <div class="footer-col col3">
-                  <label>Address:</label>
-                  <p>The Malabar Chamber of Commerce, Thayatheru Rd, Caltex, Kannur</p>
-                  <label>Phone:</label>
-                  <p><a href="tel:+919895202021">+91 9895202021</a></p>
-                  <label>Address:</label>
-                  <a href="mailto:info@spicenutrition.com">info@spicenutrition.com</a>
+                  <h5>Contact Us</h5>
+                  <p><a href="tel:+971245414758"><i class="fa-brands fa-whatsapp me-2"></i>+971 24 541 4758</a></p>
+                  <a href="mailto:info@adamexpress.com"><i
+                        class="fa-regular fa-envelope me-2"></i>info@adamexpress.com</a>
                </div>
             </div>
          </div>
-         <p class="copy-rite">© 2025 spicenutrition.com All rights reserved</p>
       </div>
    </footer>
 
@@ -409,6 +550,8 @@
    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+   <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
    <script src="js/bootstrap.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
