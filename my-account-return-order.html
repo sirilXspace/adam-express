@@ -20,93 +20,6 @@
 
 <body>
 
-   <!-- Select Address -->
-   <div class="modal fade select-address" id="addressModal" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-         <div class="modal-content">
-
-            <div class="modal-body">
-               <div class="d-flex justify-content-between mb-4">
-                  <h2 class="f-24">Select Address</h2>
-                  <button type="button" class="c_close" data-bs-dismiss="modal" aria-label="Close"><i><img
-                           src="images/close-btn.png" alt="icon"></i></button>
-               </div>
-               <div class="row">
-                  <div class="col-md-4">
-                     <div class="address-option mb-3 position-relative selected">
-                        <input class="form-check-input c_radio" type="radio" name="flexRadioDefault" checked>
-                        <p class="mt-0">Alfredo Dokidis<br>
-                           Kaoser Complex, Caltex Kannur,
-                           KANNUR, KERALA, 670002</p>
-                        <p>+91 8590243275</p>
-                        <a href="#edit_address" class="edit_pen"><i class="fa-solid fa-pen"></i></a>
-                     </div>
-                  </div>
-                  <div class="col-md-4">
-                     <div class="address-option mb-3 position-relative">
-                        <input class="form-check-input c_radio" type="radio" name="flexRadioDefault">
-                        <p class="mt-0">Jaylon Calzoni<br>
-                           Kaoser Complex, Caltex Kannur,
-                           KANNUR, KERALA, 670002</p>
-                        <p>+91 8590243275</p>
-                        <a href="#edit_address" class="edit_pen"><i class="fa-solid fa-pen"></i></a>
-                     </div>
-                  </div>
-
-                  <div class="col-md-4">
-                     <div class="address-option mb-3 position-relative">
-                        <input class="form-check-input c_radio" type="radio" name="flexRadioDefault">
-                        <p class="mt-0">Cristofer Aminoff<br>
-                           Kaoser Complex, Caltex Kannur,
-                           KANNUR, KERALA, 670002</p>
-                        <p>+91 8590243275</p>
-                        <a href="#edit_address" class="edit_pen"><i class="fa-solid fa-pen"></i></a>
-                     </div>
-                  </div>
-
-                  <div class="col-md-4">
-                     <div class="address-option mb-3 position-relative">
-                        <input class="form-check-input c_radio" type="radio" name="flexRadioDefault">
-                        <p class="mt-0">Kierra Culhane<br>
-                           Kaoser Complex, Caltex Kannur,
-                           KANNUR, KERALA, 670002</p>
-                        <p>+91 8590243275</p>
-                        <a href="#edit_address" class="edit_pen"><i class="fa-solid fa-pen"></i></a>
-                     </div>
-                  </div>
-
-                  <div class="col-md-4">
-                     <div class="address-option mb-3 position-relative">
-                        <input class="form-check-input c_radio" type="radio" name="flexRadioDefault">
-                        <p class="mt-0">Charlie Schleifer<br>
-                           Kaoser Complex, Caltex Kannur,
-                           KANNUR, KERALA, 670002</p>
-                        <p>+91 8590243275</p>
-                        <a href="#edit_address" class="edit_pen"><i class="fa-solid fa-pen"></i></a>
-                     </div>
-                  </div>
-
-                  <div class="col-md-4">
-                     <div class="address-option mb-3 position-relative">
-                        <input class="form-check-input c_radio" type="radio" name="flexRadioDefault">
-                        <p class="mt-0">Marilyn Curtis<br>
-                           Kaoser Complex, Caltex Kannur,
-                           KANNUR, KERALA, 670002</p>
-                        <p>+91 8590243275</p>
-                        <a href="#edit_address" class="edit_pen"><i class="fa-solid fa-pen"></i></a>
-                     </div>
-                  </div>
-
-               </div>
-               <div class="buttons">
-                  <a class="cancel-btn text-black">Cancel</a>
-                  <a class="save-btn">Continue</a>
-               </div>
-            </div>
-
-         </div>
-      </div>
-   </div>
 
    <!-- Login -->
    <div class="modal fade login-modal" id="loginmodal" tabindex="-1" aria-hidden="true">
@@ -501,117 +414,127 @@
    </div>
 
 
-   <div class="address-page myaddress payment bg-white custompad-2">
+
+   <div class="myacount return-ordere custompad-2 custom_bg">
       <div class="container">
-         <div class="row">
-            <div class="col-md-7">
-               <div class="address-option position-relative">
-                  <label>Delivery Address </label>
-                  <p><span class="address-tag me-2 mb-2"><i
-                           class="fa-solid fa-house theme-color me-2"></i>Home</span>Alfredo Dokidis, Kaoser Complex,
-                     Caltex Kannur, KANNUR, KERALA, 670002, +91 8590243275</p>
-                  <a href="#edit_address" class="edit_field" data-bs-toggle="modal"
-                     data-bs-target="#addressModal">Change</a>
-               </div>
+         <a class="backto" href="my-account-orders.html"><i class="me-2"><img src="images/backto.png"
+                  alt="icon"></i>Back to Orders</a>
 
 
-               <div class="cart-right d-block d-md-none">
-
-                  <h4 class="mb-3"><i class="me-2"><img src="images/order-summary-ic.png" alt="icon"
-                           style="width: 24px;"></i>Order Summary <span>(3 items)</span></h4>
-                  <div class="cart-summary">
-                     <p>Total MRP <span>QR 2499.00</span></p>
-                     <p>Total Discounts <span class="disc-color">-QR 1250</span></p>
-                     <p>Subtotal <span>QR 7148</span></p>
-                     <p>Shipping <span>QR 0</span></p>
-                     <hr class="minus-margin">
-                     <p class="total grand-total">Total <span>QR 15750</span></p>
-                     <p class="free_delivery_tip">You will Save QR 1,250 on this order</p>
-                  </div>
-
-               </div>
-
-               <div class="payment-container">
-                  <h6>Payment Options</h6>
-                  <div class="row">
-                     <div class="col-lg-4">
-
-                        <ul class="nav nav-pills flex-column payment-tab" id="payment-tab" role="tablist">
-
-                           <li class="nav-item" role="presentation">
-                              <button class="nav-link active" id="debit-tab" data-bs-toggle="pill"
-                                 data-bs-target="#debit" type="button" role="tab">Debit Card <i><img
-                                       src="images/card.png" alt="icon"></i></button>
-                           </li>
-
-                           <li class="nav-item" role="presentation">
-                              <button class="nav-link" id="cod-tab" data-bs-toggle="pill" data-bs-target="#cod"
-                                 type="button" role="tab">Cash On Delivery<i><img src="images/cod.png"
-                                       alt="icon"></i></button>
-                           </li>
-                        </ul>
-                     </div>
-
-
-                     <!-- Right Content -->
-                     <div class="col-lg-8">
-                        <div class="tab-content">
-
-
-                           <!-- Debit Card -->
-                           <div class="tab-pane fade show active" id="debit" role="tabpanel">
-                              <div class="payment-box">
-                                 <h6 class="fw-bold">Pay Using Debit Card</h6>
-                                 <p class="text-muted">Card form goes here...</p>
-                                 <a class="place-order" href="success.html">Securely Pay ₹15750</a>
+         <div class="row mt-sm-4 mt-2">
+            <div class="col-md-6">
+               <div class="order-info mb-3">
+                  <h5>Order ID: #0068521705 </h5>
+                  <div class="order-details">
+                     <ul class="w-100">
+                        <li>
+                           <a href="my-account-orders-details.html" class="d-flex align-items-center">
+                              <div class="img-thumb me-2">
+                                 <img src="images/order-info-3n.png" alt="image">
                               </div>
-                              
-                           </div>
-
-
-                           <!-- Cash on Delivery -->
-                           <div class="tab-pane fade" id="cod" role="tabpanel">
-                              <div class="payment-box">
-                                 <h6 class="fw-bold">Cash on Delivery</h6>
-                                 <p class="text-muted">You can pay when your order is delivered.</p>
-                                 <a class="place-order" href="success.html">Securely Pay ₹15750</a>
+                              <div>
+                                 <h4>HP Victus 15-fa2703TX Intel Core i5 13th Gen Gaming Laptop</h4>
+                                 <p>Qty:1</p>
                               </div>
-                              
-                           </div>
-                        </div>
-                     </div>
+                           </a>
+                        </li>
+                        <li><a href="my-account-orders-details.html" class="d-flex align-items-center">
+                              <div class="img-thumb me-2">
+                                 <img src="images/order-info-2.png" alt="image">
+                              </div>
+                              <div>
+                                 <h4>boAt Party Pal 400 160W Portable Bluetooth Speaker</h4>
+                                 <p>Qty:1</p>
+                              </div>
+                           </a>
+                        </li>
+                        <li><a href="my-account-orders-details.html" class="d-flex align-items-center">
+                              <div class="img-thumb me-2">
+                                 <img src="images/order-info-3.png" alt="image">
+                              </div>
+                              <div>
+                                 <h4>boAt Rockerz 425 Bluetooth Wireless Over Ear Headphone</h4>
+                                 <p>Qty:1</p>
+                              </div>
+                           </a>
+                        </li>
+                     </ul>
                   </div>
                </div>
 
             </div>
 
+            <div class="col-md-6">
 
-
-
-            <div class="col-md-5">
-
-               <div class="cart-right d-none d-md-block">
-
-                  <h4 class="mb-3"><i class="me-2"><img src="images/order-summary-ic.png" alt="icon"
-                           style="width: 24px;"></i>Order Summary <span>(3 items)</span></h4>
-                  <div class="cart-summary">
-                     <p>Total MRP <span>QR 2499.00</span></p>
-                     <p>Total Discounts <span class="disc-color">-QR 1250</span></p>
-                     <p>Subtotal <span>QR 7148</span></p>
-                     <p>Shipping <span>QR 0</span></p>
-                     <p>Wallet Points used <span class="disc-color">-QR 50</span></p>
-                     <hr class="minus-margin">
-                     <p class="total grand-total">Total <span>QR 15750</span></p>
-                     <p class="free_delivery_tip">You will Save QR 1,250 on this order</p>
+               <div class="order-info">
+                  <div class="mb-3">
+                     <h5 class="mb-3">Reason for cancellation*</h5>
+                     <select class="form-select c-select c-color border-0" aria-label="Default select example">
+                        <option selected>Slect Reason</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                     </select>
+                  </div>
+                  <div class="mb-0 mt-4">
+                     <h5 class="mb-3 mt-3">Other details</h5>
+                     <div>
+                        <textarea class="form-control c-color border-0 c_textarea" rows="3"
+                           placeholder="Any other comments..."></textarea>
+                     </div>
                   </div>
 
                </div>
+
             </div>
+
+
+            <div class="col-md-12">
+
+               <div class="order-info mb-3">
+                  <div class="mb-3">
+                     <h5 class="mb-3">Account Holder Name</h5>
+                     <div class="mb-3">
+                        <input type="email" class="form-control c-color border-0" placeholder="Enter name">
+                     </div>
+                  </div>
+                  <div class="mb-3">
+                     <h5 class="mb-3">IFSC Code</h5>
+                     <div class="mb-3">
+                        <input type="email" class="form-control c-color border-0" placeholder="IFSC Code">
+                     </div>
+                  </div>
+                  <div class="mb-3">
+                     <h5 class="mb-3">Account number</h5>
+                     <div class="mb-3">
+                        <input type="email" class="form-control c-color border-0" placeholder="Account number">
+                     </div>
+                  </div>
+
+               </div>
+
+            </div>
+
+            <div class="col-md-12">
+
+               <div class="order-info mb-0">
+                  <h5 class="mb-3">Pickup Address</h5>
+                  <p><span class="address-tag me-2"><i class="fa-solid fa-house theme-color me-2"></i>Home</span>Alfredo
+                     Dokidis, Kaoser Complex, Caltex Kannur, KANNUR, KERALA, 670002, +91 8590243275</p>
+
+               </div>
+
+            </div>
+
+            <div class="buttons">
+               <button class="cancel-btn">Cancel</button>
+               <button class="save-btn">Submit</button>
+            </div>
+
          </div>
       </div>
+
    </div>
-
-
 
    <footer class="footer">
       <div class="container">
@@ -655,7 +578,7 @@
                   <h5>Contact Us</h5>
                   <p><a href="tel:+971245414758"><i class="fa-brands fa-whatsapp me-2"></i>+971 24 541 4758</a></p>
                   <a href="mailto:info@adamexpress.com"><i
-                        class="fa-regular fa-envelope me-2"></i>info@adamexpress.com</a>
+                        class="fa-regular fa-envelope me-2"></i>infoo@adamexpress.com</a>
                </div>
             </div>
          </div>
@@ -676,23 +599,6 @@
    <script src="js/wow.js"></script>
    <script src="js/page.js"></script>
    <script src="js/swiper-call.js"></script>
-
-
-
-   <script>
-      $(document).ready(function () {
-         $(".heart-icon").on("click", function (e) {
-            e.preventDefault();
-
-            $(this).toggleClass("clicked animated");
-
-            // Remove animation class after animation ends
-            setTimeout(() => {
-               $(this).removeClass("animated");
-            }, 300);
-         });
-      });
-   </script>
 
 </body>
 

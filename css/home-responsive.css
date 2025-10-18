@@ -184,7 +184,7 @@
         font-size: 14px;
     }
 
-    .cancel-btn2 {
+    .cancel-btn2,.return-btn {
         font-size: 14px;
     }
 
@@ -363,6 +363,7 @@
     }
     footer .col3 h5{font-size:18px;}
     .product-page .product-box-img-wrap{height:103px;}
+    .return-item{font-size:16px;}
 
 }
 
@@ -603,6 +604,11 @@
     }
     .frequent-bought .my-accordion-button{font-size:16px;}
     .all-flavors{margin-top:30px;}
+    .order-info h5{font-size:15px;}
+    .cart-summary.style-2{height: auto;}
+    .cart-summary.style-2 p{margin:5px 0px}
+    .cart-summary.style-2 p.grand-total{font-size:17px;}
+    .cart-summary.style-2 p.grand-total span{font-size:20px;}
 
 }
 
@@ -1093,6 +1099,9 @@
         margin-top:15px;
     }
     .select-address .modal-content{border-radius:15px;}
+    .trackorder-modal .modal-body{padding:15px 15px}
+    .progress-track .step .label{font-size:9px;}
+    .timeline li.completed .date,.timeline li .date{font-size:9px;margin-top:2px;}
 
 }
 
@@ -1637,6 +1646,9 @@
     .specs-table th{font-size:12px;}
     .add-cart2{margin-top:5px;}
     .all-flavors{margin-top:20px;}
+    .circle{width:25px;height:25px;font-size:10px;}
+    .tracking-updates{margin-top:20px;}
+    .return-item{font-size:13px;}
 
 }
 
@@ -1699,9 +1711,9 @@
         font-size: 15px;
     }
 
-    .progress-track .step .label {
+    /* .progress-track .step .label {
         font-size: 12px;
-    }
+    } */
 
     .progress-track .step.completed::after {
         height: 5px;
@@ -1716,7 +1728,7 @@
     }
 
     .tracking-updates h6 {
-        font-size: 14px;
+        font-size: 18px;
     }
 
     .quantity-input {
@@ -1735,6 +1747,8 @@
     }
     .price-blk p{font-size:14px;}
     .yr-warranty,.mrp-price p, .select-size{font-size:9px;}
+    .order-details2{padding:10px 10px}
+    .deliver-details h3{font-size:14px;}
 
 
 }
