@@ -125,9 +125,7 @@
         padding-right: 25px;
     }
 
-    .cart-right h4 {
-        font-size: 16px;
-    }
+
 
     .fw-30 {
         font-size: 20px;
@@ -609,6 +607,9 @@
     .cart-summary.style-2 p{margin:5px 0px}
     .cart-summary.style-2 p.grand-total{font-size:17px;}
     .cart-summary.style-2 p.grand-total span{font-size:20px;}
+    .cart-right h4 {
+        font-size: 16px;
+    }
 
 }
 

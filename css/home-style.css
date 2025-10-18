@@ -3646,6 +3646,7 @@ footer .social-links {
   margin-top: 30px;
   display: inline-block;
 }
+.cancel-btn3.style2{background-color:#FFA500;}
 
 .add_add_link {
   color: var(--primary-color);
