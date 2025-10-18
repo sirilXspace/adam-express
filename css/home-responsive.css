@@ -1070,7 +1070,12 @@
     .advt-banner .ad-blk {
         margin-bottom: 20px;
     }
-
+     .advt-banner-2 .ad-blk {
+        margin-bottom: 20px;
+    }
+    .advt-banner-2 .ad-blk:last-child {
+        margin-bottom: 0px;
+    }
     .advt-banner .ad-blk:last-child {
         margin-bottom: 0px;
     }
