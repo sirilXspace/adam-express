@@ -1088,6 +1088,11 @@
     .side-product-card-discount{font-size:10px;}
    .frequent-bought-together{padding-bottom:0px;}
    .frequent-bought{margin-top:20px;}
+       .ratings-container.style-2 {
+        padding: 10px 10px;
+        margin-top:15px;
+    }
+    .select-address .modal-content{border-radius:15px;}
 
 }
 
@@ -1352,9 +1357,7 @@
         padding: 12px 12px
     }
 
-    .ratings-container.style-2 {
-        padding: 10px 10px
-    }
+
 
     .custom-tabs .nav-link.style-2 {
         font-size: 14px;
