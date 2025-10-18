@@ -1103,6 +1103,8 @@
     .trackorder-modal .modal-body{padding:15px 15px}
     .progress-track .step .label{font-size:9px;}
     .timeline li.completed .date,.timeline li .date{font-size:9px;margin-top:2px;}
+    .write-review .modal-body{padding:20px 20px}
+    .rate-star .star{font-size:33px;}
 
 }
 

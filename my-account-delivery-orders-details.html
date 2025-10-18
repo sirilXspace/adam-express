@@ -21,6 +21,71 @@
 <body>
 
 
+   <!-- Write Review -->
+   <div class="modal fade write-review" id="write-review" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+         <div class="modal-content">
+
+            <div class="modal-body">
+               <div class="d-flex justify-content-between mb-sm-4 mb-2">
+                  <h2 class="f-24">How was the overall experience?</h2>
+                  <button type="button" class="c_close" data-bs-dismiss="modal" aria-label="Close"><i><img
+                           src="images/close-btn.png" alt="icon"></i></button>
+               </div>
+
+               <div class="review-card">
+                  <!-- Stars -->
+                   <div class="rate-star d-flex justify-content-center mb-4 mt-4">
+<div class="star-rating" data-product="1">
+                                       <span class="star" data-value="1">☆</span>
+                                       <span class="star" data-value="2">☆</span>
+                                       <span class="star" data-value="3">☆</span>
+                                       <span class="star" data-value="4">☆</span>
+                                       <span class="star" data-value="5">☆</span>
+                                    </div>
+                                    </div>
+
+                  <!-- Upload area -->
+
+                  <div class="upload-area" id="uploadArea" tabindex="0">
+                     <div class="upload-inner">
+                        <i class="bi bi-card-image"></i>
+                        <div><i><img src="images/gal_ic.png" alt="icon"></i>Add Photos</div>
+                     </div>
+                  </div>
+
+                  <!-- invisible file input -->
+                  <input type="file" id="photoInput" accept="image/*" multiple style="display:none;">
+
+                  <!-- previews -->
+                  <div id="previewContainer" class="preview-grid" aria-live="polite"></div>
+
+                  <!-- Headline -->
+                  <div class="mt-3">
+                     <label for="headline" class="form-label text-black" style="font-weight:500;">Add a Headline</label>
+                     <input id="headline" class="form-control" placeholder="Write your headline">
+                  </div>
+
+                  <!-- Review text -->
+                  <div class="mt-3">
+                     <label for="reviewText" class="form-label text-black" style="font-weight:500;">Write your review here</label>
+                     <textarea id="reviewText" rows="7" class="form-control"
+                        placeholder="Please write product review here"></textarea>
+                  </div>
+
+                  <!-- Actions -->
+<div class="buttons">
+               <button class="cancel-btn">Cancel</button>
+               <button class="save-btn">Submit</button>
+            </div>
+               </div>
+
+            </div>
+
+         </div>
+      </div>
+   </div>
+
    <!-- Login -->
    <div class="modal fade login-modal" id="loginmodal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog">
@@ -494,7 +559,8 @@
                               </div>
                            </div>
                            <div class="col-3">
-                              <a href="" class="return-item float-end">Return Item</a>
+                              <a href="" class="return-item float-end" data-bs-toggle="modal"
+                                 data-bs-target="#write-review">Return Item</a>
                            </div>
                         </div>
                         <div class="share-review">
@@ -709,6 +775,107 @@
                star.classList.toggle('active', star.dataset.value <= rating);
             });
          }
+      });
+   </script>
+
+
+   <script>
+      // Elements
+      const uploadArea = document.getElementById('uploadArea');
+      const fileInput = document.getElementById('photoInput');
+      const previewContainer = document.getElementById('previewContainer');
+
+      // trigger file select when clicking upload area
+      uploadArea.addEventListener('click', () => fileInput.click());
+      uploadArea.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') fileInput.click(); });
+
+      // store files array (for potential form submission)
+      let filesList = [];
+
+      function renderPreviews() {
+         previewContainer.innerHTML = '';
+         filesList.forEach((fileObj, idx) => {
+            const div = document.createElement('div');
+            div.className = 'preview-item';
+            const img = document.createElement('img');
+            img.src = fileObj.dataUrl;
+            img.alt = fileObj.file.name;
+
+            const remove = document.createElement('button');
+            remove.className = 'remove-btn';
+            remove.type = 'button';
+            remove.innerHTML = '&times;';
+            remove.title = 'Remove';
+            remove.addEventListener('click', (ev) => {
+               ev.stopPropagation();
+               filesList.splice(idx, 1);
+               renderPreviews();
+               // clear file input if no files
+               if (filesList.length === 0) fileInput.value = '';
+            });
+
+            div.appendChild(img);
+            div.appendChild(remove);
+            previewContainer.appendChild(div);
+         });
+      }
+
+      fileInput.addEventListener('change', (e) => {
+         const files = Array.from(e.target.files || []);
+         // read files and add to filesList
+         const readers = files.map(f => {
+            return new Promise((res, rej) => {
+               const r = new FileReader();
+               r.onload = () => res({ file: f, dataUrl: r.result });
+               r.onerror = () => rej();
+               r.readAsDataURL(f);
+            });
+         });
+         Promise.all(readers).then(loaded => {
+            // append (maintain previous selections)
+            filesList = filesList.concat(loaded);
+            renderPreviews();
+         }).catch(() => { /* ignore read errors */ });
+      });
+
+      // Stars logic
+      const starIcons = document.querySelectorAll('.stars .bi');
+      let currentRating = 0;
+      starIcons.forEach(icon => {
+         icon.addEventListener('mouseenter', () => {
+            const v = Number(icon.dataset.value);
+            fillStars(v);
+         });
+         icon.addEventListener('mouseleave', () => fillStars(currentRating));
+         icon.addEventListener('click', () => {
+            currentRating = Number(icon.dataset.value);
+            starIcons.forEach(i => i.setAttribute('aria-checked', i.dataset.value === String(currentRating)));
+         });
+      });
+
+      function fillStars(count) {
+         starIcons.forEach(i => {
+            if (Number(i.dataset.value) <= count) i.classList.add('filled');
+            else i.classList.remove('filled');
+         });
+      }
+
+      // Submit button demo action (replace with real form handler)
+      document.getElementById('submitBtn').addEventListener('click', () => {
+         const headline = document.getElementById('headline').value.trim();
+         const review = document.getElementById('reviewText').value.trim();
+
+         // For demo: log composite object
+         const payload = {
+            rating: currentRating,
+            headline,
+            review,
+            images: filesList.map(f => ({ name: f.file.name, type: f.file.type, size: f.file.size }))
+         };
+         console.log('Submit payload:', payload);
+
+         // You can now send filesList[*].file via FormData to server
+         alert('Demo submit logged to console. Replace with actual form submission.');
       });
    </script>
 
