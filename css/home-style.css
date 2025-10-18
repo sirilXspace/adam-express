@@ -5356,6 +5356,7 @@ hr.style1 {
   border-bottom: 1px solid #dfdfdf;
   padding-top: 20px;
   padding-bottom: 20px;
+  font-family: 'Satoshi-Medium';
 }
 
 .spec-review .custom_accordion:first-child .accordion-button {

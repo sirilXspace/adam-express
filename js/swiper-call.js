@@ -45,6 +45,10 @@ var category = new Swiper(".category-slider", {
 var trendingproductslider = new Swiper(".trending-product-slider", {
   slidesPerView: 2,
   spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-nextn2",
+    prevEl: ".swiper-button-prevn2",
+  },
   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
@@ -76,6 +80,10 @@ var trendingproductslider = new Swiper(".trending-product-slider", {
 var featuredproductslider = new Swiper(".featured-product-slider", {
   slidesPerView: 2,
   spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-nextn1",
+    prevEl: ".swiper-button-prevn1",
+  },
   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
